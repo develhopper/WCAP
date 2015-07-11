@@ -1,0 +1,2 @@
+module TreatmentHistoriesHelper
+end

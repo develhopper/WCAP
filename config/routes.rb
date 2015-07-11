@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :treatment_histories
+
   resources :abusings
 
   resources :abusing_profiles

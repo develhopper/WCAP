@@ -1,0 +1,35 @@
+<h1>Listing treatment_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Is cured</th>
+      <th>In month treated</th>
+      <th>In year treat count</th>
+      <th>Na session</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @treatment_histories.each do |treatment_history| %>
+      <tr>
+        <td><%= treatment_history.patient %></td>
+        <td><%= treatment_history.is_cured %></td>
+        <td><%= treatment_history.in_month_treated %></td>
+        <td><%= treatment_history.in_year_treat_count %></td>
+        <td><%= treatment_history.na_session %></td>
+        <td><%= treatment_history.total %></td>
+        <td><%= link_to 'Show', treatment_history %></td>
+        <td><%= link_to 'Edit', edit_treatment_history_path(treatment_history) %></td>
+        <td><%= link_to 'Destroy', treatment_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Treatment history', new_treatment_history_path %>

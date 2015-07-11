@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  is_cured: false
+  in_month_treated: false
+  in_year_treat_count: 1
+  na_session: false
+  total: 1
+
+two:
+  patient_id: 
+  is_cured: false
+  in_month_treated: false
+  in_year_treat_count: 1
+  na_session: false
+  total: 1
