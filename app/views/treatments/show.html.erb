@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Treatment history:</strong>
+  <%= @treatment.treatment_history %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @treatment.type %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @treatment.count %>
+</p>
+
+<p>
+  <strong>Max avoidance day:</strong>
+  <%= @treatment.max_avoidance_day %>
+</p>
+
+<p>
+  <strong>Descriptin:</strong>
+  <%= @treatment.descriptin %>
+</p>
+
+<p>
+  <strong>In month used:</strong>
+  <%= @treatment.in_month_used %>
+</p>
+
+<%= link_to 'Edit', edit_treatment_path(@treatment) %> |
+<%= link_to 'Back', treatments_path %>

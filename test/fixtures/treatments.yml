@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  treatment_history_id: 
+  type: 1
+  count: 1
+  max_avoidance_day: 1
+  descriptin: MyText
+  in_month_used: 1
+
+two:
+  treatment_history_id: 
+  type: 1
+  count: 1
+  max_avoidance_day: 1
+  descriptin: MyText
+  in_month_used: 1
