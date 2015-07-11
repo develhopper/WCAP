@@ -1,0 +1,49 @@
+<%= form_for(@basic_demographic) do |f| %>
+  <% if @basic_demographic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@basic_demographic.errors.count, "error") %> prohibited this basic_demographic from being saved:</h2>
+
+      <ul>
+      <% @basic_demographic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.text_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :file_number %><br>
+    <%= f.number_field :file_number %>
+  </div>
+  <div class="field">
+    <%= f.label :private_code %><br>
+    <%= f.number_field :private_code %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.number_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :year_of_birth %><br>
+    <%= f.number_field :year_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :interview_date %><br>
+    <%= f.date_select :interview_date %>
+  </div>
+  <div class="field">
+    <%= f.label :marital_status %><br>
+    <%= f.number_field :marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :educational_year %><br>
+    <%= f.number_field :educational_year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

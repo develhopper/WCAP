@@ -1,0 +1,39 @@
+<h1>Listing basic_demographics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>File number</th>
+      <th>Private code</th>
+      <th>Gender</th>
+      <th>Year of birth</th>
+      <th>Interview date</th>
+      <th>Marital status</th>
+      <th>Educational year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @basic_demographics.each do |basic_demographic| %>
+      <tr>
+        <td><%= basic_demographic.patient %></td>
+        <td><%= basic_demographic.file_number %></td>
+        <td><%= basic_demographic.private_code %></td>
+        <td><%= basic_demographic.gender %></td>
+        <td><%= basic_demographic.year_of_birth %></td>
+        <td><%= basic_demographic.interview_date %></td>
+        <td><%= basic_demographic.marital_status %></td>
+        <td><%= basic_demographic.educational_year %></td>
+        <td><%= link_to 'Show', basic_demographic %></td>
+        <td><%= link_to 'Edit', edit_basic_demographic_path(basic_demographic) %></td>
+        <td><%= link_to 'Destroy', basic_demographic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Basic demographic', new_basic_demographic_path %>

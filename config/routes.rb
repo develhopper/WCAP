@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :basic_demographics
+
   resources :ddt_questions
 
   resources :ddts

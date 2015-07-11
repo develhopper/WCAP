@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711124312) do
+ActiveRecord::Schema.define(version: 20150711124928) do
 
   create_table "balloons", force: true do |t|
     t.integer  "pumps"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20150711124312) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "basic_demographics", force: true do |t|
+    t.integer  "patient_id"
+    t.integer  "file_number"
+    t.integer  "private_code"
+    t.integer  "gender"
+    t.integer  "year_of_birth"
+    t.date     "interview_date"
+    t.integer  "marital_status"
+    t.integer  "educational_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "basic_demographics", ["patient_id"], name: "index_basic_demographics_on_patient_id"
 
   create_table "clinics", force: true do |t|
     t.string   "name"
