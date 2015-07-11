@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cost per month:</strong>
+  <%= @abusing_profile.cost_per_month %>
+</p>
+
+<p>
+  <strong>Overdose count:</strong>
+  <%= @abusing_profile.overdose_count %>
+</p>
+
+<p>
+  <strong>Freakout count:</strong>
+  <%= @abusing_profile.freakout_count %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @abusing_profile.patient %>
+</p>
+
+<%= link_to 'Edit', edit_abusing_profile_path(@abusing_profile) %> |
+<%= link_to 'Back', abusing_profiles_path %>

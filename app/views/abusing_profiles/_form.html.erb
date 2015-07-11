@@ -1,0 +1,33 @@
+<%= form_for(@abusing_profile) do |f| %>
+  <% if @abusing_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@abusing_profile.errors.count, "error") %> prohibited this abusing_profile from being saved:</h2>
+
+      <ul>
+      <% @abusing_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cost_per_month %><br>
+    <%= f.number_field :cost_per_month %>
+  </div>
+  <div class="field">
+    <%= f.label :overdose_count %><br>
+    <%= f.number_field :overdose_count %>
+  </div>
+  <div class="field">
+    <%= f.label :freakout_count %><br>
+    <%= f.number_field :freakout_count %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.text_field :patient_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

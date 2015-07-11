@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cost_per_month: 1
+  overdose_count: 1
+  freakout_count: 1
+  patient_id: 
+
+two:
+  cost_per_month: 1
+  overdose_count: 1
+  freakout_count: 1
+  patient_id: 
