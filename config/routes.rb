@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :studies
+
   resources :treatments
 
   resources :treatment_histories
