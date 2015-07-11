@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state: 1
+  is_clicked: false
+  display_time: 1
+  response_time: 1
+  reaction_time: 1
+  gonogo_id: 
+
+two:
+  state: 1
+  is_clicked: false
+  display_time: 1
+  response_time: 1
+  reaction_time: 1
+  gonogo_id: 

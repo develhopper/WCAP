@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711122713) do
+ActiveRecord::Schema.define(version: 20150711123138) do
 
   create_table "balloons", force: true do |t|
     t.integer  "pumps"
@@ -64,6 +64,19 @@ ActiveRecord::Schema.define(version: 20150711122713) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "rectangles", force: true do |t|
+    t.integer  "state"
+    t.boolean  "is_clicked"
+    t.integer  "display_time"
+    t.integer  "response_time"
+    t.integer  "reaction_time"
+    t.integer  "gonogo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rectangles", ["gonogo_id"], name: "index_rectangles_on_gonogo_id"
 
   create_table "registrations", force: true do |t|
     t.integer  "user_id"
