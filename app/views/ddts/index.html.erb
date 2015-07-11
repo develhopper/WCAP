@@ -1,0 +1,23 @@
+<h1>Listing ddts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ddts.each do |ddt| %>
+      <tr>
+        <td><%= link_to 'Show', ddt %></td>
+        <td><%= link_to 'Edit', edit_ddt_path(ddt) %></td>
+        <td><%= link_to 'Destroy', ddt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ddt', new_ddt_path %>

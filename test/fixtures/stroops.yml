@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duration: 1
+  total_items: 1
+  correct_items: 1
+  finished: false
+
+two:
+  duration: 1
+  total_items: 1
+  correct_items: 1
+  finished: false

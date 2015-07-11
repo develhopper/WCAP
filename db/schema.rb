@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711114002) do
+ActiveRecord::Schema.define(version: 20150711121011) do
+
+  create_table "barts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clinics", force: true do |t|
     t.string   "name"
@@ -21,6 +26,16 @@ ActiveRecord::Schema.define(version: 20150711114002) do
   end
 
   add_index "clinics", ["supervisor_id"], name: "index_clinics_on_supervisor_id"
+
+  create_table "ddts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gonogos", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "patients", force: true do |t|
     t.string   "first_name"
@@ -51,6 +66,15 @@ ActiveRecord::Schema.define(version: 20150711114002) do
   add_index "registrations", ["patient_id"], name: "index_registrations_on_patient_id"
   add_index "registrations", ["user_id"], name: "index_registrations_on_user_id"
 
+  create_table "stroops", force: true do |t|
+    t.integer  "duration"
+    t.integer  "total_items"
+    t.integer  "correct_items"
+    t.boolean  "finished"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tasks", force: true do |t|
     t.boolean  "confirmed"
     t.integer  "study_id"
@@ -61,6 +85,17 @@ ActiveRecord::Schema.define(version: 20150711114002) do
 
   add_index "tasks", ["patient_id"], name: "index_tasks_on_patient_id"
   add_index "tasks", ["study_id"], name: "index_tasks_on_study_id"
+
+  create_table "tests", force: true do |t|
+    t.integer  "task_id"
+    t.integer  "execution_schedule"
+    t.integer  "actable_id"
+    t.string   "actable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tests", ["task_id"], name: "index_tests_on_task_id"
 
 # Could not dump table "users" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass

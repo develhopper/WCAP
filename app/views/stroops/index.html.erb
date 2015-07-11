@@ -1,0 +1,31 @@
+<h1>Listing stroops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Duration</th>
+      <th>Total items</th>
+      <th>Correct items</th>
+      <th>Finished</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stroops.each do |stroop| %>
+      <tr>
+        <td><%= stroop.duration %></td>
+        <td><%= stroop.total_items %></td>
+        <td><%= stroop.correct_items %></td>
+        <td><%= stroop.finished %></td>
+        <td><%= link_to 'Show', stroop %></td>
+        <td><%= link_to 'Edit', edit_stroop_path(stroop) %></td>
+        <td><%= link_to 'Destroy', stroop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stroop', new_stroop_path %>

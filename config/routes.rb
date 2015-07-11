@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :ddts
+
+  resources :gonogos
+
+  resources :stroops
+
+  resources :barts
+
   resources :tasks
 
   resources :clinics

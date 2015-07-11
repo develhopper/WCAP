@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 
 
 gem 'devise'
+
+
+
+gem 'active_record-acts_as'
