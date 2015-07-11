@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711181001) do
+ActiveRecord::Schema.define(version: 20150711182402) do
 
   create_table "abusing_profiles", force: true do |t|
     t.integer  "cost_per_month"
@@ -78,6 +78,11 @@ ActiveRecord::Schema.define(version: 20150711181001) do
   end
 
   add_index "clinics", ["supervisor_id"], name: "index_clinics_on_supervisor_id"
+
+  create_table "clinics_users", id: false, force: true do |t|
+    t.integer "user_id",   null: false
+    t.integer "clinic_id", null: false
+  end
 
   create_table "ddt_answers", force: true do |t|
     t.integer  "ddt_id"
