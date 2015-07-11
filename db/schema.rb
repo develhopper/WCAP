@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711182402) do
+ActiveRecord::Schema.define(version: 20150711182646) do
 
   create_table "abusing_profiles", force: true do |t|
     t.integer  "cost_per_month"
@@ -173,6 +173,11 @@ ActiveRecord::Schema.define(version: 20150711182402) do
   end
 
   add_index "studies", ["admin_id"], name: "index_studies_on_admin_id"
+
+  create_table "studies_users", id: false, force: true do |t|
+    t.integer "user_id",  null: false
+    t.integer "study_id", null: false
+  end
 
   create_table "tasks", force: true do |t|
     t.boolean  "confirmed"
