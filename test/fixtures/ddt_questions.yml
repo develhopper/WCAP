@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  definite_value: 1
+  indefinite_value: 1
+  risk_rate: 1
+  question_type: 1
+
+two:
+  definite_value: 1
+  indefinite_value: 1
+  risk_rate: 1
+  question_type: 1

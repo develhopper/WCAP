@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Definite value:</strong>
+  <%= @ddt_question.definite_value %>
+</p>
+
+<p>
+  <strong>Indefinite value:</strong>
+  <%= @ddt_question.indefinite_value %>
+</p>
+
+<p>
+  <strong>Risk rate:</strong>
+  <%= @ddt_question.risk_rate %>
+</p>
+
+<p>
+  <strong>Question type:</strong>
+  <%= @ddt_question.question_type %>
+</p>
+
+<%= link_to 'Edit', edit_ddt_question_path(@ddt_question) %> |
+<%= link_to 'Back', ddt_questions_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711123840) do
+ActiveRecord::Schema.define(version: 20150711124312) do
 
   create_table "balloons", force: true do |t|
     t.integer  "pumps"
@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 20150711123840) do
 
   add_index "ddt_answers", ["ddt_id"], name: "index_ddt_answers_on_ddt_id"
   add_index "ddt_answers", ["ddt_question_id"], name: "index_ddt_answers_on_ddt_question_id"
+
+  create_table "ddt_questions", force: true do |t|
+    t.integer  "definite_value"
+    t.integer  "indefinite_value"
+    t.integer  "risk_rate"
+    t.integer  "question_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ddts", force: true do |t|
     t.datetime "created_at"

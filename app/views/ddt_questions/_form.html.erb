@@ -1,0 +1,33 @@
+<%= form_for(@ddt_question) do |f| %>
+  <% if @ddt_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ddt_question.errors.count, "error") %> prohibited this ddt_question from being saved:</h2>
+
+      <ul>
+      <% @ddt_question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :definite_value %><br>
+    <%= f.number_field :definite_value %>
+  </div>
+  <div class="field">
+    <%= f.label :indefinite_value %><br>
+    <%= f.number_field :indefinite_value %>
+  </div>
+  <div class="field">
+    <%= f.label :risk_rate %><br>
+    <%= f.number_field :risk_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :question_type %><br>
+    <%= f.number_field :question_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

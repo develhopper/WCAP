@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :ddt_questions
+
   resources :ddts
 
   resources :gonogos

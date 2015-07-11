@@ -1,0 +1,31 @@
+<h1>Listing ddt_questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Definite value</th>
+      <th>Indefinite value</th>
+      <th>Risk rate</th>
+      <th>Question type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ddt_questions.each do |ddt_question| %>
+      <tr>
+        <td><%= ddt_question.definite_value %></td>
+        <td><%= ddt_question.indefinite_value %></td>
+        <td><%= ddt_question.risk_rate %></td>
+        <td><%= ddt_question.question_type %></td>
+        <td><%= link_to 'Show', ddt_question %></td>
+        <td><%= link_to 'Edit', edit_ddt_question_path(ddt_question) %></td>
+        <td><%= link_to 'Destroy', ddt_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ddt question', new_ddt_question_path %>
