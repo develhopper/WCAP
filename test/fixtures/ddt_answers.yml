@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ddt_id: 
+  ddt_question_id: 
+  response: false
+
+two:
+  ddt_id: 
+  ddt_question_id: 
+  response: false

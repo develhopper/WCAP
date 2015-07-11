@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711123138) do
+ActiveRecord::Schema.define(version: 20150711123840) do
 
   create_table "balloons", force: true do |t|
     t.integer  "pumps"
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20150711123138) do
   end
 
   add_index "clinics", ["supervisor_id"], name: "index_clinics_on_supervisor_id"
+
+  create_table "ddt_answers", force: true do |t|
+    t.integer  "ddt_id"
+    t.integer  "ddt_question_id"
+    t.boolean  "response"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ddt_answers", ["ddt_id"], name: "index_ddt_answers_on_ddt_id"
+  add_index "ddt_answers", ["ddt_question_id"], name: "index_ddt_answers_on_ddt_question_id"
 
   create_table "ddts", force: true do |t|
     t.datetime "created_at"
