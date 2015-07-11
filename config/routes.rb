@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :patients
+
   resources :profiles
 
   get 'welcome/index'
