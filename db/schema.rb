@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711182646) do
+ActiveRecord::Schema.define(version: 20150711183359) do
+
+  create_table "DdtQuestions_studies", id: false, force: true do |t|
+    t.integer "ddt_question_id", null: false
+    t.integer "study_id",        null: false
+  end
 
   create_table "abusing_profiles", force: true do |t|
     t.integer  "cost_per_month"
