@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711121011) do
+ActiveRecord::Schema.define(version: 20150711122713) do
+
+  create_table "balloons", force: true do |t|
+    t.integer  "pumps"
+    t.boolean  "explosion"
+    t.integer  "response_time"
+    t.integer  "bart_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "balloons", ["bart_id"], name: "index_balloons_on_bart_id"
 
   create_table "barts", force: true do |t|
     t.datetime "created_at"
