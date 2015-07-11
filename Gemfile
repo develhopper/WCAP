@@ -44,3 +44,5 @@ gem 'devise'
 
 
 gem 'active_record-acts_as'
+
+gem 'pg'
