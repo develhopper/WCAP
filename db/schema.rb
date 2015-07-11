@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711113842) do
+ActiveRecord::Schema.define(version: 20150711114002) do
 
   create_table "clinics", force: true do |t|
     t.string   "name"
@@ -50,6 +50,17 @@ ActiveRecord::Schema.define(version: 20150711113842) do
   add_index "registrations", ["clinic_id"], name: "index_registrations_on_clinic_id"
   add_index "registrations", ["patient_id"], name: "index_registrations_on_patient_id"
   add_index "registrations", ["user_id"], name: "index_registrations_on_user_id"
+
+  create_table "tasks", force: true do |t|
+    t.boolean  "confirmed"
+    t.integer  "study_id"
+    t.integer  "patient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks", ["patient_id"], name: "index_tasks_on_patient_id"
+  add_index "tasks", ["study_id"], name: "index_tasks_on_study_id"
 
 # Could not dump table "users" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass

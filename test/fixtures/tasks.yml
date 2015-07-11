@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  confirmed: false
+  study_id: 
+  patient_id: 
+
+two:
+  confirmed: false
+  study_id: 
+  patient_id: 
