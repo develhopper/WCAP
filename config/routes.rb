@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :abusings
+
   resources :abusing_profiles
 
   resources :basic_demographics

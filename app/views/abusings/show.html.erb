@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abusing profile:</strong>
+  <%= @abusing.abusing_profile %>
+</p>
+
+<p>
+  <strong>Drug type:</strong>
+  <%= @abusing.drug_type %>
+</p>
+
+<p>
+  <strong>First use age:</strong>
+  <%= @abusing.first_use_age %>
+</p>
+
+<p>
+  <strong>Continuous usage duration:</strong>
+  <%= @abusing.continuous_usage_duration %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @abusing.count %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @abusing.type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @abusing.description %>
+</p>
+
+<p>
+  <strong>Is mainspring:</strong>
+  <%= @abusing.is_mainspring %>
+</p>
+
+<%= link_to 'Edit', edit_abusing_path(@abusing) %> |
+<%= link_to 'Back', abusings_path %>

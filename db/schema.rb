@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711125224) do
+ActiveRecord::Schema.define(version: 20150711130136) do
 
   create_table "abusing_profiles", force: true do |t|
     t.integer  "cost_per_month"
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 20150711125224) do
   end
 
   add_index "abusing_profiles", ["patient_id"], name: "index_abusing_profiles_on_patient_id"
+
+  create_table "abusings", force: true do |t|
+    t.integer  "abusing_profile_id"
+    t.integer  "drug_type"
+    t.integer  "first_use_age"
+    t.integer  "continuous_usage_duration"
+    t.integer  "count"
+    t.integer  "type"
+    t.text     "description"
+    t.boolean  "is_mainspring"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "abusings", ["abusing_profile_id"], name: "index_abusings_on_abusing_profile_id"
 
   create_table "balloons", force: true do |t|
     t.integer  "pumps"

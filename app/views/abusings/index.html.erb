@@ -1,0 +1,39 @@
+<h1>Listing abusings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abusing profile</th>
+      <th>Drug type</th>
+      <th>First use age</th>
+      <th>Continuous usage duration</th>
+      <th>Count</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Is mainspring</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abusings.each do |abusing| %>
+      <tr>
+        <td><%= abusing.abusing_profile %></td>
+        <td><%= abusing.drug_type %></td>
+        <td><%= abusing.first_use_age %></td>
+        <td><%= abusing.continuous_usage_duration %></td>
+        <td><%= abusing.count %></td>
+        <td><%= abusing.type %></td>
+        <td><%= abusing.description %></td>
+        <td><%= abusing.is_mainspring %></td>
+        <td><%= link_to 'Show', abusing %></td>
+        <td><%= link_to 'Edit', edit_abusing_path(abusing) %></td>
+        <td><%= link_to 'Destroy', abusing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Abusing', new_abusing_path %>

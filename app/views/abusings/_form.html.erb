@@ -1,0 +1,49 @@
+<%= form_for(@abusing) do |f| %>
+  <% if @abusing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@abusing.errors.count, "error") %> prohibited this abusing from being saved:</h2>
+
+      <ul>
+      <% @abusing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abusing_profile_id %><br>
+    <%= f.text_field :abusing_profile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :drug_type %><br>
+    <%= f.number_field :drug_type %>
+  </div>
+  <div class="field">
+    <%= f.label :first_use_age %><br>
+    <%= f.number_field :first_use_age %>
+  </div>
+  <div class="field">
+    <%= f.label :continuous_usage_duration %><br>
+    <%= f.number_field :continuous_usage_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :count %><br>
+    <%= f.number_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :is_mainspring %><br>
+    <%= f.check_box :is_mainspring %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
