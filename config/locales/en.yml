@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+  show: Show
+  edit: Edit
+  destroy: Destroy
+  user: User
+  profiles_list: "Profiles List"
