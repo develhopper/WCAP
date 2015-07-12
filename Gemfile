@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,4 +45,4 @@ gem 'devise'
 
 gem 'active_record-acts_as'
 
-gem 'pg'
+#gem 'pg'
