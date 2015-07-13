@@ -45,4 +45,7 @@ gem 'devise'
 
 gem 'active_record-acts_as'
 
-gem 'pg'
+
+group :production do  
+  gem 'pg'
+end  
