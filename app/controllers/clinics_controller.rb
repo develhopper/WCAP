@@ -1,5 +1,6 @@
 class ClinicsController < ApplicationController
   before_action :set_clinic, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   respond_to :html
 
