@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
+  <strong><%= t 'first_name'%>:</strong>
   <%= @profile.first_name %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
+  <strong><%= t 'last_name'%>:</strong>
   <%= @profile.last_name %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong><%= t 'user'%></strong>
   <%= @profile.user %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to (t 'edit'), edit_profile_path(@profile) %> |
+<%= link_to (t 'back'), profiles_path %>

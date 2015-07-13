@@ -1,4 +1,5 @@
 
+
 <header id="header" class="site-header">
   <nav id="topbar" class="site-topbar visible-lg visible-md">
     <div class="container">
@@ -9,6 +10,11 @@
 			    <a href="#"><i class="fa fa-twitter"></i></a>
 			    <a href="#"><i class="fa fa-google-plus"></i></a>
 			    <a href="#"><i class="fa fa-pinterest"></i></a>
+          <%if request.fullpath == url_for( :locale => 'en' )%>
+            <%=link_to 'Persian', url_for( :locale => 'fa' )%>
+          <%else%>
+            <%=link_to 'English', url_for( :locale => 'en' )%>
+          <%end%>
 			  </div>
       </div>
     </div>
@@ -25,7 +31,7 @@
 		  </div>
       <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul id="navigation" class="nav navbar-nav navbar-right">
-			    <li class="active"><a href="#header" class="current">خانه </a></li>
+			    <li class="active"><a href="#header" class="current"><%= t 'home'%></a></li>
 			    <li><a href="#features">ویژگی ها</a></li>
 			    <li><a href="#portfolio">نمونه کارها</a></li>
 			    <li><a href="#testimonials">نظر مشتریان</a></li>
