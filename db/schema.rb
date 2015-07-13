@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150712141143) do
 
-  create_table "DdtQuestions_studies", id: false, force: true do |t|
+  create_table "Ddt_Questions_studies", id: false, force: true do |t|
     t.integer "ddt_question_id", null: false
     t.integer "study_id",        null: false
   end
@@ -256,10 +256,10 @@ ActiveRecord::Schema.define(version: 20150712141143) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "study_id"
+    t.integer  "current_study_id"
     t.boolean  "admin"
     t.boolean  "supervisor"
-    t.integer  "task_id"
+    t.integer  "current_task_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
