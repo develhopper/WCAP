@@ -192,10 +192,15 @@ fa:
       short: "%e %B، ساعت %H:%M"
     pm: بعد از ظهر
 
+
+
+
   show: نمایش
   edit: ویرایش
   destroy: حذف
-  user: کاربر
-  listing: نمایش
-  profile: پروفایل
-  profiles_list: "لیست پروفایل‌ها"
+  back: بازگشت
+
+#navigation bar
+  home: خانه
+  
+  

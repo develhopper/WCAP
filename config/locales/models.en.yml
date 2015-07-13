@@ -1,0 +1,38 @@
+#This file contains the translation of model names, attribute names, and assignable_value labels
+---
+en:
+
+#users
+  user: "User"
+#abusing_profiles
+
+#abusings
+
+#barts
+
+#basic_demographics
+
+#clinics
+
+#ddt_questions
+
+#ddt
+
+#gonogos
+
+#patients
+
+#profiles
+  first_name: "First Name"
+  last_name: "Last Name"
+  
+
+#stroops
+
+#studies
+
+#tasks
+
+#treatment_histories
+
+#treatment_histories

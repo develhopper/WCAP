@@ -21,6 +21,7 @@ module WCAP
     config.i18n.default_locale = :fa
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end
 

@@ -20,10 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-
   show: Show
   edit: Edit
   destroy: Destroy
-  user: User
-  profiles_list: "Profiles List"
+  home: Home
+  
