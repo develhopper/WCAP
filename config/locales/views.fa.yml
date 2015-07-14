@@ -23,8 +23,9 @@ fa:
 #patients
 
 #profiles
-  profiles_list: "لیست حساب‌های کاربری"	  
-  new_profile: "ایجاد حساب کاربری جدید"
+  profiles_list: "لیست پروفایلهای کاربری"	  
+  new_profile: "ایجاد پروفایل"
+  edit_profile: "ویرایش پروفایل"
 #stroops
 
 #studies

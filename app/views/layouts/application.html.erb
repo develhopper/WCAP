@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +14,10 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<div id="page">
+<div id="page" >
 	<%= render :partial => 'layouts/navbar'%>
 	<main id="main" class="site-main">
+   <script> setDirection(); </script>
 		<%= yield %>
 	</main>
 	<%= render :partial => 'layouts/footer'%>
