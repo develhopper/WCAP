@@ -6,6 +6,9 @@ en:
   user: User
 
 #abusing_profiles
+  cost_per_month: How much approximately was the patient's total value of drugs(narcotics and stimulants)? (Dollars per Month)
+  overdose_count: How many times due to overdose has been admitted to the hospital or clinic?
+  freakout_count: 'How many times due to severe aggression, delusions, or hallucinations has been admitted to hospital or medical center?'
 
 #abusings
   abusing_profile: Abusing Profile
@@ -15,7 +18,7 @@ en:
   count: Number of Days of Usage (in Last 30 Days)
   type: Method of Usage (in Last 30 Days)
   description: Descriptions 
-  is_mainspring: Is This the Main Problem and Motivation to Seek Treatment?
+  is_mainspring: Is this the main problem and motivation to Seek treatment?
 
 #barts
 

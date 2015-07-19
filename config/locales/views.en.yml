@@ -5,6 +5,9 @@ en:
 #users
 
 #abusing_profiles
+  abusing_profiles_list: Drug Abuse Profiles List
+  new_abusing_profile: New Drug Abuse Profile
+  edit_abusing_profile: Edit Drug Abuse Profile
 
 #abusings
   abusings_list: Abusings List	  
@@ -14,7 +17,7 @@ en:
 #barts
 
 #basic_demographics
-  basic_demographics_list: Basic Demographics' List
+  basic_demographics_list: Basic Demographics List
   new_basic_demographic: New Basic Demographics
   edit_basic_demographic: Edit Basic Demographics
 

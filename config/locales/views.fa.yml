@@ -5,6 +5,9 @@ fa:
 #users
 
 #abusing_profiles
+  abusing_profiles_list: لیست نیم‌رخ‌های سوءمصرف‌های مواد	  
+  new_abusing_profile: ایجاد نیم‌رخ سوءمصرف جدید
+  edit_abusing_profile: ویرایش نیم‌رخ سوءمصرف
 
 #abusings
   abusings_list: لیست سوءمصرف‌های مواد	  
