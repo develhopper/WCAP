@@ -1,44 +1,44 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Abusing profile:</strong>
+  <strong><%= t 'abusing_profile'%>:</strong>
   <%= @abusing.abusing_profile %>
 </p>
 
 <p>
-  <strong>Drug type:</strong>
+  <strong><%= t 'drug_type'%>:</strong>
   <%= @abusing.drug_type %>
 </p>
 
 <p>
-  <strong>First use age:</strong>
+  <strong><%= t 'first_use_age'%>:</strong>
   <%= @abusing.first_use_age %>
 </p>
 
 <p>
-  <strong>Continuous usage duration:</strong>
+  <strong><%= t 'continuous_usage_duration'%>:</strong>
   <%= @abusing.continuous_usage_duration %>
 </p>
 
 <p>
-  <strong>Count:</strong>
+  <strong><%= t 'count'%>:</strong>
   <%= @abusing.count %>
 </p>
 
 <p>
-  <strong>Type:</strong>
+  <strong><%= t 'type'%>:</strong>
   <%= @abusing.type %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t 'description'%>:</strong>
   <%= @abusing.description %>
 </p>
 
 <p>
-  <strong>Is mainspring:</strong>
+  <strong><%= t 'is_mainspring'%>:</strong>
   <%= @abusing.is_mainspring %>
 </p>
 
-<%= link_to 'Edit', edit_abusing_path(@abusing) %> |
-<%= link_to 'Back', abusings_path %>
+<%= link_to (t 'edit'), edit_abusing_path(@abusing) %> |
+<%= link_to (t 'back'), abusings_path %>

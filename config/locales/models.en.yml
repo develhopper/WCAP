@@ -4,9 +4,18 @@ en:
 
 #users
   user: User
+
 #abusing_profiles
 
 #abusings
+  abusing_profile: Abusing Profile
+  drug_type: Type of Drug
+  first_use_age: Age of the First Use
+  continuous_usage_duration: Number of Years of Continuous Usage
+  count: Number of Days of Usage (in Last 30 Days)
+  type: Method of Usage (in Last 30 Days)
+  description: Descriptions 
+  is_mainspring: Is This the Main Problem and Motivation to Seek Treatment?
 
 #barts
 
