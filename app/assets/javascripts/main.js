@@ -10,10 +10,10 @@ function setDirection() {
     }
   } 
   if (locale == "fa"){
-    document.getElementById("main").className += " right-to-left";
+    document.getElementById("page").className += " right-to-left";
   }
   else{
-    document.getElementById("main").className += " left-to-right";
+    document.getElementById("page").className += " left-to-right";
   }
 }
 

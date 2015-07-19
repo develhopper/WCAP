@@ -21,7 +21,10 @@ en:
 #gonogos
 
 #patients
-
+  patients_list: "Patients List"	  
+  new_patient: "New Patient"
+  edit_patient: "Edit Patient"
+  
 #profiles
   profiles_list: "Profiles List"	  
   new_profile: "New Profile"

@@ -21,11 +21,14 @@ fa:
 #gonogos
 
 #patients
-
+  patients_list: لیست پروفایلهای کاربری	  
+  new_patient: ایجاد آزمودنی
+  edit_patient: ویرایش اطلاعات آزمودنی
+  
 #profiles
-  profiles_list: "لیست پروفایلهای کاربری"	  
-  new_profile: "ایجاد پروفایل"
-  edit_profile: "ویرایش پروفایل"
+  profiles_list: لیست پروفایلهای کاربری	  
+  new_profile: ایجاد پروفایل
+  edit_profile: ویرایش پروفایل
 #stroops
 
 #studies
