@@ -3,7 +3,7 @@
 en:
 
 #users
-  user: "User"
+  user: User
 #abusing_profiles
 
 #abusings
@@ -11,6 +11,13 @@ en:
 #barts
 
 #basic_demographics
+  file_number: File Number
+  private_code: Private Code
+  gender: Gender
+  year_of_birth: Year of Birth
+  interview_date: Interview Date
+  marital_status: Marital Status
+  educational_year: Education in Years
 
 #clinics
 
@@ -21,12 +28,14 @@ en:
 #gonogos
 
 #patients
+  patient: Patient
+  first_name: First Name
+  last_name: Last Name
 
 #profiles
-  first_name: "First Name"
-  last_name: "Last Name"
+  first_name: First Name
+  last_name: Last Name
   
-
 #stroops
 
 #studies

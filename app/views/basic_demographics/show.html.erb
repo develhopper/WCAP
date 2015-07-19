@@ -1,44 +1,44 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Patient:</strong>
+  <strong><%= t 'patient'%>:</strong>
   <%= @basic_demographic.patient %>
 </p>
 
 <p>
-  <strong>File number:</strong>
+  <strong><%= t 'file_number'%>:</strong>
   <%= @basic_demographic.file_number %>
 </p>
 
 <p>
-  <strong>Private code:</strong>
+  <strong><%= t 'private_code'%>:</strong>
   <%= @basic_demographic.private_code %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong><%= t 'gender'%>:</strong>
   <%= @basic_demographic.gender %>
 </p>
 
 <p>
-  <strong>Year of birth:</strong>
+  <strong><%= t 'year_of_birth'%>:</strong>
   <%= @basic_demographic.year_of_birth %>
 </p>
 
 <p>
-  <strong>Interview date:</strong>
+  <strong><%= t 'interview_date'%>:</strong>
   <%= @basic_demographic.interview_date %>
 </p>
 
 <p>
-  <strong>Marital status:</strong>
+  <strong><%= t 'marital_status'%>:</strong>
   <%= @basic_demographic.marital_status %>
 </p>
 
 <p>
-  <strong>Educational year:</strong>
+  <strong><%= t 'educational_year'%>:</strong>
   <%= @basic_demographic.educational_year %>
 </p>
 
-<%= link_to 'Edit', edit_basic_demographic_path(@basic_demographic) %> |
-<%= link_to 'Back', basic_demographics_path %>
+<%= link_to (t 'edit'), edit_basic_demographic_path(@basic_demographic) %> |
+<%= link_to (t 'back'), basic_demographics_path %>

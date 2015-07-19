@@ -11,6 +11,9 @@ en:
 #barts
 
 #basic_demographics
+  basic_demographics_list: Basic Demographics' List
+  new_basic_demographic: New Basic Demographics
+  edit_basic_demographic: Edit Basic Demographics
 
 #clinics
 
@@ -21,14 +24,14 @@ en:
 #gonogos
 
 #patients
-  patients_list: "Patients List"	  
-  new_patient: "New Patient"
-  edit_patient: "Edit Patient"
-  
+  patients_list: Patients List	  
+  new_patient: New Patient
+  edit_patient: Edit Patient
+
 #profiles
-  profiles_list: "Profiles List"	  
-  new_profile: "New Profile"
-  edit_profile: "Edit Profile"
+  profiles_list: Profiles List
+  new_profile: New Profile
+  edit_profile: Edit Profile
 #stroops
 
 #studies

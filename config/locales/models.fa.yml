@@ -3,7 +3,7 @@
 fa:
 
 #users
-  user: "کاربر"
+  user: کاربر
 #abusing_profiles
 
 #abusings
@@ -11,6 +11,13 @@ fa:
 #barts
 
 #basic_demographics
+  file_number: شماره‌ی پرونده‌ی مراجع (کد بیمار، ماه و سال)
+  private_code: کد اختصاصی ۱۰ رقمی
+  gender: جنسیت
+  year_of_birth: سال تولد
+  interview_date: تاریخ مصاحبه
+  marital_status: وضعیت تاهل در حال حاضر
+  educational_year: میزان تحصیلات به سال (برای مثال لیسانس معادل ۱۶ سال است.)
 
 #clinics
 
@@ -21,10 +28,13 @@ fa:
 #gonogos
 
 #patients
+  patient: آزمودنی
+  first_name: نام
+  last_name: نام خانوادگی
 
 #profiles
-  first_name: "نام"
-  last_name: "نام خانوادگی"
+  first_name: نام
+  last_name: نام خانوادگی
   
 #stroops
 

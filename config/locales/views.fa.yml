@@ -11,6 +11,9 @@ fa:
 #barts
 
 #basic_demographics
+  basic_demographics_list: اطلاعات پایه‌ی دموگرافیک آزمودنی
+  new_basic_demographic: ایجاد اطلاعات پایه‌ی دموگرافیک
+  edit_basic_demographic: ویرایش اطلاعات پایه‌ی دموگرافیک
 
 #clinics
 
