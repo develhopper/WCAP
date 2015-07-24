@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= t 'gender' %><br>
-    <%= f.number_field :gender %>
+    <%= f.select :gender, options_for_select(BasicDemographic.genders.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @basic_demographic.gender), {}  %>
   </div>
   <div class="field">
     <%= t 'year_of_birth' %><br>
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= t 'marital_status' %><br>
-    <%= f.number_field :marital_status %>
+    <%= f.select :marital_status, options_for_select(BasicDemographic.marital_statuses.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @basic_demographic.marital_status), {}  %>
   </div>
   <div class="field">
     <%= t 'educational_year' %><br>

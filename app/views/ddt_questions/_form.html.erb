@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :question_type %><br>
-    <%= f.number_field :question_type %>
+    <%= f.select :question_type, options_for_select(DdtQuestion.question_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @ddt_question.question_type), {}  %>
   </div>
   <div class="actions">
     <%= f.submit %>

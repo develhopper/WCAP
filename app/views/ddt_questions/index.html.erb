@@ -17,7 +17,7 @@
         <td><%= ddt_question.definite_value %></td>
         <td><%= ddt_question.indefinite_value %></td>
         <td><%= ddt_question.risk_rate %></td>
-        <td><%= ddt_question.question_type %></td>
+        <td><%= t ddt_question.question_type %></td>
         <td><%= link_to 'Show', ddt_question %></td>
         <td><%= link_to 'Edit', edit_ddt_question_path(ddt_question) %></td>
         <td><%= link_to 'Destroy', ddt_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>

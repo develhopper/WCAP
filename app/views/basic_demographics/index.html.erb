@@ -21,10 +21,10 @@
         <td><%= basic_demographic.patient %></td>
         <td><%= basic_demographic.file_number %></td>
         <td><%= basic_demographic.private_code %></td>
-        <td><%= basic_demographic.gender %></td>
+        <td><%= t basic_demographic.gender %></td>
         <td><%= basic_demographic.year_of_birth %></td>
         <td><%= basic_demographic.interview_date %></td>
-        <td><%= basic_demographic.marital_status %></td>
+        <td><%= t basic_demographic.marital_status  %></td>
         <td><%= basic_demographic.educational_year %></td>
         <td><%= link_to (t 'show'), basic_demographic %></td>
         <td><%= link_to (t 'edit'), edit_basic_demographic_path(basic_demographic) %></td>
