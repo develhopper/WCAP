@@ -7,14 +7,41 @@ en:
 #abusing_profiles
 
 #abusings
+	opium: opium
+	heroin: heroin
+	crack: crack
+	norgesic: norgesic
+  Buprenorphine:	Buprenorphine
+	other_opiums:	other_opiums
+	methamphetamine: methamphetamine
+	ecstasy:	ecstasy
+	cocaine:	cocaine
+	hallucinogens:	hallucinogens
+	hashish:	hashish
+	sedative: sedative
+	alcohol:	alcohol
+	cigarette:	cigarette
+	other_materials: other_materials
 
+	nasal: nasal
+	fumigation: fumigation
+	orally: orally
+	non_intravenous_injection: "non intravenous injection"
+	intravenous_injection: "intravenous injection"
 #barts
 
 #basic_demographics
+ single: "single"
+ married: "married"
+ separated: "separated"
+ divorced: "divorced"
+ widowed: "widowed"
 
 #clinics
 
 #ddt_questions
+  deterministic: "deterministic"
+  probabilistic: "probabilistic"
 
 #ddt
 
@@ -36,3 +63,9 @@ en:
 #treatment_histories
 
 #treatment_histories
+
+#test
+  #execution_schedule<enum>
+  before_stimulation: "Before stimulation"
+  after_stimulation: "After stimulation"
+  during_stimulation: "During stimulation"

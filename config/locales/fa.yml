@@ -202,5 +202,8 @@ fa:
 
 #navigation bar
   home: خانه
-  
-  
+
+
+#enums
+  male: مرد
+  female: زن

@@ -7,14 +7,41 @@ fa:
 #abusing_profiles
 
 #abusings
+opium: opium
+heroin: هرویین
+crack: کراک
+norgesic: نورجزیک
+Buprenorphine:	تمجیزک
+other_opiums:	"سایر مواد افیونی"
+methamphetamine: "مت آمفتامین شیشه"
+ecstasy:	اکستازی
+cocaine:	کوکائین
+hallucinogens:	"توهم‌زا‌ها"
+hashish:	حشیش
+sedative: "آرام بخش‌ها"
+alcohol:	"مواد الکلی"
+cigarette:	سیگار
+other_materials: "سایر ترکیبات"
+
+nasal: مشامی
+fumigation: دودی
+orally: خوراکی
+non_intravenous_injection: "تزریق غیر وریدی"
+intravenous_injection: "تزریق وریدی"
 
 #barts
 
 #basic_demographics
-
+ single: "مجرد"
+ married: "متاهل"
+ separated: "متارکه"
+ divorced: "طلاق"
+ widowed: "بیوه"
 #clinics
 
 #ddt_questions
+  deterministic: "قطعی"
+  probabilistic: "غیر قطعی"
 
 #ddt
 
@@ -35,3 +62,9 @@ fa:
 #treatment_histories
 
 #treatment_histories
+
+#test
+  #execution_schedule<enum>
+  before_stimulation: "قبل از تحریک"
+  after_stimulation: "بعد از تحریک"
+  during_stimulation: "در حین تحریک"

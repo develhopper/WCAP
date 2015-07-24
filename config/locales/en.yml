@@ -228,4 +228,7 @@ en:
   edit: Edit
   destroy: Destroy
   home: Home
-  
+
+#enums
+  male: male
+  female: female
