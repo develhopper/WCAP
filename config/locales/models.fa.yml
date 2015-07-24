@@ -3,40 +3,60 @@
 fa:
 
 #users
-  user: "کاربر"
+  user: کاربر
+
 #abusing_profiles
+  cost_per_month: در ماه گذشته مجموعا ارزش مصرف مواد (مخدر و محرک) بیمار به طور تقریبی چقدر بوده‌است؟ (تومان در ماه)
+  overdose_count: تاکنون چند بار به علت بیش‌مصرف مواد (overdose) به بیمارستان یا مرکز درمانی مراجعه کرده‌است؟
+  freakout_count: تاکنون چند بار به علت پرخاش‌گری شدید یا بروز هذیان یا توهم به بیمارستان یا مرکز درمانی مراجعه کرده‌است؟
 
 #abusings
-opium: opium
-heroin: هرویین
-crack: کراک
-norgesic: نورجزیک
-Buprenorphine:	تمجیزک
-other_opiums:	"سایر مواد افیونی"
-methamphetamine: "مت آمفتامین شیشه"
-ecstasy:	اکستازی
-cocaine:	کوکائین
-hallucinogens:	"توهم‌زا‌ها"
-hashish:	حشیش
-sedative: "آرام بخش‌ها"
-alcohol:	"مواد الکلی"
-cigarette:	سیگار
-other_materials: "سایر ترکیبات"
+  abusing_profile: نیم‌رخ سوءمصرف مواد
+  drug_type: نوع ماده
+  first_use_age: اولین باری که از این ماده استفاده‌ کرده‌است چند ساله بوده‌است؟ (سن شروع)
+  continuous_usage_duration: مجموعا چند سال مصرف مداوم این ماده را داشته‌است؟ (وابستگی)
+  count: تعداد روزهای استفاده (در ۳۰ روز گذشته)
+  type: روش غالب مصرف (در ۳۰ روز گذشته)
+  description: توضیحات
+  is_mainspring: آیا این ماده‌ی اصلی و مشکل‌ساز و انگیزه‌ی مراجعه برای درمان بوده‌است؟
+	opium: opium
+	heroin: هرویین
+	crack: کراک
+	norgesic: نورجزیک
+	Buprenorphine:	تمجیزک
+	other_opiums:	"سایر مواد افیونی"
+	methamphetamine: "مت آمفتامین شیشه"
+	ecstasy:	اکستازی
+	cocaine:	کوکائین
+	hallucinogens:	"توهم‌زا‌ها"
+	hashish:	حشیش
+	sedative: "آرام بخش‌ها"
+	alcohol:	"مواد الکلی"
+	cigarette:	سیگار
+	other_materials: "سایر ترکیبات"
 
-nasal: مشامی
-fumigation: دودی
-orally: خوراکی
-non_intravenous_injection: "تزریق غیر وریدی"
-intravenous_injection: "تزریق وریدی"
+	nasal: مشامی
+	fumigation: دودی
+	orally: خوراکی
+	non_intravenous_injection: "تزریق غیر وریدی"
+	intravenous_injection: "تزریق وریدی"
 
 #barts
 
 #basic_demographics
- single: "مجرد"
- married: "متاهل"
- separated: "متارکه"
- divorced: "طلاق"
- widowed: "بیوه"
+  file_number: شماره‌ی پرونده‌ی مراجع (کد بیمار، ماه و سال)
+  private_code: کد اختصاصی ۱۰ رقمی
+  gender: جنسیت
+  year_of_birth: سال تولد
+  interview_date: تاریخ مصاحبه
+  marital_status: وضعیت تاهل در حال حاضر
+  educational_year: میزان تحصیلات به سال (برای مثال لیسانس معادل ۱۶ سال است.)
+	single: "مجرد"
+	married: "متاهل"
+	separated: "متارکه"
+	divorced: "طلاق"
+	widowed: "بیوه"
+
 #clinics
 
 #ddt_questions
@@ -48,10 +68,13 @@ intravenous_injection: "تزریق وریدی"
 #gonogos
 
 #patients
+  patient: آزمودنی
+  first_name: نام
+  last_name: نام خانوادگی
 
 #profiles
-  first_name: "نام"
-  last_name: "نام خانوادگی"
+  first_name: نام
+  last_name: نام خانوادگی
   
 #stroops
 

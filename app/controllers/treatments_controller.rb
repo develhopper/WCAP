@@ -1,6 +1,7 @@
 class TreatmentsController < ApplicationController
   before_action :set_treatment, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  
   respond_to :html
 
   def index

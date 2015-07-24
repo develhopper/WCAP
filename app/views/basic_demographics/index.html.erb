@@ -1,16 +1,16 @@
-<h1>Listing basic_demographics</h1>
+<h1><%= t 'basic_demographics_list'%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Patient</th>
-      <th>File number</th>
-      <th>Private code</th>
-      <th>Gender</th>
-      <th>Year of birth</th>
-      <th>Interview date</th>
-      <th>Marital status</th>
-      <th>Educational year</th>
+      <th><%= t 'patient'%></th>
+      <th><%= t 'file_number'%></th>
+      <th><%= t 'private_code'%></th>
+      <th><%= t 'gender'%></th>
+      <th><%= t 'year_of_birth'%></th>
+      <th><%= t 'interview_date'%></th>
+      <th><%= t 'marital_status'%></th>
+      <th><%= t 'educational_year'%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,9 @@
         <td><%= basic_demographic.interview_date %></td>
         <td><%= basic_demographic.marital_status %></td>
         <td><%= basic_demographic.educational_year %></td>
-        <td><%= link_to 'Show', basic_demographic %></td>
-        <td><%= link_to 'Edit', edit_basic_demographic_path(basic_demographic) %></td>
-        <td><%= link_to 'Destroy', basic_demographic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (t 'show'), basic_demographic %></td>
+        <td><%= link_to (t 'edit'), edit_basic_demographic_path(basic_demographic) %></td>
+        <td><%= link_to (t 'destroy'), basic_demographic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Basic demographic', new_basic_demographic_path %>
+<%= link_to (t 'new_basic_demographic'), new_basic_demographic_path %>

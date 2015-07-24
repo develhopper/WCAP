@@ -1,6 +1,7 @@
 class DdtsController < ApplicationController
   before_action :set_ddt, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  
   respond_to :html
 
   def index

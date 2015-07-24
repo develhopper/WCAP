@@ -1,12 +1,11 @@
-<h1>Listing abusing_profiles</h1>
-
+<h1><%= t 'abusing_profiles_list'%></h1>
 <table>
   <thead>
     <tr>
-      <th>Cost per month</th>
-      <th>Overdose count</th>
-      <th>Freakout count</th>
-      <th>Patient</th>
+      <th><%= t 'cost_per_month'%></th>
+      <th><%= t 'overdose_count'%></th>
+      <th><%= t 'freakout_count'%></th>
+      <th><%= t 'patient'%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +17,9 @@
         <td><%= abusing_profile.overdose_count %></td>
         <td><%= abusing_profile.freakout_count %></td>
         <td><%= abusing_profile.patient %></td>
-        <td><%= link_to 'Show', abusing_profile %></td>
-        <td><%= link_to 'Edit', edit_abusing_profile_path(abusing_profile) %></td>
-        <td><%= link_to 'Destroy', abusing_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (t 'show'), abusing_profile %></td>
+        <td><%= link_to (t 'edit'), edit_abusing_profile_path(abusing_profile) %></td>
+        <td><%= link_to (t 'destroy'), abusing_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Abusing profile', new_abusing_profile_path %>
+<%= link_to (t 'new_abusing_profile'), new_abusing_profile_path %>

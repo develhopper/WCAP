@@ -12,7 +12,7 @@
 
 <p>
   <strong><%= t 'user'%></strong>
-  <%= @profile.user %>
+  <%= @profile.user.email %>
 </p>
 
 <%= link_to (t 'edit'), edit_profile_path(@profile) %> |

@@ -194,13 +194,14 @@ fa:
 
 
 
-
+#General in views
   show: نمایش
   edit: ویرایش
   destroy: حذف
   back: بازگشت
+  submit: ثبت اطلاعات
 
-#navigation bar
+#Navigation Bar
   home: خانه
 
 

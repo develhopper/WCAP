@@ -1,6 +1,7 @@
 class TreatmentHistoriesController < ApplicationController
   before_action :set_treatment_history, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  
   respond_to :html
 
   def index

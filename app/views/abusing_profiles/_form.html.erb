@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :cost_per_month %><br>
+    <%= t 'cost_per_month' %><br>
     <%= f.number_field :cost_per_month %>
   </div>
   <div class="field">
-    <%= f.label :overdose_count %><br>
+    <%= t 'overdose_count' %><br>
     <%= f.number_field :overdose_count %>
   </div>
   <div class="field">
-    <%= f.label :freakout_count %><br>
+    <%= t 'freakout_count' %><br>
     <%= f.number_field :freakout_count %>
   </div>
   <div class="field">
-    <%= f.label :patient_id %><br>
+    <%= t 'patient' %><br>
     <%= f.text_field :patient_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit (t 'submit', :default => "Submit")%>
   </div>
 <% end %>

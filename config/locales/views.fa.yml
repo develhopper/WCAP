@@ -5,12 +5,20 @@ fa:
 #users
 
 #abusing_profiles
+  abusing_profiles_list: لیست نیم‌رخ‌های سوءمصرف‌های مواد	  
+  new_abusing_profile: ایجاد نیم‌رخ سوءمصرف جدید
+  edit_abusing_profile: ویرایش نیم‌رخ سوءمصرف
 
 #abusings
-
+  abusings_list: لیست سوءمصرف‌های مواد	  
+  new_abusing: ایجاد سوءمصرف جدید
+  edit_abusing: ویرایش سوءمصرف
 #barts
 
 #basic_demographics
+  basic_demographics_list: اطلاعات پایه‌ی دموگرافیک آزمودنی
+  new_basic_demographic: ایجاد اطلاعات پایه‌ی دموگرافیک
+  edit_basic_demographic: ویرایش اطلاعات پایه‌ی دموگرافیک
 
 #clinics
 
@@ -21,10 +29,14 @@ fa:
 #gonogos
 
 #patients
-
+  patients_list: لیست پروفایلهای کاربری	  
+  new_patient: ایجاد آزمودنی
+  edit_patient: ویرایش اطلاعات آزمودنی
+  
 #profiles
-  profiles_list: "لیست حساب‌های کاربری"	  
-  new_profile: "ایجاد حساب کاربری جدید"
+  profiles_list: لیست پروفایلهای کاربری	  
+  new_profile: ایجاد پروفایل
+  edit_profile: ویرایش پروفایل
 #stroops
 
 #studies

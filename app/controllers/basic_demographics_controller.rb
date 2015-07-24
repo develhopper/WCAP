@@ -1,5 +1,6 @@
 class BasicDemographicsController < ApplicationController
   before_action :set_basic_demographic, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!  
 
   respond_to :html
 

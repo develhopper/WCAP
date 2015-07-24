@@ -1,3 +1,23 @@
+
+function setDirection() {
+  var locale = "fa";
+  var params = window.location.search.substring(1);
+  var vars = params.split("?");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == "locale") {
+      locale = pair[1];
+    }
+  } 
+  if (locale == "fa"){
+    document.getElementById("page").className += " right-to-left";
+  }
+  else{
+    document.getElementById("page").className += " left-to-right";
+  }
+}
+
+
 (function($) {
   "use strict";
   // Add "loaded" class when a section has been loaded
