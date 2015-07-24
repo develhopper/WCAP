@@ -19,11 +19,11 @@
     <% @abusings.each do |abusing| %>
       <tr>
         <td><%= abusing.abusing_profile %></td>
-        <td><%= abusing.drug_type %></td>
+        <td><%= I18n.t(abusing.drug_type) %></td>
         <td><%= abusing.first_use_age %></td>
         <td><%= abusing.continuous_usage_duration %></td>
         <td><%= abusing.count %></td>
-        <td><%= abusing.type %></td>
+        <td><%= I18n.t(abusing.abusing_type) %></td>
         <td><%= abusing.description %></td>
         <td><%= abusing.is_mainspring %></td>
         <td><%= link_to (t 'show'), abusing %></td>

@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= t 'drug_type' %><br>
-    <%= f.number_field :drug_type %>
+    <%= f.select :drug_type, options_for_select(Abusing.drug_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @abusing.drug_type), {}  %>
+
   </div>
   <div class="field">
     <%= t 'first_use_age' %><br>
@@ -33,7 +34,7 @@
   </div>
   <div class="field">
     <%= t 'type' %><br>
-    <%= f.number_field :type %>
+    <%= f.select :abusing_type, options_for_select(Abusing.abusing_types.collect { |p| [I18n.t(p[0]), p[0]] }, selected: @abusing.abusing_type), {}  %>
   </div>
   <div class="field">
     <%= t 'description' %><br>

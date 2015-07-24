@@ -19,27 +19,28 @@ fa:
   type: روش غالب مصرف (در ۳۰ روز گذشته)
   description: توضیحات
   is_mainspring: آیا این ماده‌ی اصلی و مشکل‌ساز و انگیزه‌ی مراجعه برای درمان بوده‌است؟
-	opium: opium
-	heroin: هرویین
-	crack: کراک
-	norgesic: نورجزیک
-	Buprenorphine:	تمجیزک
-	other_opiums:	"سایر مواد افیونی"
-	methamphetamine: "مت آمفتامین شیشه"
-	ecstasy:	اکستازی
-	cocaine:	کوکائین
-	hallucinogens:	"توهم‌زا‌ها"
-	hashish:	حشیش
-	sedative: "آرام بخش‌ها"
-	alcohol:	"مواد الکلی"
-	cigarette:	سیگار
-	other_materials: "سایر ترکیبات"
+  
+  opium: تریاک
+  heroin: هرویین
+  crack: کراک
+  norgesic: نورجزیک
+  buprenorphine:  تمجیزک
+  other_opiums:  "سایر مواد افیونی"
+  methamphetamine: "مت آمفتامین شیشه"
+  ecstasy:  اکستازی
+  cocaine:  کوکائین
+  hallucinogens:  "توهم‌زا‌ها"
+  hashish:  حشیش
+  sedative: "آرام بخش‌ها"
+  alcohol:  "مواد الکلی"
+  cigarette:  سیگار
+  other_materials: "سایر ترکیبات"
 
-	nasal: مشامی
-	fumigation: دودی
-	orally: خوراکی
-	non_intravenous_injection: "تزریق غیر وریدی"
-	intravenous_injection: "تزریق وریدی"
+  nasal: مشامی
+  fumigation: دودی
+  orally: خوراکی
+  non_intravenous_injection: "تزریق غیر وریدی"
+  intravenous_injection: "تزریق وریدی"
 
 #barts
 
@@ -51,11 +52,11 @@ fa:
   interview_date: تاریخ مصاحبه
   marital_status: وضعیت تاهل در حال حاضر
   educational_year: میزان تحصیلات به سال (برای مثال لیسانس معادل ۱۶ سال است.)
-	single: "مجرد"
-	married: "متاهل"
-	separated: "متارکه"
-	divorced: "طلاق"
-	widowed: "بیوه"
+  single: "مجرد"
+  married: "متاهل"
+  separated: "متارکه"
+  divorced: "طلاق"
+  widowed: "بیوه"
 
 #clinics
 
@@ -75,7 +76,7 @@ fa:
 #profiles
   first_name: نام
   last_name: نام خانوادگی
-  
+
 #stroops
 
 #studies

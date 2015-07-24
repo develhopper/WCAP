@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150712141143) do
     t.integer  "first_use_age"
     t.integer  "continuous_usage_duration"
     t.integer  "count"
-    t.integer  "type"
+    t.integer  "abusing_type"
     t.text     "description"
     t.boolean  "is_mainspring"
     t.datetime "created_at"

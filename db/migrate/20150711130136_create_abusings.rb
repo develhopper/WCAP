@@ -6,7 +6,7 @@ class CreateAbusings < ActiveRecord::Migration
       t.integer :first_use_age
       t.integer :continuous_usage_duration
       t.integer :count
-      t.integer :type
+      t.integer :abusing_type
       t.text :description
       t.boolean :is_mainspring
 
