@@ -48,3 +48,7 @@ en:
 
 #treatment_histories
   
+
+#nav_bar
+  nav_bar_text: You can find this text in views.en.yml
+  exit: exit

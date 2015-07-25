@@ -47,3 +47,6 @@ fa:
 
 #treatment_histories
   
+#nav_bar
+  nav_bar_text: شما می‌توانید این نوشته را در فایل views.fa.yml پیدا کنید.
+  exit: خروج

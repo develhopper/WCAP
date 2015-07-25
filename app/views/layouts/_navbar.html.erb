@@ -4,12 +4,18 @@
   <nav id="topbar" class="site-topbar visible-lg visible-md">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">سوالی دارید ؟؟ با شماره من تماس بگیرید : 09300000000</div>
+        <div class="col-sm-6">
+          <% if current_user %>
+            <%= current_user.email %>
+          <% else %>
+            <%= t 'nav_bar_text' %>
+          <% end %>  
+        </div>
 	      <div class="social-links col-sm-6">
-			    <a href="#"><i class="fa fa-facebook"></i></a>
+			    <!-- <a href="#"><i class="fa fa-facebook"></i></a>
 			    <a href="#"><i class="fa fa-twitter"></i></a>
 			    <a href="#"><i class="fa fa-google-plus"></i></a>
-			    <a href="#"><i class="fa fa-pinterest"></i></a>
+			    <a href="#"><i class="fa fa-pinterest"></i></a> -->
           <%if request.fullpath == url_for( :locale => 'en' )%>
             <%=link_to 'Persian', url_for( :locale => 'fa' )%>
           <%else%>
@@ -27,17 +33,25 @@
           <span class="sr-only">Toggle navigation</span>
           <i class="fa fa-bars"></i>
         </button>
-        <h1 class="navbar-brand"><i class="fa fa-power-off"></i> <a href="index.html">شروع</a></h1>
+        <% if current_user %>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'exit'), destroy_user_session_url , :method => :delete %></i></h1>
+        <% else %>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_in'), new_user_session_url %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_up'), new_user_registration_url %></i></h1>
+        <% end %>
+
 		  </div>
       <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul id="navigation" class="nav navbar-nav navbar-right">
-			    <li class="active"><a href="#header" class="current"><%= t 'home'%></a></li>
-			    <li><a href="#features">ویژگی ها</a></li>
+          <% unless current_page?(welcome_index_url) %>
+			     <li class="active"><%= link_to (t 'home'), welcome_index_url %></li>
+          <% end %>
+<!-- 			    <li><a href="#features">ویژگی ها</a></li>
 			    <li><a href="#portfolio">نمونه کارها</a></li>
 			    <li><a href="#testimonials">نظر مشتریان</a></li>
 			    <li><a href="#blog">وبلاگ</a></li>
 			    <li><a href="#clients">مشتریان</a></li>
-			    <li><a href="#contact">تماس</a></li>
+			    <li><a href="#contact">تماس</a></li> -->
 			  </ul>
       </div>
     </div>

@@ -11,13 +11,22 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
 
 <div id="page" >
 	<%= render :partial => 'layouts/navbar'%>
 	<main id="main" class="site-main">
    <script> setDirection(); </script>
+   <% if notice %>
+     <div class= "alert-box notice" >
+      <p><%= notice %></p>
+     </div>
+   <% end %>
+   <% if alert %>
+     <div class="alert-box error">
+      <p><%= alert %></p>
+     </div>
+   <% end %>
 		<%= yield %>
 	</main>
 	<%= render :partial => 'layouts/footer'%>
