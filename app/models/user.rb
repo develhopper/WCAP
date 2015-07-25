@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
     Profile.create(user: self) # Associations must be defined correctly for this syntax, avoids using ID's directly.
   end
 
+  def is_supervisor
+    not under_supervision_clinics.empty?
+  end
+
   has_one :profile
   has_many :registrations
   has_many :under_supervision_clinics, :class_name => :Clinic, :foreign_key => "supervisor_id"
