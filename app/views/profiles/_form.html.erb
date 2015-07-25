@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= t 'user' %><br>
-    <%= f.text_field :user_id %>
+    <%= @profile.user.email %>
   </div>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit")%>

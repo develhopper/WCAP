@@ -41,8 +41,10 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'devise-i18n-views'
+gem 'byebug'
 
 
+gem 'cancancan', '~> 1.10'
 
 gem 'active_record-acts_as'
 

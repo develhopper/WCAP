@@ -15,5 +15,8 @@
   <%= @profile.user.email %>
 </p>
 
-<%= link_to (t 'edit'), edit_profile_path(@profile) %> |
+<%= link_to (t 'edit'), edit_profile_path(@profile) %> 
+<% if current_user and current_user.admin %>
+|
 <%= link_to (t 'back'), profiles_path %>
+<% end %>
