@@ -1,0 +1,67 @@
+fa:
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: "دستور‌العمل بازیابی را ارسال کن"
+    mailer:
+      confirmation_instructions:
+        action: "حساب کاربری مرا تعیید کن"
+        greeting: "%{recipient} خوش آمدید."
+        instruction: "شما می‌توانید از طریق لینک زیر ایمیل خود را تایید کنید:"
+      reset_password_instructions:
+        action: "گذرواژه‌ی مرا تغییر بده"
+        greeting: "%{recipient} سلام!"
+        instruction: "یک نفر برای تغییر رمز شما درخواست داده و این کار از طریق لینک زیر قابل انجام است."
+        instruction_2: "اگر شما این درخواست‌ را نداده‌ای لطفا این ایمیل را جدی نگیرید."
+        instruction_3: "پسورد شما تا زمانی که از طریق لینک بالا اقدام به تعویض آن نکنید تغییر نمی‌کند."
+      unlock_instructions:
+        action: "حساب کاربری مرا محددا باز کن"
+        greeting: "%{recipient} سلام!"
+        instruction: "برای فعال‌سازی مجدد حساب کاربری روی لینک زیر کلیک کنید:"
+        message: "حساب کاربری شما به دلیل تعداد زیاد ورود ناموفق بسته شده."
+    passwords:
+      new:
+        forgot_your_password: "رمز خود را فراموش کرده اید ؟"
+        send_me_reset_password_instructions: "برای من دستور‌العمل بازیابی گذرواژه را ارسال کن."
+      edit:
+        change_your_password: "گذرواژه را تغییر بده"
+        new_password: "گذرواژه‌ی جدید"
+        confirm_new_password: "تکرار گذرواژه‌ی جدید"
+        change_my_password: "گذرواژه‌ی مرا تغییر بده"
+    registrations:
+      edit:
+        are_you_sure: "آیا اطمینان دارید"
+        cancel_my_account: "لغو عضویت"
+        leave_blank_if_you_don_t_want_to_change_it: "اگر مایل به تغییر نیستید این فیلد را خالی بگذارید"
+        currently_waiting_confirmation_for_email: "Currently waiting confirmation for: %{email}"
+        title: "ویرایش %{resource}"
+        we_need_your_current_password_to_confirm_your_changes: "ما برای ثبت تغییرات به گذرواژه‌ی فعلی شما نیازمندیم."
+        update: "به روز رسانی"
+        unhappy: "ناراحت"
+      new:
+        sign_up: "ثبت نام"
+    sessions:
+      new:
+        sign_in: "ورود"
+    shared:
+      links:
+        back: "بازگشت"
+        didn_t_receive_confirmation_instructions: "دستور‌العمل تایید را دریافت نکردید؟"
+        didn_t_receive_unlock_instructions: "دستور‌العمل بازگشایی را دریافت نکردید؟"
+        forgot_your_password: "رمز خود را فراموش کرده ای؟"
+        sign_in: "ورود"
+        sign_in_with_provider: "ورود با %{provider}"
+        sign_up: "ثبت نام"
+    unlocks:
+      new:
+        resend_unlock_instructions: "دستور‌العمل بازیابی را ارسال کن"
+  activerecord:
+    models:
+      user: "کاربر"
+    attributes:
+      user:
+        email: "ایمیل"
+        password: "گذرواژه"
+        password_confirmation: "تایید گذرواژه"
+        current_password: "گذرواژه‌ی فعلی"
+        remember_me: "مرا به خاطرت نگهدار."
