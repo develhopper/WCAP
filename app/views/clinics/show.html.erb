@@ -7,7 +7,9 @@
 
 <p>
   <strong>Supervisor:</strong>
-  <%= @clinic.supervisor %>
+  <% if @clinic.supervisor %>
+  	<%= @clinic.supervisor.email %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_clinic_path(@clinic) %> |

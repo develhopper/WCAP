@@ -1,7 +1,8 @@
 class ClinicsController < ApplicationController
   before_action :set_clinic, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-
+  load_and_authorize_resource
+  
   respond_to :html
 
   def index
@@ -15,10 +16,12 @@ class ClinicsController < ApplicationController
 
   def new
     @clinic = Clinic.new
+    @users = User.all
     respond_with(@clinic)
   end
 
   def edit
+    @users = User.all
   end
 
   def create

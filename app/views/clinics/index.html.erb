@@ -13,10 +13,9 @@
     <% @clinics.each do |clinic| %>
       <tr>
         <td><%= clinic.name %></td>
-        <td><%= clinic.supervisor %></td>
+        <td><%= clinic.supervisor ? clinic.supervisor.email : "" %></td>
         <td><%= link_to 'Show', clinic %></td>
         <td><%= link_to 'Edit', edit_clinic_path(clinic) %></td>
-        <td><%= link_to 'Destroy', clinic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +23,6 @@
 
 <br>
 
-<%= link_to 'New Clinic', new_clinic_path %>
+<% if current_user.admin %>
+  <%= link_to 'New Clinic', new_clinic_path %>
+<% end %>
