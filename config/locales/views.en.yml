@@ -23,6 +23,9 @@ en:
 
 #clinics
   clinics: Clinics
+  clinics_list: Clinics List    
+  new_clinic: New Clinic
+  edit_clinic: Edit Clinic
 
 #ddt_questions
 

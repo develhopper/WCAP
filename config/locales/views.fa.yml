@@ -22,6 +22,9 @@ fa:
 
 #clinics
   clinics: کلینیک‌ها
+  clinics_list: لیست کلینیک‌ها
+  new_clinic: ایجاد کلینیک جدید
+  edit_clinic: ویرایش کلینیک
 
 #ddt_questions
 

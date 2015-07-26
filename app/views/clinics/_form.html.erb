@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= t 'clinic_name' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :supervisor_id %><br>
+    <%= t 'supervisor' %><br>
     <%= f.select :supervisor_id, options_for_select(@users.collect { |s| [s.email, s.id] }, selected: @clinic.supervisor_id), {}  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit (t 'submit', :default => "Submit")%>
   </div>
 <% end %>

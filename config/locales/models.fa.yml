@@ -4,6 +4,7 @@ fa:
 
 #users
   user: کاربر
+  supervisor: مدیر کلینیک
 
 #abusing_profiles
   cost_per_month: در ماه گذشته مجموعا ارزش مصرف مواد (مخدر و محرک) بیمار به طور تقریبی چقدر بوده‌است؟ (تومان در ماه)
@@ -59,6 +60,7 @@ fa:
   widowed: "بیوه"
 
 #clinics
+  clinic_name: نام کلینیک
 
 #ddt_questions
   deterministic: "قطعی"

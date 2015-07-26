@@ -4,6 +4,7 @@ en:
 
 #users
   user: User
+  supervisor: Supervisor
 
 #abusing_profiles
   cost_per_month: How much approximately was the patient's total value of drugs(narcotics and stimulants)? (Dollars per Month)
@@ -59,6 +60,7 @@ en:
   widowed: "widowed"
 
 #clinics
+  clinic_name: "name"
 
 #ddt_questions
   deterministic: "deterministic"

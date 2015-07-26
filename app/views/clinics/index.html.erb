@@ -1,10 +1,10 @@
-<h1>Listing clinics</h1>
+<h1><%= t 'clinics_list'%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Supervisor</th>
+      <th><%= t 'clinic_name'%></th>
+      <th><%= t 'supervisor'%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
       <tr>
         <td><%= clinic.name %></td>
         <td><%= clinic.supervisor ? clinic.supervisor.email : "" %></td>
-        <td><%= link_to 'Show', clinic %></td>
-        <td><%= link_to 'Edit', edit_clinic_path(clinic) %></td>
+        <td><%= link_to (t 'show'), clinic %></td>
+        <td><%= link_to (t 'edit'), edit_clinic_path(clinic) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,5 +24,5 @@
 <br>
 
 <% if current_user.admin %>
-  <%= link_to 'New Clinic', new_clinic_path %>
+  <%= link_to (t 'new_clinic'), new_clinic_path %>
 <% end %>

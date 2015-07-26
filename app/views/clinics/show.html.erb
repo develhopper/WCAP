@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t 'clinic_name'%>:</strong>
   <%= @clinic.name %>
 </p>
 
 <p>
-  <strong>Supervisor:</strong>
+  <strong><%= t 'supervisor'%>:</strong>
   <% if @clinic.supervisor %>
   	<%= @clinic.supervisor.email %>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
-<%= link_to 'Back', clinics_path %>
+<%= link_to (t 'edit'), edit_clinic_path(@clinic) %> |
+<%= link_to (t 'back'), clinics_path %>
