@@ -1,6 +1,21 @@
-<h1><%= t 'edit_profile'%></h1>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<%= render 'form' %>
+      <div class='col-md-6 col-sm-6'>
+        <div class='panel panel-primary '>
+      		<h1 class='section-title'><%= t 'edit_profile'%></h1>
 
-<%= link_to (t 'show'), @profile %>|
-<%= link_to (t 'back'), profiles_path %>
+      		<%= render 'form' %>
+        </div>
+    		<%= link_to (t 'show'), @profile, :class => "btn btn-primary" %>
+    		<%= link_to (t 'back'), profiles_path, :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
