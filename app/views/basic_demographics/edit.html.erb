@@ -1,6 +1,20 @@
-<h1><%= t 'edit_basic_demographic'%></h1>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<%= render 'form' %>
+      <div class='col-md-6 col-sm-6'>
+        <div class='panel panel-primary '>
+          <h1 class='section-title'><%= t 'edit_basic_demographic'%></h1>
 
-<%= link_to (t 'show'), @basic_demographic %> |
-<%= link_to (t 'back'), basic_demographics_path %>
+          <%= render 'form' %>
+        </div>
+        <%= link_to (t 'show'), @basic_demographic, :class => "btn btn-primary" %> 
+        <%= link_to (t 'back'), basic_demographics_path, :class => "btn btn-primary" %>
+        </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>

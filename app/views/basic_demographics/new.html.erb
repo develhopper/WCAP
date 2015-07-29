@@ -1,5 +1,19 @@
-<h1><%= t 'new_basic_demographic' %></h1>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<%= render 'form' %>
-
-<%= link_to (t 'back'), basic_demographics_path %>
+      <div class='col-md-6 col-sm-6'>
+        <div class='panel panel-primary '>
+          <h1 class='section-title'><%= t 'new_basic_demographic' %></h1>
+          <%= render 'form' %>
+        </div>
+        <%= link_to (t 'back'), basic_demographics_path %>
+        </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
