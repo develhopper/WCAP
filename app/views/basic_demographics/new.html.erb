@@ -1,4 +1,4 @@
-<section class="section section-center section-testimonial loaded">
+<section class="section  section-testimonial loaded">
   <div class='container'>
     
     <div class='row'>
@@ -7,11 +7,21 @@
 
       <div class='col-md-6 col-sm-6'>
         <div class='panel panel-primary '>
-          <h1 class='section-title'><%= t 'new_basic_demographic' %></h1>
-          <%= render 'form' %>
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <%= t 'new_basic_demographic' %>
+            </h3>
+          </div>
+
+          <div class="panel-body">
+            <%= render 'form' %>
+          </div>
+
         </div>
-        <%= link_to (t 'back'), basic_demographics_path, :class => "btn btn-primary" %>
+        <div class="text-center">
+          <%= link_to (t 'back'), basic_demographics_path, :class => "btn btn-primary" %>
         </div>
+      </div>  
       <div class='col-md-3'>
       </div>
     </div>
