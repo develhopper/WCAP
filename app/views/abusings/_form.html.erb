@@ -1,4 +1,4 @@
-<%= form_for(@abusing) do |f| %>
+<%= form_for([@patient,@abusing_profile,@abusing]) do |f| %>
   <% if @abusing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@abusing.errors.count, "error") %> prohibited this abusing from being saved:</h2>
@@ -12,39 +12,35 @@
   <% end %>
 
   <div class="field">
-    <%= t 'abusing_profile' %><br>
-    <%= f.text_field :abusing_profile_id %>
-  </div>
-  <div class="field">
     <%= t 'drug_type' %><br>
-    <%= f.select :drug_type, options_for_select(Abusing.drug_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @abusing.drug_type), {}  %>
+    <%= f.select :drug_type, options_for_select(Abusing.drug_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @abusing.drug_type), {} ,:class=>"reverse-dir" %>
 
   </div>
   <div class="field">
     <%= t 'first_use_age' %><br>
-    <%= f.number_field :first_use_age %>
+    <%= f.number_field :first_use_age,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'continuous_usage_duration' %><br>
-    <%= f.number_field :continuous_usage_duration %>
+    <%= f.number_field :continuous_usage_duration,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'count' %><br>
-    <%= f.number_field :count %>
+    <%= f.number_field :count,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'type' %><br>
-    <%= f.select :abusing_type, options_for_select(Abusing.abusing_types.collect { |p| [I18n.t(p[0]), p[0]] }, selected: @abusing.abusing_type), {}  %>
+    <%= f.select :abusing_type, options_for_select(Abusing.abusing_types.collect { |p| [I18n.t(p[0]), p[0]] }, selected: @abusing.abusing_type), {} ,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'description' %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'is_mainspring' %><br>
-    <%= f.check_box :is_mainspring %>
+    <%= f.check_box :is_mainspring,:class=>"reverse-dir" %>
   </div>
   <div class="actions">
-    <%= f.submit (t 'submit', :default => "Submit")%>
+    <%= f.submit (t 'submit', :default => "Submit"),:class=>"reverse-dir"%>
   </div>
 <% end %>

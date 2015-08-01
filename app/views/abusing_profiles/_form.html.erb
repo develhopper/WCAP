@@ -1,4 +1,4 @@
-<%= form_for(@abusing_profile) do |f| %>
+<%= form_for([@abusing_profile.patient, @abusing_profile]) do |f| %>
   <% if @abusing_profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@abusing_profile.errors.count, "error") %> prohibited this abusing_profile from being saved:</h2>
@@ -13,21 +13,21 @@
 
   <div class="field">
     <%= t 'cost_per_month' %><br>
-    <%= f.number_field :cost_per_month %>
+    <%= f.number_field :cost_per_month,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'overdose_count' %><br>
-    <%= f.number_field :overdose_count %>
+    <%= f.number_field :overdose_count,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'freakout_count' %><br>
-    <%= f.number_field :freakout_count %>
+    <%= f.number_field :freakout_count,:class=>"reverse-dir" %>
   </div>
   <div class="field">
-    <%= t 'patient' %><br>
-    <%= f.text_field :patient_id %>
+    <%= t 'patient' %> :
+    <%= "#{@abusing_profile.patient.first_name} #{@abusing_profile.patient.last_name}"%>
   </div>
   <div class="actions">
-    <%= f.submit (t 'submit', :default => "Submit")%>
+    <%= f.submit (t 'submit', :default => "Submit") ,:class=>"reverse-dir"%>
   </div>
 <% end %>

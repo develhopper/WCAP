@@ -1,5 +1,6 @@
 class AbusingProfilesController < ApplicationController
   before_action :set_abusing_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_patient 
   before_filter :authenticate_user!
   respond_to :html
 
@@ -13,7 +14,13 @@ class AbusingProfilesController < ApplicationController
   end
 
   def new
-    @abusing_profile = AbusingProfile.new
+    if @patient.abusing_profile
+      @abusing_profile = @patient.abusing_profile
+    else
+      @abusing_profile = AbusingProfile.new
+      @patient.abusing_profile = @abusing_profile
+      @abusing_profile.patient = @patient
+    end
     respond_with(@abusing_profile)
   end
 
@@ -28,7 +35,7 @@ class AbusingProfilesController < ApplicationController
 
   def update
     @abusing_profile.update(abusing_profile_params)
-    respond_with(@abusing_profile)
+    respond_with(@abusing_profile.patient)
   end
 
   def destroy
@@ -38,8 +45,13 @@ class AbusingProfilesController < ApplicationController
 
   private
     def set_abusing_profile
-      @abusing_profile = AbusingProfile.find(params[:id])
+      set_patient
+      @abusing_profile = @patient.abusing_profile
     end
+
+    def set_patient
+      @patient = Patient.find(params[:patient_id])
+    end 
 
     def abusing_profile_params
       params.require(:abusing_profile).permit(:cost_per_month, :overdose_count, :freakout_count, :patient_id)

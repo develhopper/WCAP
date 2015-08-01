@@ -1,44 +1,55 @@
-<p id="notice"><%= notice %></p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong><%= t 'abusing_profile'%>:</strong>
-  <%= @abusing.abusing_profile %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t 'drug_type'%>:</strong>
+            <%= t @abusing.drug_type %>
+          </p>
 
-<p>
-  <strong><%= t 'drug_type'%>:</strong>
-  <%= t @abusing.drug_type %>
-</p>
+          <p>
+            <strong><%= t 'first_use_age'%>:</strong>
+            <%= @abusing.first_use_age %>
+          </p>
 
-<p>
-  <strong><%= t 'first_use_age'%>:</strong>
-  <%= @abusing.first_use_age %>
-</p>
+          <p>
+            <strong><%= t 'continuous_usage_duration'%>:</strong>
+            <%= @abusing.continuous_usage_duration %>
+          </p>
 
-<p>
-  <strong><%= t 'continuous_usage_duration'%>:</strong>
-  <%= @abusing.continuous_usage_duration %>
-</p>
+          <p>
+            <strong><%= t 'count'%>:</strong>
+            <%= @abusing.count %>
+          </p>
 
-<p>
-  <strong><%= t 'count'%>:</strong>
-  <%= @abusing.count %>
-</p>
+          <p>
+            <strong><%= t 'type'%>:</strong>
+            <%= t @abusing.abusing_type  %>
+          </p>
 
-<p>
-  <strong><%= t 'type'%>:</strong>
-  <%= t @abusing.abusing_type  %>
-</p>
+          <p>
+            <strong><%= t 'description'%>:</strong>
+            <%= @abusing.description %>
+          </p>
 
-<p>
-  <strong><%= t 'description'%>:</strong>
-  <%= @abusing.description %>
-</p>
+          <p>
+            <strong><%= t 'is_mainspring'%>:</strong>
+            <%= @abusing.is_mainspring %>
+          </p>
 
-<p>
-  <strong><%= t 'is_mainspring'%>:</strong>
-  <%= @abusing.is_mainspring %>
-</p>
-
-<%= link_to (t 'edit'), edit_abusing_path(@abusing) %> |
-<%= link_to (t 'back'), abusings_path %>
+        </div>
+      </div>
+      <%= link_to (t 'edit'), edit_patient_abusing_profile_abusing_path(@patient,@abusing_profile,@abusing) , :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), patient_abusing_profile_path(@patient,@abusing_profile), :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>

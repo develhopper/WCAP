@@ -1,14 +1,42 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t 'first_name'%>:</strong>
-  <%= @patient.first_name %>
-</p>
 
-<p>
-  <strong><%= t 'last_name'%>:</strong>
-  <%= @patient.last_name %>
-</p>
 
-<%= link_to (t 'edit'), edit_patient_path(@patient) %> |
-<%= link_to (t 'back'), patients_path %>
+
+
+
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
+
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t 'first_name'%>:</strong>
+            <%= @patient.first_name %>
+          </p>
+
+          <p>
+            <strong><%= t 'last_name'%>:</strong>
+            <%= @patient.last_name %>
+          </p>
+        </div>
+      </div>
+
+      <%= link_to (t 'edit'), edit_patient_path(@patient) , :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), patients_path, :class => "btn btn-primary" %>
+      <% if @patient.abusing_profile %>
+       <%= link_to (t "abusing_profile"), patient_abusing_profile_path(@patient,@patient.abusing_profile) , :class => "btn btn-primary"%> 
+      <% else %>
+       <%= link_to (t "new_abusing_profile"), new_patient_abusing_profile_path(@patient), :class => "btn btn-primary" %> 
+      <% end %>  
+      
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>

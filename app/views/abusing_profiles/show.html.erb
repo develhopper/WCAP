@@ -1,24 +1,45 @@
-<p id="notice"><%= notice %></p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong><%= t 'cost_per_month'%>:</strong>
-  <%= @abusing_profile.cost_per_month %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
 
-<p>
-  <strong><%= t 'overdose_count'%>:</strong>
-  <%= @abusing_profile.overdose_count %>
-</p>
+          <p>
+            <strong><%= t 'cost_per_month'%>:</strong>
+            <%= @abusing_profile.cost_per_month %>
+          </p>
 
-<p>
-  <strong><%= t 'freakout_count'%>:</strong>
-  <%= @abusing_profile.freakout_count %>
-</p>
+          <p>
+            <strong><%= t 'overdose_count'%>:</strong>
+            <%= @abusing_profile.overdose_count %>
+          </p>
 
-<p>
-  <strong><%= t 'patient'%>:</strong>
-  <%= @abusing_profile.patient %>
-</p>
+          <p>
+            <strong><%= t 'freakout_count'%>:</strong>
+            <%= @abusing_profile.freakout_count %>
+          </p>
 
-<%= link_to (t 'edit'), edit_abusing_profile_path(@abusing_profile) %> |
-<%= link_to (t 'back'), abusing_profiles_path %>
+          <p>
+            <strong><%= t 'patient'%>:</strong>
+            <%= "#{@abusing_profile.patient.first_name} #{@abusing_profile.patient.last_name}" %>
+          </p>
+        </div>
+      </div>
+
+      <%= link_to (t 'edit'),edit_patient_abusing_profile_path(@patient, @patient.abusing_profile), :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), patient_path(@patient), :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+    
+  </div>
+  <br>
+  <br>
+  <%= render 'abusings/index' %>
+</section>

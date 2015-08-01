@@ -8,6 +8,7 @@ en:
   abusing_profiles_list: Drug Abuse Profiles List
   new_abusing_profile: New Drug Abuse Profile
   edit_abusing_profile: Edit Drug Abuse Profile
+  abusing_profile: Drug Abuse Profile
 
 #abusings
   abusings_list: Abusings List	  
@@ -20,6 +21,7 @@ en:
   basic_demographics_list: Basic Demographics List
   new_basic_demographic: New Basic Demographics
   edit_basic_demographic: Edit Basic Demographics
+  basic_demographics: Basic Demographic
 
 #clinics
   clinics: Clinics

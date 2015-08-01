@@ -2,16 +2,6 @@ Rails.application.routes.draw do
 
   resources :studies
 
-  resources :treatments
-
-  resources :treatment_histories
-
-  resources :abusings
-
-  resources :abusing_profiles
-
-  resources :basic_demographics
-
   resources :ddt_questions
 
   resources :ddts
@@ -25,8 +15,17 @@ Rails.application.routes.draw do
   resources :tasks
 
   resources :clinics
+  resources :basic_demographics do
+      resources :treatments
+    end
+    resources :treatment_histories
 
-  resources :patients
+  resources :patients do
+    resources :abusing_profiles do
+      resources :abusings
+    end
+    
+  end
 
   resources :profiles
 

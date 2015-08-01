@@ -8,6 +8,7 @@ fa:
   abusing_profiles_list: لیست نیم‌رخ‌های سوءمصرف‌های مواد	  
   new_abusing_profile: ایجاد نیم‌رخ سوءمصرف جدید
   edit_abusing_profile: ویرایش نیم‌رخ سوءمصرف
+  abusing_profile: نیم‌رخ سوءمصرف
 
 #abusings
   abusings_list: لیست سوءمصرف‌های مواد	  
@@ -19,6 +20,7 @@ fa:
   basic_demographics_list: اطلاعات پایه‌ی دموگرافیک آزمودنی
   new_basic_demographic: ایجاد اطلاعات پایه‌ی دموگرافیک
   edit_basic_demographic: ویرایش اطلاعات پایه‌ی دموگرافیک
+  basic_demographics: اطلاعات پایه‌ی دموگرافیک
 
 #clinics
   clinics: کلینیک‌ها

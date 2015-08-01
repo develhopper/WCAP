@@ -7,45 +7,47 @@
 
       <div class='col-md-6 col-sm-6'>
       <div class='panel panel-primary '>
-        <p>
-          <strong><%= t 'patient'%>:</strong>
-          <%= @basic_demographic.patient %>
-        </p>
+        <div class="panel-body">
+          <p>
+            <strong><%= t 'patient'%>:</strong>
+            <%= @basic_demographic.patient %>
+          </p>
 
-        <p>
-          <strong><%= t 'file_number'%>:</strong>
-          <%= @basic_demographic.file_number %>
-        </p>
+          <p>
+            <strong><%= t 'file_number'%>:</strong>
+            <%= @basic_demographic.file_number %>
+          </p>
 
-        <p>
-          <strong><%= t 'private_code'%>:</strong>
-          <%= @basic_demographic.private_code %>
-        </p>
+          <p>
+            <strong><%= t 'private_code'%>:</strong>
+            <%= @basic_demographic.private_code %>
+          </p>
 
-        <p>
-          <strong><%= t 'gender'%>:</strong>
-          <%= t @basic_demographic.gender %>
-        </p>
+          <p>
+            <strong><%= t 'gender'%>:</strong>
+            <%= t @basic_demographic.gender %>
+          </p>
 
-        <p>
-          <strong><%= t 'year_of_birth'%>:</strong>
-          <%= @basic_demographic.year_of_birth %>
-        </p>
+          <p>
+            <strong><%= t 'year_of_birth'%>:</strong>
+            <%= @basic_demographic.year_of_birth %>
+          </p>
 
-        <p>
-          <strong><%= t 'interview_date'%>:</strong>
-          <%= @basic_demographic.interview_date %>
-        </p>
+          <p>
+            <strong><%= t 'interview_date'%>:</strong>
+            <%= @basic_demographic.interview_date %>
+          </p>
 
-        <p>
-          <strong><%= t 'marital_status'%>:</strong>
-          <%= t @basic_demographic.marital_status %>
-        </p>
+          <p>
+            <strong><%= t 'marital_status'%>:</strong>
+            <%= t @basic_demographic.marital_status %>
+          </p>
 
-        <p>
-          <strong><%= t 'educational_year'%>:</strong>
-          <%= @basic_demographic.educational_year %>
-        </p>
+          <p>
+            <strong><%= t 'educational_year'%>:</strong>
+            <%= @basic_demographic.educational_year %>
+          </p>
+        </div>
       </div>
 
       <%= link_to (t 'edit'), edit_basic_demographic_path(@basic_demographic), :class => "btn btn-primary" %>
