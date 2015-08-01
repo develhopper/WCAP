@@ -1,35 +1,47 @@
-<h1>Listing treatment_histories</h1>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'treatment_histories_list'%></h1>
+      <div class='panel panel-primary '>
+        
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'patient'%></th>
+              <th class='text-center'><%= t 'is_cured'%></th>
+              <th class='text-center'><%= t 'in_month_treated'%></th>
+              <th class='text-center'><%= t 'in_year_treat_count'%></th>
+              <th class='text-center'><%= t 'na_session'%></th>
+              <th class='text-center'><%= t 'total'%></th>
+              <th colspan="3"  class='text-center'></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Patient</th>
-      <th>Is cured</th>
-      <th>In month treated</th>
-      <th>In year treat count</th>
-      <th>Na session</th>
-      <th>Total</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <tbody>
+            <% @treatment_histories.each do |treatment_history| %>
+              <tr>
+                <td><%= treatment_history.patient %></td>
+                <td><%= treatment_history.is_cured %></td>
+                <td><%= treatment_history.in_month_treated %></td>
+                <td><%= treatment_history.in_year_treat_count %></td>
+                <td><%= treatment_history.na_session %></td>
+                <td><%= treatment_history.total %></td>
+                <td><%= link_to 'Show', treatment_history, :class => "btn btn-primary"  %></td>
+                <td><%= link_to 'Edit', edit_treatment_history_path(treatment_history), :class => "btn btn-primary"  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-  <tbody>
-    <% @treatment_histories.each do |treatment_history| %>
-      <tr>
-        <td><%= treatment_history.patient %></td>
-        <td><%= treatment_history.is_cured %></td>
-        <td><%= treatment_history.in_month_treated %></td>
-        <td><%= treatment_history.in_year_treat_count %></td>
-        <td><%= treatment_history.na_session %></td>
-        <td><%= treatment_history.total %></td>
-        <td><%= link_to 'Show', treatment_history %></td>
-        <td><%= link_to 'Edit', edit_treatment_history_path(treatment_history) %></td>
-        <td><%= link_to 'Destroy', treatment_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Treatment history', new_treatment_history_path %>
+      </div>
+      
+      <div class='text-center'>
+        <%= link_to 'New Treatment history', new_treatment_history_path, :class => "smooth-scroll btn btn-lg btn-link " %>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>

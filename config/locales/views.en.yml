@@ -19,9 +19,9 @@ en:
 
 #basic_demographics
   basic_demographics_list: Basic Demographics List
-  new_basic_demographic: New Basic Demographics
-  edit_basic_demographic: Edit Basic Demographics
-  basic_demographics: Basic Demographic
+  new_basic_demographic: New Basic Demographic
+  edit_basic_demographic: Edit Basic Demographic
+  basic_demographic: Basic Demographic
 
 #clinics
   clinics: Clinics
@@ -51,8 +51,12 @@ en:
 #tasks
 
 #treatment_histories
+  treatment_histories_list: Treatment Histories List
+  new_treatment_history: New Treatment History
+  edit_treatment_history: Edit Treatment History
+  treatment_history: Treatment History
 
-#treatment_histories
+#treatments
   
 
 #nav_bar

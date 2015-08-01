@@ -15,14 +15,15 @@ Rails.application.routes.draw do
   resources :tasks
 
   resources :clinics
-  resources :basic_demographics do
-      resources :treatments
-    end
-    resources :treatment_histories
 
   resources :patients do
     resources :abusing_profiles do
       resources :abusings
+    end
+    resources :basic_demographics 
+    
+    resources :treatment_histories do
+      resources :treatments
     end
     
   end

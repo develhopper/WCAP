@@ -1,34 +1,54 @@
-<p id="notice"><%= notice %></p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong>Patient:</strong>
-  <%= @treatment_history.patient %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t 'patient'%>:</strong>
+            <%= "#{@treatment_history.patient.first_name} #{@treatment_history.patient.last_name}" %>
+          </p>
 
-<p>
-  <strong>Is cured:</strong>
-  <%= @treatment_history.is_cured %>
-</p>
+          <p>
+            <strong><%= t 'is_cured'%></strong>
+            <%= @treatment_history.is_cured %>
+          </p>
 
-<p>
-  <strong>In month treated:</strong>
-  <%= @treatment_history.in_month_treated %>
-</p>
+          <p>
+            <strong><%= t 'in_month_treated'%></strong>
+            <%= @treatment_history.in_month_treated %>
+          </p>
 
-<p>
-  <strong>In year treat count:</strong>
-  <%= @treatment_history.in_year_treat_count %>
-</p>
+          <p>
+            <strong><%= t 'in_year_treat_count'%></strong>
+            <%= @treatment_history.in_year_treat_count %>
+          </p>
 
-<p>
-  <strong>Na session:</strong>
-  <%= @treatment_history.na_session %>
-</p>
+          <p>
+            <strong><%= t 'na_session'%></strong>
+            <%= @treatment_history.na_session %>
+          </p>
 
-<p>
-  <strong>Total:</strong>
-  <%= @treatment_history.total %>
-</p>
+          <p>
+            <strong><%= t 'total'%></strong>
+            <%= @treatment_history.total %>
+          </p>
+        </div>
+      </div>
 
-<%= link_to 'Edit', edit_treatment_history_path(@treatment_history) %> |
-<%= link_to 'Back', treatment_histories_path %>
+      <%= link_to (t 'edit'), edit_patient_treatment_history_path(@patient,@treatment_history), :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), patient_path(@patient), :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <%= render 'treatments/index' %>
+</section>

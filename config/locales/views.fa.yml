@@ -20,7 +20,7 @@ fa:
   basic_demographics_list: اطلاعات پایه‌ی دموگرافیک آزمودنی
   new_basic_demographic: ایجاد اطلاعات پایه‌ی دموگرافیک
   edit_basic_demographic: ویرایش اطلاعات پایه‌ی دموگرافیک
-  basic_demographics: اطلاعات پایه‌ی دموگرافیک
+  basic_demographic: اطلاعات پایه‌ی دموگرافیک
 
 #clinics
   clinics: کلینیک‌ها
@@ -50,6 +50,11 @@ fa:
 #tasks
 
 #treatment_histories
+  treatment_histories_list: لیست سوابق دمانی
+  new_treatment_history: ایجاد سوابق درمانی
+  edit_treatment_history: ویرایش سوابق درمانی
+  treatment_history: سوابق درمانی
+
 
 #treatment_histories
   

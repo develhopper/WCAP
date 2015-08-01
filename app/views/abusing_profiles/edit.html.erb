@@ -18,6 +18,7 @@
           
         </div>
         <div class="text-center">
+          <%= link_to (t 'show'), patient_abusing_profile_path(@patient,@abusing_profile), :class => "btn btn-primary" %> 
           <%= link_to (t 'back'), patient_path(@patient), :class => "btn btn-primary" %>
         </div>
       </div>

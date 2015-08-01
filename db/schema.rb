@@ -232,10 +232,10 @@ ActiveRecord::Schema.define(version: 20150712141143) do
 
   create_table "treatments", force: true do |t|
     t.integer  "treatment_history_id"
-    t.integer  "type"
+    t.integer  "treatment_type"
     t.integer  "count"
     t.integer  "max_avoidance_day"
-    t.text     "descriptin"
+    t.text     "description"
     t.integer  "in_month_used"
     t.datetime "created_at"
     t.datetime "updated_at"

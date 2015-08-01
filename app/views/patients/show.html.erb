@@ -34,6 +34,22 @@
        <%= link_to (t "new_abusing_profile"), new_patient_abusing_profile_path(@patient), :class => "btn btn-primary" %> 
       <% end %>  
       
+
+      <% if @patient.basic_demographic %>
+       <%= link_to (t "basic_demographic"), patient_basic_demographic_path(@patient,@patient.basic_demographic) , :class => "btn btn-primary"%> 
+      <% else %>
+       <%= link_to (t "new_basic_demographic"), new_patient_basic_demographic_path(@patient), :class => "btn btn-primary" %> 
+      <% end %>  
+      
+
+      <% if @patient.treatment_history %>
+       <%= link_to (t "treatment_history"), patient_treatment_history_path(@patient,@patient.treatment_history) , :class => "btn btn-primary"%> 
+      <% else %>
+       <%= link_to (t "new_treatment_history"), new_patient_treatment_history_path(@patient), :class => "btn btn-primary" %> 
+      <% end %>  
+      
+
+
       </div>
       <div class='col-md-3'>
       </div>

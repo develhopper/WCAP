@@ -1,4 +1,4 @@
-<%= form_for(@basic_demographic) do |f| %>
+<%= form_for([@patient,@basic_demographic]) do |f| %>
   <% if @basic_demographic.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@basic_demographic.errors.count, "error") %> prohibited this basic_demographic from being saved:</h2>
@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= t 'patient' %><br>
-    <%= f.text_field :patient_id ,:class=>"reverse-dir"%>
+    <%= t 'patient' %> :
+    <%= "#{@basic_demographic.patient.first_name} #{@basic_demographic.patient.last_name}"%>
   </div>
   <div class="field">
     <%= t 'file_number' %><br>

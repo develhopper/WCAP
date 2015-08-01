@@ -87,7 +87,19 @@ en:
 
 #treatment_histories
 
-#treatment_histories
+#treatments
+  alternative_treatment_with_methadone: "Alternative treatment with Methadone(preservative)"
+  alternative_treatment_with_bupernorphine: "Alternative treatment with Buprenorphine(preservative)"
+  treatment_with_naltrexone: "Treatment with Naltrexone"
+  outpatient_detoxification: "Outpatient detoxification (with Methadone, Buprenorphine, Opium Tincture, or Clonidine)"
+  detoxification_without_supervision_of_therapists: "Detoxification without supervision of therapists (quit without medication, etc.)"
+  inpatient_detoxification: "Inpatient detoxification (without anesthesia, RD, or other methods)"
+  detoxification_under_anesthesia: "Detoxification under anesthesia (UROD)"
+  rehabilitation_care_in_therapeutic_community: "Rehabilitation care in therapeutic community (TC)"
+  residential_treatment_is_abstinence: "Residential treatment is abstinence (Camp)"
+  treatment_admissions_for_stimulant_drugs: "Treatment admissions for stimulant drugs"
+  psychological_and_outpatient_drug_treatment_for_stimulants: "Psychological and outpatient drug treatment for stimulants"
+  other_methods: "Other methods, specify"
 
 #test
   #execution_schedule<enum>

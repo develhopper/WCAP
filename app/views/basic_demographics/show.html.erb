@@ -10,7 +10,7 @@
         <div class="panel-body">
           <p>
             <strong><%= t 'patient'%>:</strong>
-            <%= @basic_demographic.patient %>
+            <%= "#{@basic_demographic.patient.first_name} #{@basic_demographic.patient.last_name}" %>
           </p>
 
           <p>
@@ -50,8 +50,8 @@
         </div>
       </div>
 
-      <%= link_to (t 'edit'), edit_basic_demographic_path(@basic_demographic), :class => "btn btn-primary" %>
-      <%= link_to (t 'back'), basic_demographics_path, :class => "btn btn-primary" %>
+      <%= link_to (t 'edit'), edit_patient_basic_demographic_path(@patient,@basic_demographic), :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), patient_path(@patient), :class => "btn btn-primary" %>
       </div>
       <div class='col-md-3'>
       </div>

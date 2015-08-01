@@ -18,8 +18,8 @@
           
         </div>
         <div class="text-center">
-          <%= link_to (t 'show'), @basic_demographic, :class => "btn btn-primary" %> 
-          <%= link_to (t 'back'), basic_demographics_path, :class => "btn btn-primary" %>
+          <%= link_to (t 'show'), patient_basic_demographic_path(@patient,@basic_demographic), :class => "btn btn-primary" %> 
+          <%= link_to (t 'back'), patient_path(@patient), :class => "btn btn-primary" %>
         </div>
       </div>
       <div class='col-md-3'>

@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= t 'patient' %> :
+    <%= "#{@abusing_profile.patient.first_name} #{@abusing_profile.patient.last_name}"%>
+  </div>
   <div class="field">
     <%= t 'cost_per_month' %><br>
     <%= f.number_field :cost_per_month,:class=>"reverse-dir" %>
@@ -23,11 +26,8 @@
     <%= t 'freakout_count' %><br>
     <%= f.number_field :freakout_count,:class=>"reverse-dir" %>
   </div>
-  <div class="field">
-    <%= t 'patient' %> :
-    <%= "#{@abusing_profile.patient.first_name} #{@abusing_profile.patient.last_name}"%>
-  </div>
+  
   <div class="actions">
-    <%= f.submit (t 'submit', :default => "Submit") ,:class=>"reverse-dir"%>
+    <%= f.submit (t 'submit', :default => "Submit") ,:class=>"btn btn-default smooth-scroll"%>
   </div>
 <% end %>

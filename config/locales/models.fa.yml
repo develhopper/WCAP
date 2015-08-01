@@ -87,7 +87,19 @@ fa:
 
 #treatment_histories
 
-#treatment_histories
+#treatments
+  alternative_treatment_with_methadone: درمان جایگزین با متادون
+  alternative_treatment_with_bupernorphine: درمان جایگزین با بوپرنورفین
+  treatment_with_naltrexone: درمان با نالترکسون
+  outpatient_detoxification: سم‌زدایی سرپایی(با متادون، بوپرنورفین، شربت تریاک یا کلونیدین)
+  detoxification_without_supervision_of_therapists: سم‌زدایی بدون نظارت درمانگران(ترک بدون دارو و ...)
+  inpatient_detoxification: سم‌زدایی بستری(غیربیهوشی، RD یا روش‌های دیگر)
+  detoxification_under_anesthesia: سم‌زدایی تحت بیهوشی(UROD)
+  rehabilitation_care_in_therapeutic_community: بازتوانی اقامتی در اجتماع درمان‌مدار(TC)
+  residential_treatment_is_abstinence: درمان اقامتی پرهیزمدار (کمپ)
+  treatment_admissions_for_stimulant_drugs: درمان بستری برای مواد محرک
+  psychological_and_outpatient_drug_treatment_for_stimulants: درمان بستری برای مواد محرک
+  other_methods: سایر روش‌ها، مشخص نمایید
 
 #test
   #execution_schedule<enum>

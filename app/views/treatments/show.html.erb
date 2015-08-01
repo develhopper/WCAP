@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong>Treatment history:</strong>
-  <%= @treatment.treatment_history %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t 'type'%>:</strong>
+            <%= t @treatment.treatment_type %>
+          </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @treatment.type %>
-</p>
+          <p>
+            <strong><%= t 'count'%>:</strong>
+            <%= @treatment.count %>
+          </p>
 
-<p>
-  <strong>Count:</strong>
-  <%= @treatment.count %>
-</p>
+          <p>
+            <strong><%= t 'max_avoidance_day'%>:</strong>
+            <%= @treatment.max_avoidance_day %>
+          </p>
 
-<p>
-  <strong>Max avoidance day:</strong>
-  <%= @treatment.max_avoidance_day %>
-</p>
+          <p>
+            <strong><%= t 'description'%>:</strong>
+            <%= @treatment.description %>
+          </p>
 
-<p>
-  <strong>Descriptin:</strong>
-  <%= @treatment.descriptin %>
-</p>
-
-<p>
-  <strong>In month used:</strong>
-  <%= @treatment.in_month_used %>
-</p>
-
-<%= link_to 'Edit', edit_treatment_path(@treatment) %> |
-<%= link_to 'Back', treatments_path %>
+          <p>
+            <strong><%= t 'in_month_used'%>:</strong>
+            <%= @treatment.in_month_used %>
+          </p>
+        </div>
+      </div>
+      <%= link_to (t 'edit'), edit_patient_treatment_history_treatment_path(@patient,@treatment_history,@treatment) , :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), patient_treatment_history_path(@patient,@treatment_history), :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
