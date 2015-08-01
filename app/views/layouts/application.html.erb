@@ -16,7 +16,7 @@
 <div id="page" >
 	<%= render :partial => 'layouts/navbar'%>
 	<main id="main" class="site-main">
-   <script> setDirection(); </script>
+   
    <% if notice %>
      <div class= "alert-box notice" >
       <p><%= notice %></p>
@@ -32,5 +32,9 @@
 	<%= render :partial => 'layouts/footer'%>
 </div>
 
+
+    <script> 
+    $(document).ready(setDirection());
+   </script>
 </body>
 </html>
