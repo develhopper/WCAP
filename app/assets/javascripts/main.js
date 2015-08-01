@@ -11,9 +11,13 @@ function setDirection() {
   } 
   if (locale == "fa"){
     document.getElementById("page").className += " right-to-left";
+    $(".revese-dir").addClass('left-side');
+    alert("fa");
   }
   else{
     document.getElementById("page").className += " left-to-right";
+   $(".revese-dir").addClass('right-side');
+   alert("en");
   }
 }
 

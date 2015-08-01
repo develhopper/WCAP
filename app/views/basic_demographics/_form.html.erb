@@ -13,36 +13,37 @@
 
   <div class="field">
     <%= t 'patient' %><br>
-    <%= f.text_field :patient_id %>
+    <%= f.text_field :patient_id ,:class=>"revese-dir"%>
   </div>
   <div class="field">
     <%= t 'file_number' %><br>
-    <%= f.number_field :file_number %>
+    <%= f.number_field :file_number ,:class=>"revese-dir"%>
   </div>
   <div class="field">
     <%= t 'private_code' %><br>
-    <%= f.number_field :private_code %>
+    <%= f.number_field :private_code ,:class=>"revese-dir"%>
   </div>
   <div class="field">
     <%= t 'gender' %><br>
-    <%= f.select :gender, options_for_select(BasicDemographic.genders.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @basic_demographic.gender), {}  %>
+    <%= f.select :gender, options_for_select(BasicDemographic.genders.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @basic_demographic.gender), {}, {:class=>"revese-dir"} %>
   </div>
   <div class="field">
     <%= t 'year_of_birth' %><br>
-    <%= f.number_field :year_of_birth %>
+    <%= f.number_field :year_of_birth ,:class=>"revese-dir"%>
   </div>
   <div class="field">
     <%= t 'interview_date' %><br>
-    <%= f.date_select :interview_date %>
+    <%= f.date_select :interview_date , {}, {:class=>"revese-dir"}%>
   </div>
   <div class="field">
     <%= t 'marital_status' %><br>
-    <%= f.select :marital_status, options_for_select(BasicDemographic.marital_statuses.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @basic_demographic.marital_status), {}  %>
+    <%= f.select :marital_status, options_for_select(BasicDemographic.marital_statuses.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @basic_demographic.marital_status), {}, {:class=>"revese-dir"}%>
   </div>
   <div class="field">
     <%= t 'educational_year' %><br>
-    <%= f.number_field :educational_year %>
+    <%= f.number_field :educational_year ,:class=>"revese-dir"%>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
   </div>

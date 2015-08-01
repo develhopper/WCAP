@@ -16,11 +16,13 @@
 			    <a href="#"><i class="fa fa-twitter"></i></a>
 			    <a href="#"><i class="fa fa-google-plus"></i></a>
 			    <a href="#"><i class="fa fa-pinterest"></i></a> -->
+
           <%if request.fullpath == url_for( :locale => 'en' )%>
             <%=link_to 'Persian', url_for( :locale => 'fa' )%>
           <%else%>
             <%=link_to 'English', url_for( :locale => 'en' )%>
           <%end%>
+          
 			  </div>
       </div>
     </div>
