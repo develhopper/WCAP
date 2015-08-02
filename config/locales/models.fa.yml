@@ -86,6 +86,11 @@ fa:
 #tasks
 
 #treatment_histories
+  is_cured: آیا تاکنون (در طی عمر خود) بیمار برای اعتیاد خود تحت درمان قرار گرفته‌است؟
+  in_month_treated: آیا در ماه گذشته تحت درمان بوده‌است؟
+  in_year_treat_count: در سال گذشته چند بار برای درمان اعتیاد به مواد اقدام کرده‌است؟
+  na_session: آیا تاکنون در جلسات NA یا دیگر گروه‌های هم‌یار شرکت کرده‌است؟
+  total: مجموعا چند ماه؟
 
 #treatments
   alternative_treatment_with_methadone: درمان جایگزین با متادون

@@ -86,6 +86,11 @@ en:
 #tasks
 
 #treatment_histories
+  is_cured: Has the patient ever(in her life) been treated for addiction?
+  in_month_treated: Has the patient been treated in the last month?
+  in_year_treat_count: How many times has attempted to treat addiction in the last year?
+  na_session: Has the patient ever been in NA meetings and other cooperative groups?
+  total: How many months in total?
 
 #treatments
   alternative_treatment_with_methadone: "Alternative treatment with Methadone(preservative)"
