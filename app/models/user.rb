@@ -22,4 +22,14 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :studies
   has_and_belongs_to_many :clinics
 
+  def related_clinics
+    _clinics = []
+    under_supervision_clinics.each do |c|
+      _clinics.append(c)
+    end
+    clinics.each do |c|
+      _clinics.append(c)
+    end
+    return _clinics
+  end
 end

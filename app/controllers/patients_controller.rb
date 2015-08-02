@@ -10,10 +10,12 @@ class PatientsController < ApplicationController
   end
 
   def show
+    @registrations = @patient.registrations
     respond_with(@patient)
   end
 
   def new
+    @related_clinics = current_user.related_clinics
     @patient = Patient.new
     respond_with(@patient)
   end
@@ -24,12 +26,14 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
     @patient.save
+    @patient.update_clinics(params[:clinic_ids], current_user)
     respond_with(@patient)
   end
 
   def update
     @patient.update(patient_params)
     respond_with(@patient)
+
   end
 
   def destroy
@@ -43,6 +47,6 @@ class PatientsController < ApplicationController
     end
 
     def patient_params
-      params.require(:patient).permit(:first_name, :last_name)
+      params.require(:patient).permit(:first_name, :last_name, :clinic_ids)
     end
 end

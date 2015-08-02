@@ -19,11 +19,6 @@
     <%= t 'last_name' %><br>
     <%= f.text_field :last_name,:class=>"reverse-dir" %>
   </div>
-  <div class="field">
-    <%= t 'clinic' %><br>
-    <%= select_tag "clinic_ids", options_from_collection_for_select(@related_clinics,"id","name"),  {:multiple => true, :class => "reverse-dir"}%>
-  </div>
-  
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
   </div>

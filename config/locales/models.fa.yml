@@ -60,6 +60,7 @@ fa:
   widowed: "بیوه"
 
 #clinics
+  clinic: کلینیک
   clinic_name: نام کلینیک
 
 #ddt_questions

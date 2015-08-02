@@ -3,6 +3,7 @@
 en:
 
 #users
+  examiner: Examiner
 
 #abusing_profiles
   abusing_profiles_list: Drug Abuse Profiles List
@@ -58,6 +59,8 @@ en:
 
 #treatments
   
+#registrations
+  registrations_list: Registrations List
 
 #nav_bar
   nav_bar_text: You can find this text in views.en.yml

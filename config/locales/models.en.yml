@@ -60,6 +60,7 @@ en:
   widowed: "widowed"
 
 #clinics
+  clinic: Clinic
   clinic_name: "name"
 
 #ddt_questions

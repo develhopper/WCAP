@@ -3,6 +3,7 @@
 fa:
 
 #users
+  examiner: آزمون‌گیرنده
 
 #abusing_profiles
   abusing_profiles_list: لیست نیم‌رخ‌های سوءمصرف‌های مواد	  
@@ -56,7 +57,10 @@ fa:
   treatment_history: سوابق درمانی
 
 
-#treatment_histories
+#treatment
+
+#registrations
+  registrations_list: لیست پرونده‌ها
   
 #nav_bar
   nav_bar_text: شما می‌توانید این نوشته را در فایل views.fa.yml پیدا کنید.
