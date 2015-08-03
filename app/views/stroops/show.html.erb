@@ -1,24 +1,56 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Duration:</strong>
-  <%= @stroop.duration %>
-</p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong>Total items:</strong>
-  <%= @stroop.total_items %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-heading">
+          <h3 class="panel-title">
+             <%= t 'stroop'%>
+          </h3>
+        </div>
 
-<p>
-  <strong>Correct items:</strong>
-  <%= @stroop.correct_items %>
-</p>
+        <div class="panel-body">
 
-<p>
-  <strong>Finished:</strong>
-  <%= @stroop.finished %>
-</p>
+          <% unless @stroop.finished %>
+            <%= t 'stroop_description' %>
 
-<%= link_to 'Edit', edit_stroop_path(@stroop) %> |
-<%= link_to 'Back', stroops_path %>
+          <% else %>
+            <p>
+            <strong><%= t 'duration' %>:</strong>
+              <%= @stroop.duration %>
+            </p>
+
+            <p>
+              <strong><%= t 'total_items' %>:</strong>
+              <%= @stroop.total_items %>
+            </p>
+
+            <p>
+              <strong><%= t 'correct_items' %>:</strong>
+              <%= @stroop.correct_items %>
+            </p>
+
+          <% end %>
+          
+          
+        </div>
+      </div>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+
+    <% unless @stroop.finished %>
+        <%= link_to (t 'start'), edit_stroop_path(@stroop), :class => "btn btn-primary" %>
+
+    <% else %>
+        <%= link_to (t 'back'), stroops_path, :class => "btn btn-primary" %>
+    <% end %>
+    
+  </div>
+</section>

@@ -1,31 +1,45 @@
-<h1>Listing stroops</h1>
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-3'>
+    </div>
+    <div class='col-md-6 col-sm-6'>
+      <h1 class='section-title'><%= t 'stroops_list'%></h1>
+      <div class='panel panel-primary '>
 
-<table>
-  <thead>
-    <tr>
-      <th>Duration</th>
-      <th>Total items</th>
-      <th>Correct items</th>
-      <th>Finished</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @stroops.each do |stroop| %>
-      <tr>
-        <td><%= stroop.duration %></td>
-        <td><%= stroop.total_items %></td>
-        <td><%= stroop.correct_items %></td>
-        <td><%= stroop.finished %></td>
-        <td><%= link_to 'Show', stroop %></td>
-        <td><%= link_to 'Edit', edit_stroop_path(stroop) %></td>
-        <td><%= link_to 'Destroy', stroop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'duration'%></th>
+              <th class='text-center'><%= t 'total_items'%></th>
+              <th class='text-center'><%= t 'correct_items'%></th>
+              <th colspan="1"></th>
+            </tr>
+          </thead>
 
-<br>
+          <tbody>
+            <% @stroops.each do |stroop| %>
+              <tr>
+                <td><%= stroop.duration %></td>
+                <td><%= stroop.total_items %></td>
+                <td><%= stroop.correct_items %></td>
 
-<%= link_to 'New Stroop', new_stroop_path %>
+                <td><%= link_to (t 'show'), stroop , :class => "btn btn-primary"%></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+
+
+      </div>
+      
+      <div class='text-center'>
+        <%= link_to (t 'new_stroop'), new_stroop_path , :class => "smooth-scroll btn btn-lg btn-link " %>
+      </div>
+      </div>
+    <div class='col-md-3'>
+    </div>
+  </div>
+</div>

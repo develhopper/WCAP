@@ -46,7 +46,23 @@ en:
   new_profile: New Profile
   edit_profile: Edit Profile
 #stroops
-
+  stroop_test: Stroop Test
+  stroop: Stroop
+  stroop_description: some description about stroop you can find this in stroop_description in views.en.yml. Click start.
+  start: Start
+  red: Red
+  green: Green
+  yellow: Yellow
+  blue: Blue
+  cancel: Cancel
+  correct: correct
+  incorrect: incorrect
+  press_space_to_start: Press space to start.
+  duration: Duration
+  total_items: Total Items
+  correct_items: Correct Items
+  new_stroop: New Stroop
+  stroops_list: Stroops List
 #studies
 
 #tasks

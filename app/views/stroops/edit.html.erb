@@ -1,6 +1,70 @@
-<h1>Editing stroop</h1>
 
-<%= render 'form' %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCAP</title>
+  <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-<%= link_to 'Show', @stroop %> |
-<%= link_to 'Back', stroops_path %>
+    <script type="text/javascript">
+            
+    $(document).ready(function() {  
+      document.getElementById("hidden-form").style.display = "none";
+      ini();
+    });
+</script>
+</head>
+<body>
+
+
+
+
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div id="clientbox">
+        <h1><%= t "stroop_test" %></h1>
+        
+        <div id="infoswitch">
+            <ul>
+                <li id="linkToResults"><a href="#results" onclick="displayScreen('results');return false;
+                ">View Results</a> or you can <a href="./">Retry</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="screenExperiment">
+        <div><input type="text" readonly="readonly" id="displayOfColoredWord" /></div>
+        <div><input type="text" readonly="readonly" id="displayOfMessage" /></div>
+        <div id="start_btn" > <button type="button"  onclick="eventInput('start')" class="btn btn-default btn-lg"><%=t 'start' %></button > </div>
+        <div id="red_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('r')" class="btn btn-default btn-lg"><%=t 'red' %></button> </div>
+        <div id="green_btn" > <button type="button"  onclick="eventInput('g')" class="btn btn-lg btn-default "><%=t 'green' %></button> </div>
+        <div id="yellow_btn" > <button type="button"  onclick="eventInput('y')" class="btn btn-default btn-lg"><%=t 'yellow' %></button> </div>
+        <div id="blue_btn" > <button type="button"  onclick="eventInput('b')" class="btn btn-default btn-lg"><%=t 'blue' %></button> </div>
+        <br><br>
+        <div id="cancel_btn"> <button type="button"  onclick="eventInput('x')" class="btn btn-default btn-lg"><%=t 'cancel' %></button> </div>
+    </div>
+    
+    <div id="screenResults" class="screenText">
+        <h2>Results</h2>
+        <div id="screenResults_div"><textarea id="textareaResults" rows="20" cols="70" readonly="readonly">You have not finished the experiment yet!
+Come back when you've done all the colors, and your results will be here.</textarea></div>
+    </div>
+
+    <div class= "middle_return_btn">
+    <%= link_to (t 'back'), @stroop.task, :class => "smooth-scroll btn btn-lg btn-link " %>
+    </div>
+
+
+
+    <div id="hidden-form" style="display:none">
+        <%= render 'edit_form' %>
+    </div>
+  </div>
+</section>
+</body>
+</html>

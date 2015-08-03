@@ -1,7 +1,9 @@
 class StroopsController < ApplicationController
   before_action :set_stroop, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  
+
+  layout false , except: [:index, :show]
+
   respond_to :html
 
   def index
@@ -29,6 +31,7 @@ class StroopsController < ApplicationController
 
   def update
     @stroop.update(stroop_params)
+    @stroop.finished = true
     respond_with(@stroop)
   end
 

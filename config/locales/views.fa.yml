@@ -45,7 +45,23 @@ fa:
   new_profile: ایجاد پروفایل
   edit_profile: ویرایش پروفایل
 #stroops
-
+  stroop_test: تست استروپ
+  stroop: استروپ
+  stroop_description: توضیحات استروپ شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
+  start: شروع
+  red: قرمز
+  green: سبز
+  yellow: زرد
+  blue: آبی
+  cancel: انصراف
+  correct: صحیح
+  incorrect: ناصحیح
+  press_space_to_start: برای شروع اسپیس بزنید
+  duration: مدت زمان 
+  total_items: مجموع بخش‌ها
+  correct_items: بخش‌های درست
+  new_stroop: ایجاد استروپ
+  stroops_list: لیست استروپ‌ها
 #studies
 
 #tasks
