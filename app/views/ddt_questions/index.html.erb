@@ -1,31 +1,44 @@
-<h1>Listing ddt_questions</h1>
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'ddt_questions_list'%></h1>
+      <div class='panel panel-primary '>
 
-<table>
-  <thead>
-    <tr>
-      <th>Definite value</th>
-      <th>Indefinite value</th>
-      <th>Risk rate</th>
-      <th>Question type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'definite_value'%></th>
+              <th class='text-center'><%= t 'indefinite_value'%></th>
+              <th class='text-center'><%= t 'risk_rate'%></th>
+              <th class='text-center'><%= t 'question_type'%></th>
+              <th class='text-center' colspan="3"></th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @ddt_questions.each do |ddt_question| %>
-      <tr>
-        <td><%= ddt_question.definite_value %></td>
-        <td><%= ddt_question.indefinite_value %></td>
-        <td><%= ddt_question.risk_rate %></td>
-        <td><%= t ddt_question.question_type %></td>
-        <td><%= link_to 'Show', ddt_question %></td>
-        <td><%= link_to 'Edit', edit_ddt_question_path(ddt_question) %></td>
-        <td><%= link_to 'Destroy', ddt_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <tbody>
+            <% @ddt_questions.each do |ddt_question| %>
+              <tr>
+                <td><%= ddt_question.definite_value %></td>
+                <td><%= ddt_question.indefinite_value %></td>
+                <td><%= ddt_question.risk_rate %></td>
+                <td><%= t ddt_question.question_type %></td>
+                <td><%= link_to (t 'show'), ddt_question , :class => "btn btn-primary" %></td>
+                <td><%= link_to (t 'edit'), edit_ddt_question_path(ddt_question) , :class => "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<br>
-
-<%= link_to 'New Ddt question', new_ddt_question_path %>
+      </div>
+      
+      <div class='text-center'>
+        <%= link_to (t 'new_ddt_question'), new_ddt_question_path, :class => "smooth-scroll btn btn-lg btn-link " %>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>

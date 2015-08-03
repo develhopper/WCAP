@@ -66,7 +66,10 @@ en:
 #ddt_questions
   deterministic: "deterministic"
   probabilistic: "probabilistic"
-
+  definite_value: Definite Value
+  indefinite_value: Indefinite Value
+  risk_rate: Risk Rate
+  question_type: Question Type
 #ddt
 
 #gonogos
@@ -112,3 +115,4 @@ en:
   before_stimulation: "Before stimulation"
   after_stimulation: "After stimulation"
   during_stimulation: "During stimulation"
+#

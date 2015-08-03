@@ -66,6 +66,10 @@ fa:
 #ddt_questions
   deterministic: "قطعی"
   probabilistic: "غیر قطعی"
+  definite_value: مقدار قطعی
+  indefinite_value: مقدار غیر قطعی
+  risk_rate: میزان ریسک
+  question_type: نوع سوال
 
 #ddt
 

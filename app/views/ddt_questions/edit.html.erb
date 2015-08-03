@@ -1,6 +1,29 @@
-<h1>Editing ddt_question</h1>
+<section class="section  section-testimonial loaded">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @ddt_question %> |
-<%= link_to 'Back', ddt_questions_path %>
+      <div class='col-md-6 col-sm-6'>
+        <div class='panel panel-primary '>
+          <div class="panel-heading">
+              <h3 class="panel-title">
+                 <%= t 'edit_ddt_question'%>
+              </h3>
+           </div>
+          
+          <div class="panel-body">
+            <%= render 'form' %>
+          </div>
+          
+        </div>
+        <div class="text-center">
+          <%= link_to (t 'show'), @ddt_question, :class => "btn btn-primary" %> 
+          <%= link_to (t 'back'), ddt_questions_path, :class => "btn btn-primary" %>
+        </div>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
