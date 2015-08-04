@@ -1,4 +1,54 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>WCAP</title>
+	  <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	    <!-- additional scripts to run the demo on this page -->
+	    <script type="text/javascript">
+	        $(document).ready(function() {   
+	            //load BART
+	        var s = {//txt_cashin: 'PUNKTE SAMMELN',
+	                //txt_inflate: 'BALLON AUFBLASEN',
+	                //txt_next: 'Nächster Ballon',
+	                //txt_balloon_number: 'Ballon:',
+	                //txt_current_earned: 'Punkte für Ballon:',
+	                //txt_total_earned: 'Punkte insgesamt:',
+	                //txt_prob_explosion: "Wahrscheinlichkeit,\n\n dass Ballon platzt:",
+	                showpumpcount: true,
+	                showpopprob: false,
+	                ballon: {popprob: 60}};
+	        var b = [ {b:5, o: { color: 'blue', earnings: 50}}, 
+	                {b:0, o: { color: 'green', earnings:1}},
+	                {b:0, o: { color: 'red', earnings: 1}} ];
+	            $("#bart").bart( {s:s, b:b} );
+	    });
+	    </script>
+	</head>
 
-<%= link_to 'Edit', edit_bart_path(@bart) %> |
-<%= link_to 'Back', barts_path %>
+	<body>
+
+	<div id="page" >
+		<main id="main" class="site-main">
+			<div id="bart" style="margin: auto; text-align: center; height:100%">
+			</div>
+			<%= render :partial => '/balloons/make_balloon' , :locals =>{:bart => @bart}  %>
+			<div id="exit">
+				<br><br>
+				پایان آزمون
+				<br><br>
+			    <%= button_to "بازگشت به خانه", "/welcome/index", :class => "button", :id=>"finish", :method => :get%>
+			</div>
+		</main>
+	</div>
+
+	<script> 
+	    $(document).ready(setDirection());
+	</script>
+	    
+	</body>
+</html>

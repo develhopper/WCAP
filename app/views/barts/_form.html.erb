@@ -11,7 +11,8 @@
     </div>
   <% end %>
 
+  <%= t 'bart_description' %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit (t 'start_test', :default => "Submit")%>
   </div>
 <% end %>

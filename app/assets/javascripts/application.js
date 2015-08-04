@@ -18,6 +18,9 @@
 //= require jquery.singlePageNav.min
 //= require main
 //= jquery-1.10.2.min
+//= jquery-1.9.1.min
+//= jquery.jcanvas.min
+//= jquery.bart
 //= require_tree .
 
 

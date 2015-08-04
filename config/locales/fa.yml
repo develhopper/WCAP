@@ -208,3 +208,6 @@ fa:
 #enums
   male: مرد
   female: زن
+
+#cognitive tests
+  start_test: شروع تست

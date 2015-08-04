@@ -45,6 +45,7 @@ en:
 #barts
 
 #basic_demographics
+  basic_demographic: Basic Demographic
   file_number: File Number
   private_code: Private Code
   gender: Gender

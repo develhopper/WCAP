@@ -46,6 +46,7 @@ fa:
 #barts
 
 #basic_demographics
+  basic_demographic: اطلاعات دموگرافیک پایه‌ی
   file_number: شماره‌ی پرونده‌ی مراجع (کد بیمار، ماه و سال)
   private_code: کد اختصاصی ۱۰ رقمی
   gender: جنسیت

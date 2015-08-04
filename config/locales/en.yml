@@ -237,3 +237,6 @@ en:
 #enums
   male: male
   female: female
+
+#cognitive tests
+  start_test: Start Test
