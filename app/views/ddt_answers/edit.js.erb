@@ -1,0 +1,11 @@
+var element =  document.getElementById("ddt_answer_<%=params[:form_index].to_i + 1%>");
+if (typeof(element) != 'undefined' && element != null)
+{
+  document.getElementById("ddt_answer_<%=params[:form_index].to_i%>").style.display = "none";
+  document.getElementById("ddt_answer_<%=params[:form_index].to_i + 1%>").style.display = "inherit";
+}
+else{
+  window.location="<%=ddt_path(@ddt)%>"
+}
+
+

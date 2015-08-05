@@ -20,7 +20,12 @@
 
 
           <% end %></td>
-        <td><%= answer.response %></td>
+        <td> 
+          <% if answer.response %>
+            <%= t 'first' %>
+          <% else %>
+            <%= t 'second' %>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

@@ -37,15 +37,14 @@ en:
   ddt_question: Delay Discounting Question
   question_text: Question Text
   ddt_prob_first_part: "Which one do you prefer?"
-  ddt_prob_second_part: "for sure, or"
+  ddt_prob_second_part: "for sure"
   ddt_prob_third_part: "With a chance of"
   ddt_prob_forth_part: "?"
   ddt_deter_first_part: "Which one do you prefer?"
-  ddt_deter_second_part: "right now, or"
+  ddt_deter_second_part: "right now"
   ddt_deter_third_part: "in"
   ddt_deter_forth_part: "day(s)?"
-
-
+  or: Or
 #ddt
 
 #gonogos

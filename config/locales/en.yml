@@ -235,5 +235,7 @@ en:
   home: Home
 
 #enums
-  male: male
-  female: female
+  male: Male
+  female: Female
+  first: First
+  second: Seconds

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-
+<div id="page" >
 
 
 <section class="section  section-testimonial loaded">
@@ -22,36 +22,30 @@
       </div>
 
       <div class='col-md-6 col-sm-6'>
-        <div class='panel panel-primary '>
-          <div class="panel-heading">
-              <h3 class="panel-title">
-                 <%= t 'edit_ddt'%>
-              </h3>
-           </div>
-          
+        <div class='panel panel-primary '>   
           <% @ddt.ddt_answers.each_with_index do |ddt_answer , i| %>
-            <div id='<%="ddt_answer_#{i}"%>' style="display:none">
+            <div class="lead" id='<%="ddt_answer_#{i}"%>' style="display:none">
               <%= render :partial => "ddt_answers/form", :locals => {:ddt_answer => ddt_answer, :form_index => i} %>
              </div>
           <% end %>
           
         </div>
-        <div class="text-center">
-          <%= link_to (t 'show'), @ddt, :class => "btn btn-primary" %> 
-          <%= link_to (t 'back'), ddts_path, :class => "btn btn-primary" %>
-        </div>
+        
       </div>
       <div class='col-md-3'>
       </div>
     </div>
   </div>
 </section>
-   
+</div>   
 <script type="text/javascript">
   $(document).ready(function() {  
+      setDirection();
       document.getElementById("ddt_answer_0").style.display = "inherit";
       ini();
     });
 </script>
+
+
 </body>
 </html>

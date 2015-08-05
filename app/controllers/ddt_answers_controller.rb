@@ -8,7 +8,6 @@ class DdtAnswersController < ApplicationController
     # @ddt_answer.update(params[:response])
     @ddt_answer.response = params[:response]
     @ddt_answer.save
-    byebug
     render 'edit.js'
   end
 
