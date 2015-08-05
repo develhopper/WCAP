@@ -27,10 +27,10 @@
             <strong><%= t 'question_type' %>:</strong>
             <%= t @ddt_question.question_type %>
           </p>
-          <% if @ddt_question.question_type == DdtQuestion.question_types["deterministic"] %>
+          <% if @ddt_question.question_type == "deterministic" %>
             <p>
               <strong><%= t 'question_text' %>:</strong>
-              <%= "#{t 'ddt_deter_first_part'} #{@ddt_question.definite_value} #{t 'ddt_deter_second_part'} #{@ddt_question.injectinit { |mem, var|  } } #{t 'ddt_deter_third_part'} #{@ddt_question.risk_rate } #{t 'ddt_deter_forth_part'}" %>
+              <%= "#{t 'ddt_deter_first_part'} #{@ddt_question.definite_value} #{t 'ddt_deter_second_part'} #{@ddt_question.indefinite_value } #{t 'ddt_deter_third_part'} #{@ddt_question.risk_rate } #{t 'ddt_deter_forth_part'}" %>
             </p>
           <% else %>
             <p>

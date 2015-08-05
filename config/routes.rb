@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   resources :studies
 
   resources :ddt_questions
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   resources :gonogos
 
   resources :stroops
+
+  post 'ddts/:ddt_id/ddt_answer/:id' => 'ddt_answers#update', as: :update_ddt_ddt_answer
 
   resources :barts
 

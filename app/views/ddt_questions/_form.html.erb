@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :definite_value %><br>
-    <%= f.number_field :definite_value %>
+    <%= f.label t 'definite_value' %><br>
+    <%= f.number_field :definite_value,:class=>"reverse-dir",:class=>"reverse-dir" %>
   </div>
   <div class="field">
-    <%= f.label :indefinite_value %><br>
-    <%= f.number_field :indefinite_value %>
+    <%= f.label t 'indefinite_value' %><br>
+    <%= f.number_field :indefinite_value,:class=>"reverse-dir" %>
   </div>
   <div class="field">
-    <%= f.label :risk_rate %><br>
-    <%= f.number_field :risk_rate %>
+    <%= f.label t 'risk_rate' %><br>
+    <%= f.number_field :risk_rate,:class=>"reverse-dir" %>
   </div>
   <div class="field">
-    <%= f.label :question_type %><br>
+    <%= f.label t 'question_type',:class=>"reverse-dir" %><br>
     <%= f.select :question_type, options_for_select(DdtQuestion.question_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @ddt_question.question_type), {}  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
   </div>
 <% end %>

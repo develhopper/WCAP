@@ -1,0 +1,19 @@
+
+  <div class="field">
+  <%= t 'question' %><br>
+  <% if ddt_answer.ddt_question.question_type == "deterministic" %>
+
+      <%= "#{t 'ddt_deter_first_part'} #{ddt_answer.ddt_question.definite_value} #{t 'ddt_deter_second_part'} #{ddt_answer.ddt_question.indefinite_value } #{t 'ddt_deter_third_part'} #{ddt_answer.ddt_question.risk_rate } #{t 'ddt_deter_forth_part'}" %>
+
+  <% else %>
+
+      <%= "#{t 'ddt_prob_first_part'} #{ddt_answer.ddt_question.definite_value } #{t 'ddt_prob_second_part'} #{ddt_answer.ddt_question.indefinite_value } #{t 'ddt_prob_third_part'} #{ddt_answer.ddt_question.risk_rate } #{t 'ddt_prob_forth_part'}  " %>
+
+
+  <% end %>
+  </div>
+
+  <%= button_to 'first_option',update_ddt_ddt_answer_path(@ddt, ddt_answer , :response => :true, :form_index => :form_index)  , :method=>:post, :remote => :true, :class => "btn btn-default" %>
+  <%= button_to 'second_option',update_ddt_ddt_answer_path(@ddt, ddt_answer, :response => :false, :form_index => :form_index)  , :method=>:post, :remote => :true,  :class => "btn btn-danger" %>
+  
+

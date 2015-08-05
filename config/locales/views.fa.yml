@@ -36,12 +36,12 @@ fa:
   ddt_question: سوال Delay Discounting 
   question_text: متن سوال
   ddt_prob_first_part: "کدام‌یک را ترجیح می‌دهید؟"
-  ddt_prob_second_part: "به طور حتم، یا"
-  ddt_prob_third_part: "با شانس"
+  ddt_prob_second_part: "تومان به طور حتم، یا"
+  ddt_prob_third_part: "تومان با شانس"
   ddt_prob_forth_part: "؟"
   ddt_deter_first_part: "کدام‌یک را ترجیح می‌دهید؟"
-  ddt_deter_second_part: "همین الان یا"
-  ddt_deter_third_part: "در"
+  ddt_deter_second_part: "تمان همین الان یا"
+  ddt_deter_third_part: "تومان در"
   ddt_deter_forth_part: "روز؟"
 
 

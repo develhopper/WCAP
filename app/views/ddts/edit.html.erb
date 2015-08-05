@@ -1,6 +1,57 @@
-<h1>Editing ddt</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCAP</title>
+  <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</script>
+</head>
+<body>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @ddt %> |
-<%= link_to 'Back', ddts_path %>
+
+
+<section class="section  section-testimonial loaded">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
+
+      <div class='col-md-6 col-sm-6'>
+        <div class='panel panel-primary '>
+          <div class="panel-heading">
+              <h3 class="panel-title">
+                 <%= t 'edit_ddt'%>
+              </h3>
+           </div>
+          
+          <% @ddt.ddt_answers.each_with_index do |ddt_answer , i| %>
+            <div id='<%="ddt_answer_#{i}"%>' style="display:none">
+              <%= render :partial => "ddt_answers/form", :locals => {:ddt_answer => ddt_answer, :form_index => i} %>
+             </div>
+          <% end %>
+          
+        </div>
+        <div class="text-center">
+          <%= link_to (t 'show'), @ddt, :class => "btn btn-primary" %> 
+          <%= link_to (t 'back'), ddts_path, :class => "btn btn-primary" %>
+        </div>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
+   
+<script type="text/javascript">
+  $(document).ready(function() {  
+      document.getElementById("ddt_answer_0").style.display = "inherit";
+      ini();
+    });
+</script>
+</body>
+</html>
