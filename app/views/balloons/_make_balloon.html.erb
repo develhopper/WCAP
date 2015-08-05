@@ -1,0 +1,23 @@
+  <div id="balloon_properties">
+    <%= form_for(:balloon, :url => balloons_path, :id => "balloon_form", :remote => true ) do |f| %>
+
+  <%= f.hidden_field :bart_id, :value => bart.id %>
+  <div  class="field" id="pumps">
+    <%= f.label :pumps %><br>
+    <%= f.number_field :pumps %>
+  </div>
+  <div class="field" id="explosion">
+    <%= f.label :explosion %><br>
+    <%= f.number_field :explosion %>
+  </div>
+  <div class="field" id="response_time">
+    <%= f.label :response_time %><br>
+    <%= f.number_field :response_time %>
+  </div>
+  <!--<div class="actions">
+    <%= f.submit %>
+  </div>-->
+      <input type="submit" value="Save Balloon" name="commit" id="submit_balloon">
+      </input>
+    <% end %>
+</div>

@@ -2,6 +2,8 @@ class BartsController < ApplicationController
   before_action :set_bart, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
 
+  layout false , except: [:index, :new]
+
   respond_to :html
 
   def index

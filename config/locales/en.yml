@@ -239,3 +239,6 @@ en:
   female: Female
   first: First
   second: Seconds
+
+#cognitive tests
+  start_test: Start Test
