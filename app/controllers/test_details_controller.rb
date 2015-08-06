@@ -50,6 +50,6 @@ class TestDetailsController < ApplicationController
     end
 
     def test_detail_params
-      params.require(:test_detail).permit(:name, :count, :part_count, :study_id)
+      params.require(:test_detail).permit(:name, :part_count, :study_id)
     end
 end

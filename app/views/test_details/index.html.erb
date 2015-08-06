@@ -9,10 +9,9 @@
         <table class='table table-striped table-bordered text-center'>
           <thead>
             <tr>
-              <th class='text-center'>Name</th>
-              <th class='text-center'>Count</th>
-              <th class='text-center'>Part count</th>
-              <th class='text-center'>Study</th>
+              <th class='text-center'><%= t "test_name" %></th>
+              <th class='text-center'><%= t "part_count" %></th>
+              <th class='text-center'><%= t "study" %></th>
               <th class='text-center' colspan="3"></th>
             </tr>
           </thead>
@@ -21,7 +20,6 @@
             <% @study.test_details.each do |test_detail| %>
               <tr>
                 <td><%= test_detail.name %></td>
-                <td><%= test_detail.count %></td>
                 <td><%= test_detail.part_count %></td>
                 <td><%= test_detail.study.description %></td>
                 <td><%= link_to (t 'show'), study_test_detail_path(@study,test_detail), :class => "btn btn-primary"  %></td>

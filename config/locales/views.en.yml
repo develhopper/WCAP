@@ -76,6 +76,10 @@ en:
   new_stroop: New Stroop
   stroops_list: Stroops List
 #studies
+  studies_list: Studies List
+  new_study: New Study
+  edit_study: Edit Study
+  back_to_study: Back to Study
 
 #tasks
 
@@ -87,6 +91,10 @@ en:
 
 #treatments
   
+#test_details
+  test_details_list: Test Details List
+  new_test_detail: New Test
+  edit_test_detail: Edit Test
 #registrations
   registrations_list: Registrations List
 

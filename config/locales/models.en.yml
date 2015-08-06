@@ -87,7 +87,7 @@ en:
 #stroops
 
 #studies
-
+  admin: Admin
 #tasks
 
 #treatment_histories
@@ -116,4 +116,7 @@ en:
   before_stimulation: "Before stimulation"
   after_stimulation: "After stimulation"
   during_stimulation: "During stimulation"
-#
+#test_details
+  test_name: Test Name
+  part_count: Parts count
+  study: study

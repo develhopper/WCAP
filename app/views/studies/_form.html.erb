@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :admin_id %><br>
+    <%= t "admin" %><br>
     <%= f.select :admin_id, options_for_select(@users.collect { |s| [s.email, s.id] }, selected: @study.admin_id), {} ,:class=>"reverse-dir" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= t "description" %><br>
     <%= f.text_area :description,:class=>"reverse-dir"%>
   </div>
   <div class="actions">

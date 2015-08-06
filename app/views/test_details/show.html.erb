@@ -1,12 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-
-
-<%= link_to 'Edit', edit_study_test_detail_path(@study,@test_detail) %> |
-<%= link_to 'Back', study_test_details_path(@study) %>
-
-
-
 <section class="section section-center section-testimonial loaded">
   <div class='container'>
     
@@ -18,20 +9,14 @@
       <div class='panel panel-primary '>
         <div class="panel-body">
           <p>
-            <strong><%= t "name"%>:</strong>
+            <strong><%= t "test_name"%>:</strong>
             <%= @test_detail.name %>
-          </p>
-
-          <p>
-            <strong><%= t "count"%>:</strong>
-            <%= @test_detail.count %>
           </p>
 
           <p>
             <strong><%= t "part_count"%>:</strong>
             <%= @test_detail.part_count %>
           </p>
-
           <p>
             <strong><%= t "study"%>:</strong>
             <%= @test_detail.study.description %>

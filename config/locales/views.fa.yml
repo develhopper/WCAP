@@ -78,7 +78,11 @@ fa:
   new_stroop: ایجاد استروپ
   stroops_list: لیست استروپ‌ها
 #studies
-
+  studies_list: لیست تحقیقات
+  new_study: ایجاد تحقیق
+  edit_study: ویرایش تحقیق
+  back_to_study: بازگشت به تحقیق
+  
 #tasks
 
 #treatment_histories
@@ -90,6 +94,10 @@ fa:
 
 #treatment
 
+#test_details
+  test_details_list: لیست جزئیات تست‌ها
+  new_test_detail: ایجاد جزئیات تست
+  edit_test_detail: ویرایش جزئیات تست
 #registrations
   registrations_list: لیست پرونده‌ها
   

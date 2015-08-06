@@ -88,7 +88,7 @@ fa:
 #stroops
 
 #studies
-
+  admin: مدیر
 #tasks
 
 #treatment_histories
@@ -117,3 +117,7 @@ fa:
   before_stimulation: "قبل از تحریک"
   after_stimulation: "بعد از تحریک"
   during_stimulation: "در حین تحریک"
+#test_details
+  test_name: نام تست
+  part_count: تعداد قسمت‌ها
+  study: تحقیق
