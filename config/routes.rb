@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  
+
   resources :balloons
 
-  resources :studies
+  resources :studies do
+    resources :test_details
+  end
 
   resources :ddt_questions
 

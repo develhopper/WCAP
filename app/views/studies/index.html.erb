@@ -1,27 +1,39 @@
-<h1>Listing studies</h1>
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'basic_demographics_list'%></h1>
+      <div class='panel panel-primary '>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'admin'%></th>
+              <th class='text-center'><%= t 'description'%></th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Admin</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @studies.each do |study| %>
-      <tr>
-        <td><%= study.admin %></td>
-        <td><%= study.description %></td>
-        <td><%= link_to 'Show', study %></td>
-        <td><%= link_to 'Edit', edit_study_path(study) %></td>
-        <td><%= link_to 'Destroy', study, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Study', new_study_path %>
+          <tbody>
+            <% @studies.each do |study| %>
+              <tr>
+                <td><%= study.admin.profile.name %></td>
+                <td><%= study.description %></td>
+                <td><%= link_to (t 'show'), study , :class => "btn btn-primary"%></td>
+                <td><%= link_to (t 'edit'), edit_study_path(study), :class => "btn btn-primary" %></td>
+                <td><%= link_to (t 'destroy'), study, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class='text-center'>
+        <%= link_to (t 'new_study'), new_study_path, :class => "smooth-scroll btn btn-lg btn-link " %>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>

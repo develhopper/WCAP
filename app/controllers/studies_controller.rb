@@ -1,7 +1,8 @@
 class StudiesController < ApplicationController
   before_action :set_study, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  
+  before_action :set_available_users
+
   respond_to :html
 
   def index
@@ -40,6 +41,10 @@ class StudiesController < ApplicationController
   private
     def set_study
       @study = Study.find(params[:id])
+    end
+
+    def set_available_users
+      @users =User.all
     end
 
     def study_params

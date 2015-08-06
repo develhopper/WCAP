@@ -1,0 +1,29 @@
+<%= form_for([@study,@test_detail]) do |f| %>
+  <% if @test_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test_detail.errors.count, "error") %> prohibited this test_detail from being saved:</h2>
+
+      <ul>
+      <% @test_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= t "test_name" %><br>
+    <%= f.select :name, options_for_select(Test.get_child_classes.collect { |s| [s, s] }, selected: @test_detail.name), {},:class=>"reverse-dir" %>
+  </div>
+  <div class="field">
+    <%= t "count" %><br>
+    <%= f.number_field :count,:class=>"reverse-dir" %>
+  </div>
+  <div class="field">
+    <%= t "part_count" %><br>
+    <%= f.number_field :part_count,:class=>"reverse-dir" %>
+  </div>
+  <div class="actions">
+    <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
+  </div>
+<% end %>

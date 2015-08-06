@@ -1,14 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @study.admin %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @study.description %>
-</p>
 
 <%= link_to 'Edit', edit_study_path(@study) %> |
 <%= link_to 'Back', studies_path %>
+
+
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
+
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t"admin" %>:</strong>
+            <%= @study.admin.profile.name %>
+          </p>
+
+          <p>
+            <strong><%= t"description"%>:</strong>
+            <%= @study.description %>
+          </p>
+
+          <p>
+            <%= link_to (t 'test_details_list'), study_test_details_path(@study), :class => "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+
+      <%= link_to (t 'edit'), edit_study_path(@study), :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), studies_path, :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
