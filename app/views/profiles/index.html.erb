@@ -12,7 +12,8 @@
               <th><%= t 'first_name'%></th>
               <th><%= t 'last_name'%></th>
               <th><%= t 'user'%></th>
-              <th colspan="3"></th>
+              <th colspan="2"></th>
+              <th><%= t 'admin'%></th>
             </tr>
           </thead>
 
@@ -24,6 +25,13 @@
                 <td><%= profile.user.email %></td>
                 <td><%= link_to (t 'show'), profile , :class => "btn btn-primary" %></td>
                 <td><%= link_to (t 'edit'), edit_profile_path(profile) ,:class => "btn btn-primary" %></td>
+                <td>
+                  <% if profile.user.admin %>
+                   <%= image_tag("tik.png", height: '32', width: '32')%>
+                  <% else %>
+                   <%= image_tag("cross.png", height: '32', width: '32')%> 
+                  <% end %>
+                </td>
               </tr>
             <% end %>
           </tbody>

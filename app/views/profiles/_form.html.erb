@@ -19,6 +19,12 @@
     <%= t 'last_name' %><br>
     <%= f.text_field :last_name %>
   </div>
+
+  <div class="field">
+    <%= t 'admin' %><br>
+    <%= check_box_tag :admin, 1, @profile.user.admin %>
+  </div>
+
   <div class="field">
     <%= t 'user' %><br>
     <%= @profile.user.email %>

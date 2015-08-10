@@ -34,6 +34,10 @@ class ProfilesController < ApplicationController
 
   def update
     @profile.update(profile_params)
+    if current_user.admin
+      @profile.user.admin = params[:admin]
+      @profile.user.save
+    end
     respond_with(@profile)
   end
 
@@ -48,6 +52,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :user_id)
+      params.require(:profile).permit(:first_name, :last_name, :user_id,:admin)
     end
 end
