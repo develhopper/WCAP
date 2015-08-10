@@ -82,7 +82,11 @@ fa:
   new_study: ایجاد تحقیق
   edit_study: ویرایش تحقیق
   back_to_study: بازگشت به تحقیق
-  
+  study_examiners_list: لیست آزمون‌گیرنده‌های تحقیق
+  add_to_study: افزودن به تحقیق
+  remove_from_study: حذف کردن از تحقیق
+  this_study_is_finalized_and_you_cant_change_related_test_details: این تحقیق نهایی شده است و شما نمی‌توانید در جزئیات تحقیق مربوطه تغییر ایجاد کنید.
+  finalize: نهایی کردن
 #tasks
 
 #treatment_histories
@@ -104,3 +108,6 @@ fa:
 #nav_bar
   nav_bar_text: شما می‌توانید این نوشته را در فایل views.fa.yml پیدا کنید.
   exit: خروج
+
+#global
+  are_you_sure: آیا مطمئن هستید؟

@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   resources :studies do
     resources :test_details
+    member do
+      post 'add_examiner'
+      delete 'remove_examiner'
+      get 'get_examiners'
+      post 'finalize'
+    end
   end
 
   resources :ddt_questions
@@ -15,8 +21,6 @@ Rails.application.routes.draw do
   resources :gonogos
 
   resources :stroops
-
-  post 'ddts/:ddt_id/ddt_answer/:id' => 'ddt_answers#update', as: :update_ddt_ddt_answer
 
   resources :barts
 
@@ -37,6 +41,14 @@ Rails.application.routes.draw do
   end
 
   resources :profiles
+
+
+
+  # post 'ddts/:ddt_id/ddt_answer/:id' => 'ddt_answers#update', as: :update_ddt_ddt_answer
+
+  # post 'studies/:id/add_examiner/:examiner_id' => 'studies#add_examiner', as: :add_study_examiner
+  
+  # delete 'studies/:id/remove_examiner/:examiner_id' => 'studies#remove_examiner', as: :remove_study_examiner
 
   get 'welcome/index'
 

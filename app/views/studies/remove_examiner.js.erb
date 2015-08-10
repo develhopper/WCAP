@@ -1,0 +1,9 @@
+var element =  document.getElementById("user_row_<%=params[:examiner_id]%>");
+if (typeof(element) != 'undefined' && element != null)
+{
+  document.getElementById("user_row_<%=params[:examiner_id]%>").className= "";
+  document.getElementById("user_row_<%=params[:examiner_id]%>").removeChild(document.getElementById("remove_link_<%=params[:examiner_id]%>"));
+  var x = document.getElementById("user_row_<%=params[:examiner_id]%>").insertCell(2);
+  x.innerHTML='<%= link_to (t "add_to_study"), add_examiner_study_path(@study, :examiner_id => params[:examiner_id]), :remote => true, :method => :post, :class => "smooth-scroll btn btn-primary " %>';
+  x.id='<%= "add_link_#{params[:examiner_id]}"%>';
+}

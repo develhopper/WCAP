@@ -1,7 +1,8 @@
 class StudiesController < ApplicationController
-  before_action :set_study, only: [:show, :edit, :update, :destroy]
+  before_action :set_study, only: [:show, :edit, :update, :destroy , 
+    :add_examiner, :remove_examiner, :get_examiners, :finalize]
   before_filter :authenticate_user!
-  before_action :set_available_users
+  before_action :set_available_users, only: [:edit, :update, :get_examiners]
 
   respond_to :html
 
@@ -38,6 +39,34 @@ class StudiesController < ApplicationController
     respond_with(@study)
   end
 
+  def add_examiner
+    examiner = User.find(params[:examiner_id])
+    if examiner && ! @study.users.include?(examiner)
+      @study.users.append(examiner)
+      @study.save
+    end
+    render 'add_examiner.js'
+  end
+
+  def remove_examiner
+    examiner = User.find(params[:examiner_id])
+    if examiner && @study.users.include?(examiner)
+      @study.users.delete(examiner)
+      @study.save
+    end
+    render 'remove_examiner.js'
+  end
+
+  def finalize
+    @study.finalized = true
+    @study.save
+    redirect_to @study
+  end
+
+  def get_examiners
+    @examiners = @study.users  
+  end
+
   private
     def set_study
       @study = Study.find(params[:id])
@@ -48,6 +77,6 @@ class StudiesController < ApplicationController
     end
 
     def study_params
-      params.require(:study).permit(:admin_id, :description)
+      params.require(:study).permit(:admin_id, :description,:examiner_id)
     end
 end

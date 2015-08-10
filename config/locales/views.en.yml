@@ -80,7 +80,11 @@ en:
   new_study: New Study
   edit_study: Edit Study
   back_to_study: Back to Study
-
+  study_examiners_list: Study Examiners List
+  add_to_study: Add to Study
+  remove_from_study: Remove from Study
+  this_study_is_finalized_and_you_cant_change_related_test_details: This study is finalized and you can't change related Test Details.
+  finalieze: Finalize
 #tasks
 
 #treatment_histories
@@ -101,3 +105,6 @@ en:
 #nav_bar
   nav_bar_text: You can find this text in views.en.yml
   exit: exit
+
+#global
+  are_you_sure: Are you sure?

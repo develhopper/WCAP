@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712141143) do
+ActiveRecord::Schema.define(version: 20150809072108) do
 
   create_table "Ddt_Questions_studies", id: false, force: true do |t|
     t.integer "ddt_question_id", null: false
@@ -175,6 +175,7 @@ ActiveRecord::Schema.define(version: 20150712141143) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "finalized"
   end
 
   add_index "studies", ["admin_id"], name: "index_studies_on_admin_id"

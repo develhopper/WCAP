@@ -18,9 +18,25 @@
             <%= @study.description %>
           </p>
 
+          
+
           <p>
-            <%= link_to (t 'test_details_list'), study_test_details_path(@study), :class => "btn btn-primary" %>
+            <%= link_to (t 'study_examiners_list'), get_examiners_study_path(@study), :class => "btn btn-primary" %>
           </p>
+
+          <% unless @study.finalized  %>
+            <p>
+              <%= link_to (t 'test_details_list'), study_test_details_path(@study), :class => "btn btn-primary" %>
+            </p>
+            <p>
+              <%= link_to (t 'finalize'), finalize_study_path(@study), :class => "btn btn-primary" , :method => :post, data: { confirm: (t 'are_you_sure') }%>
+            </p>
+          <% else %>
+            <p>
+              <strong><%= t"this_study_is_finalized_and_you_cant_change_related_test_details"%></strong>
+            </p>
+
+          <% end %>
         </div>
       </div>
 

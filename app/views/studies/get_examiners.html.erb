@@ -1,0 +1,46 @@
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'study_examiners_list'%></h1>
+      <div class='panel panel-primary '>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'name'%></th>
+              <th class='text-center'><%= t 'email'%></th>
+              <th colspan="1"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr id="<%= "user_row_#{user.id}" %>" 
+                <% if @examiners.include?(user) %>
+                  class="success"
+                <% end %>
+                >
+                <td><%= user.profile.name %></td>
+                <td><%= user.email %></td>
+                <% unless @examiners.include?(user) %>
+                    <td id="<%= "add_link_#{user.id}" %>" ><%= link_to (t 'add_to_study'), add_examiner_study_path(@study, :examiner_id => user.id), :remote => true, :method => :post, :class => "smooth-scroll btn btn-primary " %></td>
+                <% else %>
+                    <td id="<%= "remove_link_#{user.id}" %>"><%= link_to (t 'remove_from_study'), remove_examiner_study_path(@study, :examiner_id => user.id), :remote => true, :method => :delete, :class => "smooth-scroll btn btn-danger " %></td>
+                <% end %>
+                
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class='text-center'>
+        <%= link_to (t 'back'), @study, :class => "smooth-scroll btn btn-lg btn-primary " %>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>
