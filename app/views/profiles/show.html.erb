@@ -7,6 +7,7 @@
 
       <div class='col-md-6 col-sm-6'>
       <div class='panel panel-primary '>
+        <div class="panel-body">
           <p>
               <strong><%= t 'first_name'%>:</strong>
               <%= @profile.first_name %>
@@ -21,17 +22,14 @@
             <strong><%= t 'user'%></strong>
             <%= @profile.user.email %>
           </p>
-
-
+        </div>
       </div>
+
       <%= link_to (t 'edit'), edit_profile_path(@profile), :class => "btn btn-primary" %> 
       <% if current_user and current_user.admin %>
 
       <%= link_to (t 'back'), profiles_path, :class => "btn btn-primary" %>
       <% end %>
-
-
-
       </div>
       <div class='col-md-3'>
       </div>

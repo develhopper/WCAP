@@ -5,11 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <% if current_user %>
-            <%= current_user.email %>
-          <% else %>
-            <%= t 'nav_bar_text' %>
-          <% end %>  
+          <%= t 'nav_bar_text' %>
         </div>
 	      <div class="social-links col-sm-6">
 			    <!-- <a href="#"><i class="fa fa-facebook"></i></a>
@@ -36,7 +32,10 @@
           <i class="fa fa-bars"></i>
         </button>
         <% if current_user %>
-        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'exit'), destroy_user_session_url , :method => :delete %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to t('edit_profile'), current_user.profile, :class => "btn btn-xs btn-link " %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'exit'), destroy_user_session_url , :method => :delete, :class => "btn btn-xs btn-link " %></i></h1>
+
+
         <% else %>
         <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_in'), new_user_session_url %></i></h1>
         <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_up'), new_user_registration_url %></i></h1>
