@@ -1,23 +1,34 @@
-<h1>Listing barts</h1>
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'barts_list'%></h1>
+      <div class='panel panel-primary '>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th colspan="1"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <tbody>
+            <% @barts.each do |bart| %>
+              <tr>
+                <td><%= link_to (t 'show'), bart , :class => "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-  <tbody>
-    <% @barts.each do |bart| %>
-      <tr>
-        <td><%= link_to 'Show', bart %></td>
-        <td><%= link_to 'Edit', edit_bart_path(bart) %></td>
-        <td><%= link_to 'Destroy', bart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </div>
+      
+      <div class='text-center'>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Bart', new_bart_path %>

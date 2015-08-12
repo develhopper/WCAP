@@ -1,23 +1,33 @@
-<h1>Listing gonogos</h1>
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'gonogos_list'%></h1>
+      <div class='panel panel-primary '>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th colspan="1"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <tbody>
+            <% @gonogos.each do |gonogo| %>
+              <tr>
+                <td><%= link_to (t 'show'), gonogo , :class => "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-  <tbody>
-    <% @gonogos.each do |gonogo| %>
-      <tr>
-        <td><%= link_to 'Show', gonogo %></td>
-        <td><%= link_to 'Edit', edit_gonogo_path(gonogo) %></td>
-        <td><%= link_to 'Destroy', gonogo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Gonogo', new_gonogo_path %>
+      </div>
+      
+      <div class='text-center'>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>
