@@ -1,4 +1,5 @@
     /*get the client time for the monitor time transmission*/
+    /*NOTE: var maxTiral= The number of trials in Go/NoGo task. Declared in gonogos#show*/
 	var date1  = new Date() ;
 	date1.timeMSec = date1.getTime() ;
 	date1.timeSec = Math.round((date1.timeMSec)/1000) ;	
@@ -7,7 +8,7 @@
 	var play; 
 	var charCode  ; // charcode of clicked button
     var rectangle_index = 0;
-	var maxTiral = 10 ; // number of trials
+
 
     /*time variables of each trial */
 	var clearTimeOutTime = 1500; //???

@@ -10,6 +10,11 @@
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
+		<%= javascript_tag do %>
+	  		var maxTiral = <%= @gonogo.rectangles.count %>;
+		<% end %>
+
+
 		<div id="page" >
 			<main id="main" class="site-main">
 	    		<button id = "start" , onclick="start()"> <%=t 'start_test'%>  </button>
