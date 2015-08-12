@@ -98,8 +98,9 @@ fa:
   study_patients_list: لیست آزمودنی‌ها‌ی تحقیق
   patient_name: نام بیمار
   study_ddt_questions_list: لیست سوالات Delay Discounting تحقیق
+  study_test_details_list: لیست جزئیات آزمون تحقیق
 #tasks
-  tasks_list: لیست تسک‌ها
+  tasks_list: لیست آزمون‌ها
 
 #treatment_histories
   treatment_histories_list: لیست سوابق درمانی

@@ -5,7 +5,15 @@ class TasksController < ApplicationController
   respond_to :html
 
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order("id DESC")
+    unless current_user.admin
+      @tasks = []
+      Task.all.order("id DESC").each do |task|
+        if current_user.related_patients.include? task.patient
+          @tasks.append(task)
+        end
+      end
+    end
     respond_with(@tasks)
   end
 
