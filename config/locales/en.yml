@@ -242,3 +242,4 @@ en:
 
 #cognitive tests
   start_test: Start Test
+  select_test_type: Please Select Test Type
