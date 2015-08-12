@@ -22,7 +22,7 @@
 	                showpumpcount: true,
 	                showpopprob: false,
 	                ballon: {popprob: 60}};
-	        var b = [ {b:5, o: { color: 'blue', earnings: 50}}, 
+	        var b = [ {b:<%=@bart.balloons.count%>, o: { color: 'blue', earnings: 50}}, 
 	                {b:0, o: { color: 'green', earnings:1}},
 	                {b:0, o: { color: 'red', earnings: 1}} ];
 	            $("#bart").bart( {s:s, b:b} );
@@ -31,26 +31,24 @@
 	</head>
 
 	<body>
+		<div id="page" >
+			<main id="main" class="site-main">
+				<div id="bart" style="margin: auto; text-align: center; height:100%">
+				</div>
+				<% @bart.balloons.each_with_index do |balloon , i| %>
+					<%= render :partial => '/balloons/form' , :locals =>{:balloon => balloon, :form_index => i}  %>
+				<%end%>
 
-	<div id="page" >
-		<main id="main" class="site-main">
-			<div id="bart" style="margin: auto; text-align: center; height:100%">
-			</div>
-			<% @bart.balloons.each_with_index do |balloon , i| %>
-				<%= render :partial => '/balloons/form' , :locals =>{:balloon => balloon, :form_index => i}  %>
-			<%end%>
+				<div id="exit">
+					<br><br>
+					<%=t 'bart_final_text'%>
+					<br><br>
+				</div>
+			</main>
+		</div>
 
-			<div id="exit">
-				<br><br>
-				<%=t 'bart_final_text'%>
-				<br><br>
-			</div>
-		</main>
-	</div>
-
-	<script> 
-	    $(document).ready(setDirection());
-	</script>
-	    
+		<script> 
+		    $(document).ready(setDirection());
+		</script>    
 	</body>
 </html>
