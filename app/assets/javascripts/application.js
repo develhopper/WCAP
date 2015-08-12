@@ -21,6 +21,7 @@
 //= jquery-1.9.1.min
 //= jquery.jcanvas.min
 //= jquery.bart
+//= gonogo
 //= require_tree .
 
 

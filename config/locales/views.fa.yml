@@ -49,6 +49,9 @@ fa:
 #ddt
 
 #gonogos
+  gonogos_list: لیست تست‌های گونوگوی انجام‌شده
+  new_gonogo: تست گونوگو جدید
+  gonogo_description: توضیحات گونوگو شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
 
 #patients
   patients_list: لیست آزمودنی‌ها

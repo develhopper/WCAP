@@ -17,6 +17,9 @@ en:
   edit_abusing: Edit Abusing
 
 #barts
+  barts_list: Barts List
+  new_bart: New Bart
+  bart_description: find this in views.en.yml
 
 #basic_demographics
   basic_demographics_list: Basic Demographics List
@@ -47,7 +50,10 @@ en:
 #ddt
 
 #gonogos
-
+  gonogos_list: Go/NoGos List
+  new_gonogo: New Go/NoGo
+  gonogo_description: find this in views.en.yml
+  
 #patients
   patients_list: Patients List	  
   new_patient: New Patient

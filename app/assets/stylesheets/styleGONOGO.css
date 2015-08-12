@@ -1,0 +1,137 @@
+/* vertical BLUE*/
+#BlueVert
+{
+	width: 100px;
+    height: 230px ;
+	border: #000000 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #1414cc;
+	/*visibility:hidden ;*/
+    display: none;
+
+}
+/*Vertival Green*/
+#GreenVert
+{
+	width: 100px;
+    height: 230px ;
+	border: #000000 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #0fea2c;
+	/*visibility:visible ;*/
+    display: none;
+}
+/*Vertical white*/
+#WhiteVert
+{
+	width: 100px;
+    height: 230px ;
+	border: #000000 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #ffffff;
+	/*visibility:visible ;*/
+    display: none;
+}
+
+
+#WhiteWithNoBorder
+{
+	width: 100px;
+    height: 230px ;
+	border: #ffffff 10px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #ffffff;
+	/*visibility:visible ;*/
+    display: none;
+}
+
+
+
+
+
+
+/* Horizantal BLUE*/
+#BlueHori
+{
+    margin-left: -5px;
+    margin-top: 65px;
+	width: 230px;
+    height: 100px ;
+	border: #000000 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #1414cc;
+	/*visibility:hidden ;*/
+    display: none;
+
+}
+/*Horizental Green*/
+#GreenHori
+{
+    margin-left: -5px;
+    margin-top: 65px;
+	width: 230px;
+    height: 100px ;
+	border: #000000 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #0fea2c;
+	/*visibility:visible ;*/
+    display: none;
+}
+/*Horizantal white*/
+#WhiteHori
+{
+    margin-left: -5px;
+    margin-top: 65px;
+	width: 230px;
+    height: 100px ;
+	border: #000000 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #ffffff;
+	/*visibility:visible ;*/
+    display: none;
+}
+
+/*Plus white*/
+#WhitePlus
+{
+    margin-left: -5px ;
+    margin-top: 65px ;
+	width: 100px;
+    height: 100px ;
+	border: #ffffff 2px solid ;
+	margin-right:auto ;
+	margin-left:auto ;
+	background-color: #ffffff;
+//    background-image: url("plus.jpg");
+//    background-repeat:no-repeat;
+//    background-position-x : center;
+//    background-position-y : center;
+background :url("plus.jpg") center center no-repeat ;
+    display: none;
+}
+
+/*
+.plus {
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -5px;
+   margin-top: -60px;
+   //visibility : visible
+   display : block ;
+}
+*/
+
+#start{
+	float : right;
+	width :120px;
+	height :70px;
+	margin: 5% 5% 5% 5%;
+}

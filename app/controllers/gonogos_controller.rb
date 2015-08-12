@@ -1,7 +1,7 @@
 class GonogosController < ApplicationController
   before_action :set_gonogo, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  
+  layout false , except: [:index, :new]  
   respond_to :html
 
   def index

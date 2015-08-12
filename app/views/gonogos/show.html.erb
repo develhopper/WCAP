@@ -1,4 +1,44 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>WCAP</title>
+	  <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="page" >
+			<main id="main" class="site-main">
+	    		<button id = "start" , onclick="start()"> شروع آزمون  </button>
+				
+				<div id="BlueVert"></div>
+	        	<div id="GreenVert"></div>
+	   			<div id="WhiteVert"></div>
+				<div id="BlueHori"></div>
+				<div id="GreenHori"></div>
+	       		<div id="WhiteHori"></div>
+	        	<div id="WhitePlus"></div>
+	        	<div id="WhiteWithNoBorder"></div>
 
-<%= link_to 'Edit', edit_gonogo_path(@gonogo) %> |
-<%= link_to 'Back', gonogos_path %>
+
+				<% @gonogo.rectangles.each_with_index do |rectangle , i| %>
+					<%= render :partial => '/rectangles/form' , :locals =>{:rectangle => rectangle, :form_index => i}  %>
+				<%end%>
+
+			
+				<div id="exit">
+					
+	        	</div>
+			</main>
+		</div>
+
+		<script> 
+	    	$(document).ready(setDirection());
+		</script>
+	</body>
+</html>
+
+

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  
+  post 'rectangle/:id' => 'rectangles#update', as: :update_rectangle
 
   post 'balloon/:id' => 'balloons#update', as: :update_balloon
 
