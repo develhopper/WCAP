@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       delete 'remove_examiner'
       get 'get_examiners'
       post 'finalize'
+      post 'add_patient'
+      get 'get_patients'
     end
   end
 
@@ -26,7 +28,13 @@ Rails.application.routes.draw do
 
   resources :tasks
 
-  resources :clinics
+  resources :clinics do
+    member do
+      post 'add_examiner'
+      delete 'remove_examiner'
+      get 'get_examiners'
+    end
+  end
 
   resources :patients do
     resources :abusing_profiles do

@@ -3,6 +3,7 @@ class StudiesController < ApplicationController
     :add_examiner, :remove_examiner, :get_examiners, :finalize]
   before_filter :authenticate_user!
   before_action :set_available_users, only: [:edit, :update, :get_examiners]
+  before_action :set_available_examiners, only: [:get_patients]
 
   respond_to :html
 
@@ -48,6 +49,15 @@ class StudiesController < ApplicationController
     render 'add_examiner.js'
   end
 
+  def add_patient
+    pateint = Patient.find(params[:pateint_id])
+    if pateint && ! @study.patients.include?(pateint)
+      @study.create_task(patient)
+      @study.save
+    end
+    render 'add_patient.js'
+  end
+
   def remove_examiner
     examiner = User.find(params[:examiner_id])
     if examiner && @study.users.include?(examiner)
@@ -67,6 +77,10 @@ class StudiesController < ApplicationController
     @examiners = @study.users  
   end
 
+  def get_patients
+    @patients = current_user.related_patients
+  end
+
   private
     def set_study
       @study = Study.find(params[:id])
@@ -77,6 +91,6 @@ class StudiesController < ApplicationController
     end
 
     def study_params
-      params.require(:study).permit(:admin_id, :description,:examiner_id)
+      params.require(:study).permit(:admin_id, :description, :examiner_id, :patient_id)
     end
 end

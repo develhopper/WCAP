@@ -1,0 +1,46 @@
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'study_patients_list'%></h1>
+      <div class='panel panel-primary '>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'name'%></th>
+              <th class='text-center'><%= t 'email'%></th>
+              <th colspan="1"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @patient.each do |patient| %>
+              <tr id="<%= "patient_row_#{patient.id}" %>" 
+                <% if @patients.include?(patient) %>
+                  class="success"
+                <% end %>
+                >
+                <td><%= patient.profile.name %></td>
+                <td><%= patient.email %></td>
+                <% unless @patients.include?(patient) %>
+                    <td id="<%= "add_link_#{patient.id}" %>" ><%= link_to (t 'add_to_study'), add_patients_study_path(@study, :examiner_id => patient.id), :remote => true, :method => :post, :class => "smooth-scroll btn btn-primary " %></td>
+                <% else %>
+                    <td><%= image_tag("tik.png", height: '32', width: '32')%></td>
+                <% end %>
+                
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class='text-center'>
+        <%= link_to (t 'back'), @study, :class => "smooth-scroll btn btn-lg btn-primary " %>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>

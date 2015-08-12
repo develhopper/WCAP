@@ -19,6 +19,14 @@
               <%= @clinic.supervisor.email %>
             <% end %>
           </p>
+
+          <% if @clinic.supervisor.email == current_user.email %>
+
+            <p>
+              <%= link_to (t 'clinic_examiners_list'), get_examiners_clinic_path(@clinic), :class => "btn btn-primary" %>
+            </p>
+
+          <% end %>
         </div>
       </div>
 

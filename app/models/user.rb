@@ -32,4 +32,22 @@ class User < ActiveRecord::Base
     end
     return _clinics
   end
+
+  def related_patients
+    _patients=[]
+    under_supervision_clinics.each do |clinic|
+      clinic.registrations.each do |reg|
+        unless _patients.include?(reg.patient)
+          _patients.append(reg.patient)
+        end
+      end
+    end
+
+    registrations.each do |reg|
+      unless _patients.include?(reg.patient)
+        _patients.append(reg.patient)
+      end
+    end
+  end
+
 end
