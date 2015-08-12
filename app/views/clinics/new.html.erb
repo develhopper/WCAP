@@ -1,5 +1,29 @@
-<h1><%= t 'new_clinic' %></h1>
+<section class="section  section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<%= render 'form' %>
+      <div class='col-md-6 col-sm-6'>
+        <div class='panel panel-primary '>
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <%= t 'new_clinic' %>
+            </h3>
+          </div>
 
-<%= link_to (t 'back'), clinics_path %>
+          <div class="panel-body">
+            <%= render 'form' %>
+          </div>
+
+        </div>
+        <div class="text-center">
+          <%= link_to (t 'back'), clinics_path, :class => "btn btn-primary" %>
+        </div>
+      </div>  
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
