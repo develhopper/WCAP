@@ -15,10 +15,12 @@ fa:
   abusings_list: لیست سوءمصرف‌های مواد	  
   new_abusing: ایجاد سوءمصرف جدید
   edit_abusing: ویرایش سوءمصرف
+
 #barts
   barts_list: لیست تست‌های بارت انجام‌شده
   new_bart: تست بارت جدید
   bart_description: توضیحات بارت شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
+  bart_final_text: توضیحات پایان آزمون بارت را در فایل views.fa.yml بیابید.
 
 #basic_demographics
   basic_demographics_list: اطلاعات پایه‌ی دموگرافیک آزمودنی

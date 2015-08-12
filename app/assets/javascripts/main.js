@@ -1,5 +1,4 @@
-
-function setDirection() {
+function getLocale() {
   var locale = "fa";
   var params = window.location.search.substring(1);
   var vars = params.split("?");
@@ -8,7 +7,12 @@ function setDirection() {
     if (pair[0] == "locale") {
       locale = pair[1];
     }
-  } 
+  }   
+  return locale;
+}
+
+function setDirection() {
+  var locale = getLocale();
   if (locale == "fa"){
     document.getElementById("page").className += " right-to-left";
     $(".reverse-dir").addClass('left-side');
