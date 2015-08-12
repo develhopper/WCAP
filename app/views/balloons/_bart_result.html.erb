@@ -1,0 +1,25 @@
+<h1>bart results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>"id"</th>
+      <th>"pumps"</th>
+      <th>"explosion"</th>
+      <th>"response_time"</th>
+      <th>"bart_id"</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bart.balloons.each do |balloon| %>
+      <tr>
+        <td><%= balloon.id %></td>
+        <td><%= balloon.pumps %></td>
+        <td><%= balloon.explosion%></td>
+        <td><%= balloon.response_time%></td>
+        <td><%= balloon.bart_id%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

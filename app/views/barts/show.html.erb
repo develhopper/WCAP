@@ -36,12 +36,14 @@
 		<main id="main" class="site-main">
 			<div id="bart" style="margin: auto; text-align: center; height:100%">
 			</div>
-			<%= render :partial => '/balloons/make_balloon' , :locals =>{:bart => @bart}  %>
+			<% @bart.balloons.each_with_index do |balloon , i| %>
+				<%= render :partial => '/balloons/form' , :locals =>{:balloon => balloon, :form_index => i}  %>
+			<%end%>
+
 			<div id="exit">
 				<br><br>
 				پایان آزمون
 				<br><br>
-			    <%= button_to "بازگشت به خانه", "/welcome/index", :class => "button", :id=>"finish", :method => :get%>
 			</div>
 		</main>
 	</div>

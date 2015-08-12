@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   
 
-  resources :balloons
+  post 'balloon/:id' => 'balloons#update', as: :update_balloon
 
   resources :studies do
     resources :test_details

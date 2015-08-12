@@ -131,7 +131,6 @@
      */
     $.fn.bart = function( method ) {
         document.getElementById("exit").style.display = "none";
-	var balloon_index = 0;
         // default options
         var opts = {
             balloon: {                       // default settings for a balloon
@@ -452,9 +451,9 @@
                 var explosion = rows[2];
 		console.log("ex == " + explosion );
                 var response_time = rows[3];
-		document.getElementById(balloon_index.toString().concat('_pumps')).value = pumps;
-		document.getElementById(balloon_index.toString().concat('_explosion')).value = explosion;  		
-		document.getElementById(balloon_index.toString().concat('_response_time')).value = response_time;
+		document.getElementById('balloon_pumps').value = pumps;
+		document.getElementById('balloon_explosion').value = explosion;  		
+		document.getElementById('balloon_response_time').value = response_time;
                 /*rows.forEach(function (row) {
                     console.log("each Element is "+ row);
                 });*/
@@ -658,10 +657,9 @@
                             opts.onend();
                             console.log("finished");
                             bal.save(1);
-                            document.getElementById("exit").style.display = "block";
-		            document.getElementById("bart").style.display = "none";     
-                    $("#".concat(balloon_index.toString()).concat("_submit_balloon")).click();
-			        balloon_index = balloon_index + 1;    
+                        document.getElementById("exit").style.display = "block";
+			            document.getElementById("bart").style.display = "none";
+            			$("#submit_balloon").click();    
                         }
                             
                         
@@ -712,8 +710,7 @@
                 })
                 .hide()
                 .on('click.bart', function(e) {
-    		        $("#".concat(balloon_index.toString()).concat("_submit_balloon")).click();
-    	            balloon_index = balloon_index + 1;    
+                    $("#submit_balloon").click();    
                 // next ballon
                     balcnt++;
                     console.log("next is clicked : ");
@@ -787,8 +784,7 @@
                         bal.save(1);
                         document.getElementById("exit").style.display = "inline";
 			            document.getElementById("bart").style.display = "none";
-                        $("#".concat(balloon_index.toString()).concat("_submit_balloon")).click();
-			            balloon_index = balloon_index + 1;    
+                        $("#submit_balloon").click();    
                         //console.log(r);
                     }
                         
