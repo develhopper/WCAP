@@ -21,15 +21,15 @@ Rails.application.routes.draw do
 
   resources :ddt_questions
 
-  resources :ddts
+  resources :ddts, except: [:destroy, :new, :create]
 
-  resources :gonogos
+  resources :gonogos, except: [:destroy, :new, :create]
 
-  resources :stroops
+  resources :stroops, except: [:destroy, :new, :create]
 
-  resources :barts
+  resources :barts, except: [:destroy, :new, :create]
 
-  resources :tasks
+  resources :tasks, except: [:destroy, :edit, :new ,:update , :create]
 
   resources :clinics do
     member do
@@ -51,7 +51,7 @@ Rails.application.routes.draw do
     
   end
 
-  resources :profiles
+  resources :profiles, except: [:destroy, :new ,:create]
 
 
 

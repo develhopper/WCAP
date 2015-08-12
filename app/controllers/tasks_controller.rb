@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_task, only: [:show]
   before_filter :authenticate_user!
   
   respond_to :html
@@ -10,30 +10,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    respond_with(@task)
-  end
-
-  def new
-    @task = Task.new
-    respond_with(@task)
-  end
-
-  def edit
-  end
-
-  def create
-    @task = Task.new(task_params)
-    @task.save
-    respond_with(@task)
-  end
-
-  def update
-    @task.update(task_params)
-    respond_with(@task)
-  end
-
-  def destroy
-    @task.destroy
     respond_with(@task)
   end
 
