@@ -26,6 +26,9 @@
 
           <% unless @study.finalized  %>
             <p>
+              <%= link_to (t 'study_ddt_questions_list'), get_ddt_questions_study_path(@study), :class => "btn btn-primary" %>
+            </p>
+            <p>
               <%= link_to (t 'test_details_list'), study_test_details_path(@study), :class => "btn btn-primary" %>
             </p>
             <p>

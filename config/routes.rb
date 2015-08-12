@@ -13,6 +13,9 @@ Rails.application.routes.draw do
       post 'finalize'
       post 'add_patient'
       get 'get_patients'
+      get 'get_ddt_questions'
+      post 'add_ddt_question'
+      delete 'remove_ddt_question'
     end
   end
 

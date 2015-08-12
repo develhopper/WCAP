@@ -95,6 +95,9 @@ fa:
   remove_from_study: حذف کردن از تحقیق
   this_study_is_finalized_and_you_cant_change_related_test_details: این تحقیق نهایی شده است و شما نمی‌توانید در جزئیات تحقیق مربوطه تغییر ایجاد کنید.
   finalize: نهایی کردن
+  study_patients_list: لیست آزمودنی‌ها‌ی تحقیق
+  patient_name: نام بیمار
+  study_ddt_questions_list: لیست سوالات Delay Discounting تحقیق
 #tasks
 
 #treatment_histories

@@ -1,0 +1,11 @@
+var element =  document.getElementById("ddt_question_row_<%=params[:ddt_question_id]%>");
+if (typeof(element) != 'undefined' && element != null)
+{
+  document.getElementById("ddt_question_row_<%=params[:ddt_question_id]%>").className= "success";
+  document.getElementById("ddt_question_row_<%=params[:ddt_question_id]%>").removeChild(document.getElementById("add_link_<%=params[:ddt_question_id]%>"));
+  var x = document.getElementById("ddt_question_row_<%=params[:ddt_question_id]%>").insertCell(1);
+  x.innerHTML='<%= link_to (t "remove_from_study"), remove_ddt_question_study_path(@study, :ddt_question_id => params[:ddt_question_id]), :remote => true, :method => :delete, :class => "smooth-scroll btn btn-danger " %>';
+  x.id='<%= "remove_link_#{params[:ddt_question_id]}" %>';
+}
+
+

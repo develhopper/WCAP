@@ -95,6 +95,10 @@ en:
   remove_from_study: Remove from Study
   this_study_is_finalized_and_you_cant_change_related_test_details: This study is finalized and you can't change related Test Details.
   finalieze: Finalize
+  study_patients_list: Study Patients List
+  patient_name: Patient Name
+  study_ddt_questions_list: Study Delay Discounting Questions List
+  
 #tasks
 
 #treatment_histories

@@ -1,6 +1,7 @@
 class StudiesController < ApplicationController
   before_action :set_study, only: [:show, :edit, :update, :destroy , 
-    :add_examiner, :remove_examiner, :get_examiners, :finalize, :get_patients,:add_patient]
+    :add_examiner, :remove_examiner, :get_examiners, :finalize, 
+    :get_patients, :add_patient, :add_ddt_question , :get_ddt_questions, :remove_ddt_question]
   before_filter :authenticate_user!
   before_action :set_available_users, only: [:new,:edit, :update, :get_examiners]
   before_action :set_available_patients, only: [:get_patients]
@@ -80,6 +81,34 @@ class StudiesController < ApplicationController
     @examiners = @study.users  
   end
 
+  def add_ddt_question
+    if @study.finalized
+      redirect_to @study
+    end
+    ddt_question = DdtQuestion.find(params[:ddt_question_id])
+    if ddt_question && !@study.ddt_questions.include?(ddt_question)
+      @study.ddt_questions.append(ddt_question)
+      @study.save
+    end
+    render 'add_ddt_question.js'
+  end
+
+  def remove_ddt_question
+    if @study.finalized
+      redirect_to @study
+    end
+    ddt_question = DdtQuestion.find(params[:ddt_question_id])
+    if ddt_question && @study.ddt_questions.include?(ddt_question)
+      @study.ddt_questions.delete(ddt_question)
+      @study.save
+    end
+    render 'remove_ddt_question.js'
+  end
+
+  def get_ddt_questions
+    @ddt_questions = DdtQuestion.all
+  end
+
   def get_patients
     @patients = current_user.related_patients
   end
@@ -98,6 +127,6 @@ class StudiesController < ApplicationController
     end
 
     def study_params
-      params.require(:study).permit(:admin_id, :description, :examiner_id, :patient_id)
+      params.require(:study).permit(:admin_id, :description, :examiner_id, :patient_id, :ddt_question_id)
     end
 end
