@@ -1,29 +1,38 @@
-<h1>Listing tasks</h1>
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-1'>
+    </div>
+    <div class='col-md-10 col-sm-10'>
+      <h1 class='section-title'><%= t 'tasks_list'%></h1>
+      <div class='panel panel-primary '>
 
-<table>
-  <thead>
-    <tr>
-      <th>Confirmed</th>
-      <th>Study</th>
-      <th>Patient</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t "study" %></th>
+              <th class='text-center'><%= t "patient" %></th>
+              <th class='text-center' colspan="1"></th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.confirmed %></td>
-        <td><%= task.study %></td>
-        <td><%= task.patient %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <tbody>
+            <% @tasks.each do |task| %>
+              <tr>
+                <td><%= task.study.description %></td>
+                <td><%= task.patient.name %></td>
+                <td><%= link_to (t 'show'), task , :class => "btn btn-primary"%></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<br>
-
-<%= link_to 'New Task', new_task_path %>
+      </div>
+      
+      <div class='text-center'>
+      </div>
+      </div>
+    <div class='col-md-1'>
+    </div>
+  </div>
+</div>

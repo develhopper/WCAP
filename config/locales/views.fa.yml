@@ -99,6 +99,7 @@ fa:
   patient_name: نام بیمار
   study_ddt_questions_list: لیست سوالات Delay Discounting تحقیق
 #tasks
+  tasks_list: لیست تسک‌ها
 
 #treatment_histories
   treatment_histories_list: لیست سوابق درمانی

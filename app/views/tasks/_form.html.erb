@@ -10,20 +10,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :confirmed %><br>
-    <%= f.check_box :confirmed %>
-  </div>
+  
   <div class="field">
     <%= f.label :study_id %><br>
-    <%= f.text_field :study_id %>
+    <%= f.text_field :study_id,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= f.label :patient_id %><br>
-    <%= f.text_field :patient_id %>
+    <%= f.text_field :patient_id,:class=>"reverse-dir" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
+
   </div>
 <% end %>

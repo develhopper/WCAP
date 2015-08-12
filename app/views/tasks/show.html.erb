@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong>Confirmed:</strong>
-  <%= @task.confirmed %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t "study" %>:</strong>
+            <%= @task.study.description %>
+          </p>
 
-<p>
-  <strong>Study:</strong>
-  <%= @task.study %>
-</p>
-
-<p>
-  <strong>Patient:</strong>
-  <%= @task.patient %>
-</p>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+          <p>
+            <strong><%= t "patient" %>:</strong>
+            <%= @task.patient.name %>
+          </p>
+        </div>
+      </div>
+      <%= link_to (t 'back'), tasks_path, :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
