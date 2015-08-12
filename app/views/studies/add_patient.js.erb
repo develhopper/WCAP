@@ -3,6 +3,6 @@ if (typeof(element) != 'undefined' && element != null)
 {
   document.getElementById("patient_row_<%=params[:patient_id]%>").className= "success";
   document.getElementById("patient_row_<%=params[:patient_id]%>").removeChild(document.getElementById("add_link_<%=params[:patient_id]%>"));
-  var x = document.getElementById("patient_row_<%=params[:patient_id]%>").insertCell(2);
-  x.innerHTML="<%= image_tag('tik.png', height: '32', width: '32')%>";
+  var x = document.getElementById("patient_row_<%=params[:patient_id]%>").insertCell(1);
+  x.innerHTML='<%= image_tag("tik.png", height: "32", width: "32")%>';
 }
