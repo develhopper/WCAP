@@ -20,11 +20,12 @@
     <%= f.text_field :last_name %>
   </div>
 
-  <div class="field">
-    <%= t 'admin' %><br>
-    <%= check_box_tag :admin, 1, @profile.user.admin %>
-  </div>
-
+  <% if @profile.user.admin %>
+    <div class="field">
+      <%= t 'admin' %><br>
+      <%= check_box_tag :admin, 1, @profile.user.admin %>
+    </div>
+  <% end %>
   <div class="field">
     <%= t 'user' %><br>
     <%= @profile.user.email %>
