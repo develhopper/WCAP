@@ -1,0 +1,2 @@
+module RectanglesHelper
+end

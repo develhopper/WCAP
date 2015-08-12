@@ -130,9 +130,12 @@
      * @author   Timo Gnambs <timo@gnambs.at>
      */
     $.fn.bart = function( method ) {
-        document.getElementById("exit").style.display = "none";
-	var balloon_index = 0;
+       document.getElementById("exit").style.display = "none";
+	   var balloon_index = 0;
+       var locale = getLocale();
+
         // default options
+
         var opts = {
             balloon: {                       // default settings for a balloon
                 earnings:        0.05,       // potential earnings for each pump
@@ -173,15 +176,15 @@
                                              //    number of explosions for each balloon
             frmids_time:     [],             // optional ids of hidden form elements to save 
                                              //    mean latency between pumps (excluding time before first pump)
-            txt_cashin: 'برداشت',     // text on 'Cash in' button
-            txt_inflate: 'باد کردن بالون',  // text on 'Inflate' button
-            txt_next:    ' بالون بعدی',     // text on 'Next' button
-            txt_balloon_number: 'تعداد بالون ها : ',          // text for balloon number
-            txt_number_of_pumps: 'تعداد باد کردن ها : ',        // text for number of pumps
-            txt_current_earned: 'سود کنونی : ',          // text for current earnings
-            txt_total_earned: 'کل سود : ',              // text for total earnings
-            txt_prob_explosion: 'احتمال ترکیدن بالون : ', // text for probability of explosion
-            txt_pumps_used: 'بیشینه بادکردن های مجاز : ',    // text for percentage of used pumps
+            txt_cashin: (locale=="fa")?'برداشت':'Cash In',     // text on 'Cash in' button
+            txt_inflate: (locale=="fa")?'باد کردن بالون':'Inflate',  // text on 'Inflate' button
+            txt_next:    (locale=="fa")?' بالون بعدی':'Next',     // text on 'Next' button
+            txt_balloon_number: (locale=="fa")?'تعداد بالون ها : ':'Balloon Number : ',          // text for balloon number
+            txt_number_of_pumps: (locale=="fa")?'تعداد باد کردن ها : ':'Number of Pumps : ',        // text for number of pumps
+            txt_current_earned: (locale=="fa")?'سود کنونی : ':'Current Earnings : ',          // text for current earnings
+            txt_total_earned: (locale=="fa")?'کل سود : ':'Total Earnings : ',              // text for total earnings
+            txt_prob_explosion: (locale=="fa")?'احتمال ترکیدن بالون : ':'Probability of Explosion : ', // text for probability of explosion
+            txt_pumps_used: (locale=="fa")?'بیشینه بادکردن های مجاز : ':'Percentage of Used Pumps : ',    // text for percentage of used pumps
             onload:    function() {},        // function to run before loading the script 
             onend:    function() {}          // function to run after finishing the last balloon 
         };
