@@ -1,0 +1,16 @@
+function testDetailDescription() {
+	var locale = getLocale();
+ 	var selected_test = $("#test_detail_name :selected").text()
+	if (selected_test == "Stroop"){
+		document.getElementById("test_description").innerHTML = (locale=="fa")? 'توجه: تعداد قسمت‌هایی که برای این آزمون انتخاب می‌کنید در عدد ۸ ضرب خواهد شد.': 'Note: The number of selected trials for this Task will be multiplied by eight.'
+	}
+	else {
+		document.getElementById("test_description").innerHTML = "";
+	}
+	if (selected_test == "Ddt"){
+		document.getElementById("part_count").style.display = "none";
+	}
+	else{
+		document.getElementById("part_count").style.display = "block";
+	}
+}

@@ -13,9 +13,10 @@
 
   <div class="field">
     <%= t "test_name" %><br>
-    <%= f.select :name, options_for_select(Test.get_child_classes.collect { |s| [s, s] }, selected: @test_detail.name), {},:class=>"reverse-dir" %>
+    <%= f.select :name, options_for_select(Test.get_child_classes.collect { |s| [s, s] }, selected: @test_detail.name), {},:class=>"reverse-dir", :onchange => "testDetailDescription();" %>    
   </div>
-  <div class="field">
+  <div id = "test_description"></div>
+  <div class="field" id="part_count">
     <%= t "part_count" %><br>
     <%= f.number_field :part_count,:class=>"reverse-dir" %>
   </div>
