@@ -1,8 +1,8 @@
-var element =  document.getElementById("patient_row_<%=params[:examiner_id]%>");
+var element =  document.getElementById("patient_row_<%=params[:patient_id]%>");
 if (typeof(element) != 'undefined' && element != null)
 {
-  document.getElementById("patient_row_<%=params[:examiner_id]%>").className= "success";
-  document.getElementById("patient_row_<%=params[:examiner_id]%>").removeChild(document.getElementById("add_link_<%=params[:examiner_id]%>"));
-  var x = document.getElementById("user_row_<%=params[:examiner_id]%>").insertCell(2);
-  x.innerHTML='<%= image_tag("tik.png", height: '32', width: '32')%>';
+  document.getElementById("patient_row_<%=params[:patient_id]%>").className= "success";
+  document.getElementById("patient_row_<%=params[:patient_id]%>").removeChild(document.getElementById("add_link_<%=params[:patient_id]%>"));
+  var x = document.getElementById("patient_row_<%=params[:patient_id]%>").insertCell(2);
+  x.innerHTML="<%= image_tag('tik.png', height: '32', width: '32')%>";
 }

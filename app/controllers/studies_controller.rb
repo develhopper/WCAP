@@ -1,9 +1,9 @@
 class StudiesController < ApplicationController
   before_action :set_study, only: [:show, :edit, :update, :destroy , 
-    :add_examiner, :remove_examiner, :get_examiners, :finalize]
+    :add_examiner, :remove_examiner, :get_examiners, :finalize, :get_patients,:add_patient]
   before_filter :authenticate_user!
-  before_action :set_available_users, only: [:edit, :update, :get_examiners]
-  before_action :set_available_examiners, only: [:get_patients]
+  before_action :set_available_users, only: [:new,:edit, :update, :get_examiners]
+  before_action :set_available_patients, only: [:get_patients]
 
   respond_to :html
 
@@ -50,8 +50,11 @@ class StudiesController < ApplicationController
   end
 
   def add_patient
-    pateint = Patient.find(params[:pateint_id])
-    if pateint && ! @study.patients.include?(pateint)
+    unless @study.finalized
+      redirect_to @study
+    end
+    patient = Patient.find(params[:patient_id])
+    if patient && ! @study.patients.include?(patient)
       @study.create_task(patient)
       @study.save
     end
@@ -88,6 +91,10 @@ class StudiesController < ApplicationController
 
     def set_available_users
       @users =User.all
+    end
+
+    def set_available_patients
+      @patients = current_user.related_patients
     end
 
     def study_params

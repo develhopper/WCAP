@@ -48,6 +48,7 @@ class User < ActiveRecord::Base
         _patients.append(reg.patient)
       end
     end
+    return _patients
   end
 
 end

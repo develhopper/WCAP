@@ -36,6 +36,10 @@
               <strong><%= t"this_study_is_finalized_and_you_cant_change_related_test_details"%></strong>
             </p>
 
+            <p>
+              <%= link_to (t 'study_patients_list'), get_patients_study_path(@study), :class => "btn btn-primary" %>
+            </p>
+
           <% end %>
         </div>
       </div>

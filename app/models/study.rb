@@ -14,9 +14,15 @@ class Study < ActiveRecord::Base
   end
 
   def create_task(patient)
-    # t = Task.new
-    # test_details.each do |tdetail|
-    #   tdetail.
-    # end
+    t = Task.new
+    test_details.each do |tdetail|
+      test = tdetail.name.constantize.new
+      test.create_one(tdetail)
+      t.tests << test
+      test.save
+    end
+    t.patient = patient
+    t.save
+    self.tasks.append(t)
   end
 end
