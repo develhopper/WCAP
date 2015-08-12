@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= t 'clinic_name' %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'supervisor' %><br>
-    <%= f.select :supervisor_id, options_for_select(@users.collect { |s| [s.email, s.id] }, selected: @clinic.supervisor_id), {}  %>
+    <%= f.select :supervisor_id, options_for_select(@users.collect { |s| [s.email, s.id] }, selected: @clinic.supervisor_id), {} ,:class=>"reverse-dir" %>
   </div>
   <div class="actions">
-    <%= f.submit (t 'submit', :default => "Submit")%>
+    <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
   </div>
 <% end %>

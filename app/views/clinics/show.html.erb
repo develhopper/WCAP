@@ -1,16 +1,32 @@
-<p id="notice"><%= notice %></p>
+<section class="section section-center section-testimonial loaded">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-3'>
+      </div>
 
-<p>
-  <strong><%= t 'clinic_name'%>:</strong>
-  <%= @clinic.name %>
-</p>
+      <div class='col-md-6 col-sm-6'>
+      <div class='panel panel-primary '>
+        <div class="panel-body">
+          <p>
+            <strong><%= t 'clinic_name'%>:</strong>
+            <%= @clinic.name %>
+          </p>
 
-<p>
-  <strong><%= t 'supervisor'%>:</strong>
-  <% if @clinic.supervisor %>
-  	<%= @clinic.supervisor.email %>
-  <% end %>
-</p>
+          <p>
+            <strong><%= t 'supervisor'%>:</strong>
+            <% if @clinic.supervisor %>
+              <%= @clinic.supervisor.email %>
+            <% end %>
+          </p>
+        </div>
+      </div>
 
-<%= link_to (t 'edit'), edit_clinic_path(@clinic) %> |
-<%= link_to (t 'back'), clinics_path %>
+      <%= link_to (t 'edit'), edit_clinic_path(@clinic), :class => "btn btn-primary" %>
+      <%= link_to (t 'back'), clinics_path, :class => "btn btn-primary" %>
+      </div>
+      <div class='col-md-3'>
+      </div>
+    </div>
+  </div>
+</section>
