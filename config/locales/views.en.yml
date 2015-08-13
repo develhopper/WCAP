@@ -9,7 +9,7 @@ en:
   approving_status: Approving Status
   approve: Approve
   disapprove: Disapprove
-
+  users_list: Users List
 #abusing_profiles
   abusing_profiles_list: Drug Abuse Profiles List
   new_abusing_profile: New Drug Abuse Profile
@@ -132,3 +132,4 @@ en:
 
 #global
   are_you_sure: Are you sure?
+  users_awaiting_approval: Users Awaiting Approval

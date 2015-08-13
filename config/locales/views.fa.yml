@@ -9,6 +9,7 @@ fa:
   approving_status: وضعیت تایید
   approve: تایید
   disapprove: رد کردن
+  users_list: لیست کاربران
 #abusing_profiles
   abusing_profiles_list: لیست نیم‌رخ‌های سوءمصرف‌های مواد	  
   new_abusing_profile: ایجاد نیم‌رخ سوءمصرف جدید
@@ -132,3 +133,4 @@ fa:
 
 #global
   are_you_sure: آیا مطمئن هستید؟
+  users_awaiting_approval: کاربرانی که نیاز به تایید دارند
