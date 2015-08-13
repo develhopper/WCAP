@@ -5,7 +5,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <%= t 'nav_bar_text' %>
+          <% if current_user.admin %>
+              <%= link_to (t 'users_list'), users_path, :class => "btn btn-link smooth-scroll" %>
+              <%= link_to (t 'users_awaiting_approval'), users_path(:approved => "false"), :class => "btn btn-link smooth-scroll" %>
+          <% end %>
         </div>
 	      <div class="social-links col-sm-6">
 			    <!-- <a href="#"><i class="fa fa-facebook"></i></a>
@@ -14,9 +17,9 @@
 			    <a href="#"><i class="fa fa-pinterest"></i></a> -->
 
           <%if request.fullpath == url_for( :locale => 'en' )%>
-            <%=link_to 'Persian', url_for( :locale => 'fa' )%>
+            <%=link_to 'Persian', url_for( :locale => 'fa' ), :class => "btn btn-link smooth-scroll"%>
           <%else%>
-            <%=link_to 'English', url_for( :locale => 'en' )%>
+            <%=link_to 'English', url_for( :locale => 'en' ), :class => "btn btn-link smooth-scroll"%>
           <%end%>
           
 			  </div>
@@ -50,6 +53,8 @@
 
           <% if current_user %>
           <!-- write code for active users here -->
+            
+
             <% if (current_user.admin || current_user.supervisor)  && !current_page?(clinics_url) %>
               <li class="active"><%= link_to (t 'clinics'), clinics_url %></li>
             <% end %>

@@ -4,7 +4,11 @@ fa:
 
 #users
   examiner: آزمون‌گیرنده
-
+  email: ایمیل
+  approved: تایید شده
+  approving_status: وضعیت تایید
+  approve: تایید
+  disapprove: رد کردن
 #abusing_profiles
   abusing_profiles_list: لیست نیم‌رخ‌های سوءمصرف‌های مواد	  
   new_abusing_profile: ایجاد نیم‌رخ سوءمصرف جدید

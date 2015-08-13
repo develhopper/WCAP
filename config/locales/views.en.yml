@@ -4,6 +4,11 @@ en:
 
 #users
   examiner: Examiner
+  email: Email
+  approved: Approved
+  approving_status: Approving Status
+  approve: Approve
+  disapprove: Disapprove
 
 #abusing_profiles
   abusing_profiles_list: Drug Abuse Profiles List

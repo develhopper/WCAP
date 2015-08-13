@@ -1,0 +1,49 @@
+<div class='container'>
+  
+  <div class='row'>
+    <div class='col-md-3'>
+    </div>
+    <div class='col-md-6 col-sm-6'>
+      <h1 class='section-title'><%= t 'users_list'%></h1>
+      <div class='panel panel-primary '>
+
+        <table class='table table-striped table-bordered text-center'>
+          <thead>
+            <tr>
+              <th class='text-center'><%= t 'email'%></th>
+              <th class='text-center'><%= t 'approving_status'%></th>
+              <th colspan="1" class='text-center'></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.email %></td>
+                <td>
+                  <% if user.approved %>
+                   <%= image_tag("tik.png", height: '32', width: '32')%>
+                  <% else %>
+                   <%= image_tag("cross.png", height: '32', width: '32')%> 
+                  <% end %>
+                </td>
+                <td>
+                  <% unless user.approved %>
+                   <%= link_to (t 'approve'), approve_user_path(user) , :class => "btn btn-primary" , :method => :post%>
+                  <% else %>
+                   <%= link_to (t 'disapprove'), disapprove_user_path(user) , :class => "btn btn-danger", :method => :delete, data: { confirm: (t 'are_you_sure')} %> 
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class='text-center'>
+      </div>
+      </div>
+    <div class='col-md-3'>
+    </div>
+  </div>
+</div>

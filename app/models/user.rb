@@ -63,4 +63,17 @@ class User < ActiveRecord::Base
     return false
   end
 
+
+  # devise overrides
+  def active_for_authentication? 
+    super && (approved? || self.admin) 
+  end 
+
+  def inactive_message 
+    if !approved? 
+      :not_approved 
+    else 
+      super # Use whatever other message 
+    end 
+  end
 end
