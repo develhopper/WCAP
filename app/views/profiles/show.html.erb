@@ -26,6 +26,9 @@
       </div>
 
       <%= link_to (t 'edit'), edit_profile_path(@profile), :class => "btn btn-primary" %> 
+      <% if current_user.profile.id == @profile.id %>
+        <%= link_to (t 'devise.registrations.edit.title', :resource => User.model_name.human), edit_user_registration_path, :class => "btn btn-primary" %>
+      <% end %>
       <% if current_user and current_user.admin %>
 
       <%= link_to (t 'back'), profiles_path, :class => "btn btn-primary" %>
