@@ -110,7 +110,13 @@
                   <% @study.test_details.each do |test_detail| %>
                     <tr>
                       <td> <%= test_detail.name %></td> 
-                      <td> <%= test_detail.part_count %></td>                  
+                      <td> 
+                        <% if test_detail.name == Ddt.name %>
+                          <%= test_detail.study.ddt_questions.count %>
+                        <% else %>
+                          <%= test_detail.part_count %>
+                        <% end %>
+                      </td>                  
                     </tr>
                   <% end %>
                 </tbody>
