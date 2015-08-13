@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= t 'first_name' %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t 'last_name' %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name,:class=>"reverse-dir"  %>
   </div>
 
   <% if @profile.user.admin %>

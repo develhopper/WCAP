@@ -32,13 +32,13 @@
           <i class="fa fa-bars"></i>
         </button>
         <% if current_user %>
-        <h1 class="navbar-brand"><i class="fa"><%= link_to t('edit_profile'), current_user.profile, :class => "btn btn-xs btn-link " %></i></h1>
-        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'exit'), destroy_user_session_url , :method => :delete, :class => "btn btn-xs btn-link " %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to t('profile'), current_user.profile, :class => "btn btn-link smooth-scroll" %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'exit'), destroy_user_session_url , :method => :delete, :class => "btn btn-link smooth-scroll" %></i></h1>
 
 
         <% else %>
-        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_in'), new_user_session_url %></i></h1>
-        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_up'), new_user_registration_url %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_in'), new_user_session_url, :class => "btn btn-link smooth-scroll" %></i></h1>
+        <h1 class="navbar-brand"><i class="fa"><%= link_to (t 'devise.shared.links.sign_up'), new_user_registration_url, :class => "btn btn-link smooth-scroll" %></i></h1>
         <% end %>
 
 		  </div>
