@@ -67,6 +67,8 @@ en:
   profiles_list: Profiles List
   new_profile: New Profile
   edit_profile: Edit Profile
+  profile: Profile
+  
 #stroops
   stroop_test: Stroop Test
   stroop: Stroop

@@ -67,6 +67,8 @@ fa:
   profiles_list: لیست پروفایلهای کاربری	  
   new_profile: ایجاد پروفایل
   edit_profile: ویرایش پروفایل
+  profile: پروفایل
+  
 #stroops
   stroop_test: تست استروپ
   stroop: استروپ
