@@ -24,7 +24,7 @@
                 <td><%= test_detail.study.description %></td>
                 <td><%= link_to (t 'show'), study_test_detail_path(@study,test_detail), :class => "btn btn-primary"  %></td>
                 <td><%= link_to (t 'edit'), edit_study_test_detail_path(@study,test_detail), :class => "btn btn-primary" %></td>
-                <td><%= link_to (t 'destroy'), study_test_detail_path(@study,test_detail), :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to (t 'destroy'), study_test_detail_path(@study,test_detail), :class => "btn btn-danger", method: :delete, data: { confirm: (t 'are_you_sure') } %></td>
               </tr>
             <% end %>
           </tbody>
