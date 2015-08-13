@@ -1,0 +1,25 @@
+function showDdtQuestionText(){
+	var locale = getLocale();
+ 	var selected_type = $("#ddt_question_question_type :selected").text()
+ 	var question_element = document.getElementById("ddt_question_text");
+ 	var definite_value = document.getElementById("ddt_question_definite_value").value;
+ 	var indefinite_value = document.getElementById("ddt_question_indefinite_value").value;
+ 	var risk_rate = document.getElementById("ddt_question_risk_rate").value;
+
+ 	if (locale == "fa"){
+	 	if (selected_type == "قطعی"){
+	 		question_element.innerHTML = "متن سوال: کدام‌یک را ترجیح می‌دهید؟<br> ".concat(definite_value!=""?definite_value:"....").concat(" تومان همین الان، یا ").concat(indefinite_value!=""?indefinite_value:"....").concat(" تومان در ").concat(risk_rate!=""?risk_rate:"....").concat(" روز؟");
+	 		}
+	 	else{
+	 		question_element.innerHTML = "متن سوال: کدام‌یک را ترجیح می‌دهید؟<br> ".concat(definite_value!=""?definite_value:"....").concat(" تومان به طور حتم، یا ").concat(indefinite_value!=""?indefinite_value:"....").concat(" تومان با شانس ").concat(risk_rate!=""?risk_rate:"....").concat("٪؟");
+	 	}
+ 	}
+ 	else{
+ 	if (selected_type == "deterministic"){
+	 		question_element.innerHTML = "Question Text: Which one do you prefer?<br> ".concat(definite_value!=""?definite_value:"....").concat(" dollars right now, or ").concat(indefinite_value!=""?indefinite_value:"....").concat(" dollars in ").concat(risk_rate!=""?risk_rate:"....").concat(" day(s)? ");
+	 		}
+	 	else{
+	 		question_element.innerHTML = "Question Text: Which one do you prefer?<br> ".concat(definite_value!=""?definite_value:"....").concat(" dollars for sure, or ").concat(indefinite_value!=""?indefinite_value:"....").concat(" dollars with a chance of ").concat(risk_rate!=""?risk_rate:"....").concat("%? ");
+	 	}
+ 	}
+}

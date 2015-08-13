@@ -1,3 +1,12 @@
 // Place all the styles related to the DdtQuestions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#ddt_question_text{
+	color:green;
+	font-weight: bold;
+	border-style: solid;
+	padding: 10;
+	border-color: #CC0066; 
+	border-radius: 10px;
+	padding: 25px 50px;
+}
