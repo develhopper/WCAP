@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <% if current_user.admin %>
+          <% if current_user && current_user.admin %>
               <%= link_to (t 'users_list'), users_path, :class => "btn btn-link smooth-scroll" %>
               <%= link_to (t 'users_awaiting_approval'), users_path(:approved => "false"), :class => "btn btn-link smooth-scroll" %>
           <% end %>
