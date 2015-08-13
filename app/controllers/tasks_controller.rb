@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show]
+  before_action :set_task, only: [:show,:set_current]
   before_filter :authenticate_user!
   
   respond_to :html
@@ -19,6 +19,12 @@ class TasksController < ApplicationController
 
   def show
     respond_with(@task)
+  end
+
+  def set_current
+    current_user.current_task = @task
+    current_user.save
+    redirect_to tasks_path
   end
 
   private

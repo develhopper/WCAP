@@ -102,6 +102,8 @@ en:
   
 #tasks
   tasks_list: Tasks List
+  related_tasks_list: Related Task List
+  current_task: Current Task
 #treatment_histories
   treatment_histories_list: Treatment Histories List
   new_treatment_history: New Treatment History

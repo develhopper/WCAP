@@ -101,7 +101,9 @@ fa:
   study_test_details_list: لیست جزئیات آزمون تحقیق
 #tasks
   tasks_list: لیست آزمون‌ها
-
+  related_tasks_list: لیست آزمون‌های مرتبط
+  current_task: آزمون کنونی
+  
 #treatment_histories
   treatment_histories_list: لیست سوابق درمانی
   new_treatment_history: ایجاد سوابق درمانی

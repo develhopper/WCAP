@@ -12,6 +12,7 @@
             <tr>
               <th class='text-center'><%= t "study" %></th>
               <th class='text-center'><%= t "patient" %></th>
+              <th class='text-center'><%= t "current_task" %></th>
               <th class='text-center' colspan="1"></th>
             </tr>
           </thead>
@@ -21,6 +22,12 @@
               <tr>
                 <td><%= task.study.description %></td>
                 <td><%= task.patient.name %></td>
+                <td><% if current_user.current_task && current_user.current_task.id == task.id %>
+                        <%= image_tag("tik.png", height: '32', width: '32')%>
+                    <% else %>
+                        <%= link_to (t 'select_task'), set_current_task_path(task), :method => :post , :class => "btn btn-primary"%>
+                    <% end %>
+                </td>
                 <td><%= link_to (t 'show'), task , :class => "btn btn-primary"%></td>
               </tr>
             <% end %>

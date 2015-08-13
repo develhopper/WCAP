@@ -49,18 +49,29 @@
           <% end %>
 
           <% if current_user %>
-          <!-- put code for active users here -->
-            <% if current_user.admin || current_user.supervisor %>
+          <!-- write code for active users here -->
+            <% if (current_user.admin || current_user.supervisor)  && !current_page?(clinics_url) %>
               <li class="active"><%= link_to (t 'clinics'), clinics_url %></li>
             <% end %>
-           
+
+            <% unless current_page?(tasks_url)%>
+              <li class="active"><%= link_to (t 'tasks_list'), tasks_url %></li>
+            <% end %>
+
+            <% unless current_page?(patients_url)%>
+              <li class="active"><%= link_to (t 'patients_list'), patients_url %></li>
+            <% end %>
+
+            <% unless current_page?(studies_url)%>
+              <li class="active"><%= link_to (t 'studies_list'), studies_url %></li>
+            <% end %>
+
+            <% if current_user.current_task  && !current_page?(current_user.current_task) %>
+              <li class="active"><%= link_to (t 'current_task'), current_user.current_task %></li>
+            <% end %>
+
+            
           <% end %>
-<!-- 			    <li><a href="#features">ویژگی ها</a></li>
-			    <li><a href="#portfolio">نمونه کارها</a></li>
-			    <li><a href="#testimonials">نظر مشتریان</a></li>
-			    <li><a href="#blog">وبلاگ</a></li>
-			    <li><a href="#clients">مشتریان</a></li>
-			    <li><a href="#contact">تماس</a></li> -->
 			  </ul>
       </div>
     </div>

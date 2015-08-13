@@ -29,7 +29,11 @@ Rails.application.routes.draw do
 
   resources :barts, except: [:destroy, :new, :create]
 
-  resources :tasks, except: [:destroy, :edit, :new ,:update , :create]
+  resources :tasks, except: [:destroy, :edit, :new ,:update , :create] do
+    member do
+      post 'set_current'
+    end
+  end
 
   resources :clinics do
     member do
