@@ -10,23 +10,26 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label t 'question_type',:class=>"reverse-dir" %><br>
+    <%= f.select :question_type, options_for_select(DdtQuestion.question_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @ddt_question.question_type), {:include_blank => ""} ,:class=>"reverse-dir", :onchange => "showDdtQuestionText();"%>
+  </div>
 
+  <div id = "ddt_question_text"></div>
+  <br>
   <div class="field">
     <%= f.label t 'definite_value' %><br>
-    <%= f.number_field :definite_value,:class=>"reverse-dir",:class=>"reverse-dir" %>
+    <%= f.number_field :definite_value,:class=>"reverse-dir" , :onchange => "showDdtQuestionText();"%>
   </div>
   <div class="field">
     <%= f.label t 'indefinite_value' %><br>
-    <%= f.number_field :indefinite_value,:class=>"reverse-dir" %>
+    <%= f.number_field :indefinite_value,:class=>"reverse-dir", :onchange => "showDdtQuestionText();" %>
   </div>
   <div class="field">
     <%= f.label t 'risk_rate' %><br>
-    <%= f.number_field :risk_rate,:class=>"reverse-dir" %>
+    <%= f.number_field :risk_rate,:class=>"reverse-dir" , :onchange => "showDdtQuestionText();"%>
   </div>
-  <div class="field">
-    <%= f.label t 'question_type',:class=>"reverse-dir" %><br>
-    <%= f.select :question_type, options_for_select(DdtQuestion.question_types.collect { |s| [I18n.t(s[0]), s[0]] }, selected: @ddt_question.question_type), {}  %>
-  </div>
+  
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
   </div>
