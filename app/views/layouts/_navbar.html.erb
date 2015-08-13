@@ -66,6 +66,10 @@
               <li class="active"><%= link_to (t 'studies_list'), studies_url %></li>
             <% end %>
 
+            <% unless current_page?(ddt_questions_url)%>
+              <li class="active"><%= link_to (t 'ddt_questions_list'), ddt_questions_url %></li>
+            <% end %>
+
             <% if current_user.current_task  && !current_page?(current_user.current_task) %>
               <li class="active"><%= link_to (t 'current_task'), current_user.current_task %></li>
             <% end %>
