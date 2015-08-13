@@ -25,7 +25,11 @@ Rails.application.routes.draw do
 
   resources :gonogos, except: [:destroy, :new, :create]
 
-  resources :stroops, except: [:destroy, :new, :create]
+  resources :stroops, except: [:destroy, :new, :create]  do
+    member do
+      post 'restart'
+    end
+  end
 
   resources :barts, except: [:destroy, :new, :create]
 

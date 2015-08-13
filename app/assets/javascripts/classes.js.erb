@@ -36,12 +36,13 @@
  * - Part of the objects you will have to modify in order to add or subtract
  *       colors.
  */
+var locale = getLocale();
 function ColorInfo() { //Edit this
     this.cycle  = ['red','yellow','green','blue']
-    this.red    = new ColorInfo_Key('red',   "<%= I18n.t('red')%>",   '#F00');
-    this.yellow = new ColorInfo_Key('yellow',"<%= I18n.t('yellow')%>",'#FF0');
-    this.green  = new ColorInfo_Key('green', "<%= I18n.t('green')%>", '#0F0');
-    this.blue   = new ColorInfo_Key('blue',  "<%= I18n.t('blue')%>",  '#55F');
+    this.red    = new ColorInfo_Key('red',   (locale=="fa")?'قرمز':'Red',   '#F00');
+    this.yellow = new ColorInfo_Key('yellow',(locale=="fa")?'زرد':'Yellow','#FF0');
+    this.green  = new ColorInfo_Key('green', (locale=="fa")?'سبز':'Green', '#0F0');
+    this.blue   = new ColorInfo_Key('blue',  (locale=="fa")?'آبی':'Blue',  '#55F');
 }
 new ColorInfo(); //mark as constructor
 

@@ -1,5 +1,5 @@
 class StroopsController < ApplicationController
-  before_action :set_stroop, only: [:show, :edit, :update, :destroy]
+  before_action :set_stroop, only: [:show, :edit, :update, :destroy, :restart]
   before_filter :authenticate_user!
 
   layout false , except: [:index, :show]
@@ -15,16 +15,11 @@ class StroopsController < ApplicationController
     respond_with(@stroop)
   end
 
-  def new
-    @stroop = Stroop.new
-    respond_with(@stroop)
-  end
-
   def edit
   end
 
-  def create
-    @stroop = Stroop.new(stroop_params)
+  def restart
+    @stroop.finished = false
     @stroop.save
     respond_with(@stroop)
   end

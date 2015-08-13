@@ -58,11 +58,13 @@ var screensPossible = new Object();
 var wordArray = new Array(); //List of colored words to test
 var counter = 0; //Tracker of current colored word we're testing
 
-var pageloading = true; //false when ini() is called
+var pageloading = false; //false when ini() is called
 var state = 'notstarted'; //Current state of testing
 
 var timeStart; //Timer global variables for determining
 var timeStop;  //how long it took for the user to report the color
+
+var locale = getLocale();
 
 var keyToColor = new Object();
 keyToColor['r'] = 'red';
@@ -71,13 +73,14 @@ keyToColor['b'] = 'blue';
 keyToColor['y'] = 'yellow';
 keyToColor['x'] = 'cancel';
 
+
 /**
  * Initializes the script by assigning references to variables and initializing
  * the word array. Concludes by focusing on the input box.
  * 
  * @event body onload
  */
-function ini() {
+function ini(parts) {
     //alert("boogh");
     displayOfMessage     = document.getElementById('displayOfMessage');
     displayOfColoredWord = document.getElementById('displayOfColoredWord');
@@ -184,7 +187,7 @@ function eventInput(input) {
     //If we haven't started, start it if the value is a space
     if (state == 'notstarted') {
         if (value != "start") {
-            paintMessage("<%= I18n.t ('press_space_to_start') %>");
+            paintMessage((locale=="fa")?'اسپیس را بزنید تا شروع شود':'Press space to start');
             return true;
         }
         if(wordArray.length == 0)
@@ -196,7 +199,7 @@ function eventInput(input) {
         document.getElementById("yellow_btn").style.display = 'block'
         document.getElementById("cancel_btn").style.display = 'block'
         state = 'standby';
-        paintMessage("<%= I18n.t ('start') %>");
+        paintMessage((locale=="fa")?'شروع':'Start');
 
         //alert("length in if:" + wordArray.length)
         setTimeout("setStandby()",1000);
@@ -217,7 +220,7 @@ function eventInput(input) {
             var time = timeEnd - timeStart
             wordArray[counter - 1].time = time; 
             wordArray[counter -1].success = true;
-            paintMessage("<%= I18n.t ('correct') %>");  
+            paintMessage((locale=="fa")?'درست':'Correct');  
 
         } else if (keyToColor[value] == 'cancel') {
             location.reload();
@@ -229,7 +232,7 @@ function eventInput(input) {
             var time = timeEnd - timeStart
             wordArray[counter - 1].time = time;  
             wordArray[counter -1].success = false;
-            paintMessage("<%= I18n.t ('incorrect') %>");
+            paintMessage((locale=="fa")?'غلط':'Incorrect');
         }
         state = 'afteranswer';
     }
