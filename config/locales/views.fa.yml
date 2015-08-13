@@ -36,7 +36,7 @@ fa:
   clinic_examiners_list: لیست آزمون‌گیرنده‌های کلینیک
 
 #ddt_questions
-  ddt_questions_list: لیسط سوالات Delay Discounting
+  ddt_questions_list: لیست سوالات Delay Discounting
   new_ddt_question: ایجاد سوال Delay Discounting
   edit_ddt_question: ویرایش Delay Discounting 
   ddt_question: سوال Delay Discounting 
