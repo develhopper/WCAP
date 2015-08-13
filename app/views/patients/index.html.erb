@@ -30,7 +30,9 @@
       </div>
       
       <div class='text-center'>
-        <%= link_to (t 'new_patient'), new_patient_path , :class => "smooth-scroll btn btn-lg btn-link " %>
+        <% unless current_user.related_clinics.empty? %>
+          <%= link_to (t 'new_patient'), new_patient_path , :class => "smooth-scroll btn btn-lg btn-link " %>
+        <% end %>
       </div>
       </div>
     <div class='col-md-3'>

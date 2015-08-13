@@ -58,7 +58,7 @@
               <li class="active"><%= link_to (t 'tasks_list'), tasks_url %></li>
             <% end %>
 
-            <% unless current_page?(patients_url)%>
+            <% unless current_page?(patients_url) || ! current_user.has_related_patient? %>
               <li class="active"><%= link_to (t 'patients_list'), patients_url %></li>
             <% end %>
 

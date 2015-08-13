@@ -5,7 +5,11 @@ class PatientsController < ApplicationController
   respond_to :html
 
   def index
-    @patients = Patient.all
+    if current_user.admin?
+      @patients = Patient.all
+    else
+      @patients = current_user.related_patients
+    end
     respond_with(@patients)
   end
 
@@ -24,10 +28,15 @@ class PatientsController < ApplicationController
   end
 
   def create
+
     @patient = Patient.new(patient_params)
-    @patient.save
-    @patient.update_clinics(params[:clinic_ids], current_user)
-    respond_with(@patient)
+    unless @patient.check_clinics(params[:clinic_ids], current_user)
+      redirect_to patients_path
+    else 
+      @patient.save
+      @patient.update_clinics(params[:clinic_ids], current_user)
+      respond_with(@patient)
+    end
   end
 
   def update

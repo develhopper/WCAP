@@ -51,4 +51,16 @@ class User < ActiveRecord::Base
     return _patients
   end
 
+  def has_related_patient?
+    if registrations.count > 0
+      return true
+    end
+    under_supervision_clinics.each do |clinic|
+      clinic.registrations.each do |reg|
+        return true
+      end
+    end
+    return false
+  end
+
 end

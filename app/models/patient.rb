@@ -17,6 +17,19 @@ class Patient < ActiveRecord::Base
 		end
 	end
 
+	def check_clinics(clinic_ids, user)
+		unless clinic_ids && !clinic_ids.empty?
+			return false
+		end
+		clinic_ids.each do |clinic_id|
+			clinic = Clinic.find(clinic_id)
+			unless user.related_clinics.include?(clinic)
+				return false
+			end
+		end
+		return true
+	end
+
 	def name
 		return first_name + " " + last_name
 	end
