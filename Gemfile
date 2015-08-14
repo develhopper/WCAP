@@ -48,6 +48,8 @@ gem 'cancancan', '~> 1.10'
 
 gem 'active_record-acts_as'
 
+gem 'parsi-date'
+
 
 group :production do  
   gem 'pg'

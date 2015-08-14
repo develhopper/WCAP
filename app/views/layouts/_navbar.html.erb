@@ -10,19 +10,29 @@
               <%= link_to (t 'users_awaiting_approval'), users_path(:approved => "false"), :class => "btn btn-link smooth-scroll" %>
           <% end %>
         </div>
-	      <div class="social-links col-sm-6">
+	      
 			    <!-- <a href="#"><i class="fa fa-facebook"></i></a>
 			    <a href="#"><i class="fa fa-twitter"></i></a>
 			    <a href="#"><i class="fa fa-google-plus"></i></a>
 			    <a href="#"><i class="fa fa-pinterest"></i></a> -->
-
           <%if request.fullpath == url_for( :locale => 'en' )%>
-            <%=link_to 'Persian', url_for( :locale => 'fa' ), :class => "btn btn-link smooth-scroll"%>
+            <div class="col-sm-3">
+              <%=link_to 'Persian', url_for( :locale => 'fa' ), :class => "btn btn-link smooth-scroll"%>
+            </div>
+            <div class="col-sm-3">
+              <%= Time.zone.now.getlocal.strftime "%A %d %B %Y | %k:%M"%>
+            </div>
           <%else%>
-            <%=link_to 'English', url_for( :locale => 'en' ), :class => "btn btn-link smooth-scroll"%>
+            <div class="col-sm-3">
+              <%=link_to 'English', url_for( :locale => 'en' ), :class => "btn btn-link smooth-scroll"%>
+            </div>
+            <div class="col-sm-3">
+              <%= Time.zone.now.getlocal.to_parsi.strftime "%A %d %B %Y | %k:%M"
+%>
+            </div>
           <%end%>
-          
-			  </div>
+			  
+        
       </div>
     </div>
   </nav>

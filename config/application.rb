@@ -22,6 +22,7 @@ module WCAP
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.time_zone = 'Tehran'
   end
 end
 
