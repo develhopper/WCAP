@@ -1,3 +1,10 @@
+function checkIfNumeric() {
+  var locale = getLocale();
+  if (isNaN(this.value)){
+    alert(locale=="fa"?"لطفا اعداد را با صفحه‌کلید انگلیسی وارد نمایید.":"Please type a numeric value!");
+  }
+}
+
 function getLocale() {
   var locale = "fa";
   var params = window.location.search.substring(1);

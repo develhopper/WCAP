@@ -18,15 +18,15 @@
   </div>
   <div class="field">
     <%= t 'first_use_age' %><br>
-    <%= f.number_field :first_use_age,:class=>"reverse-dir" %>
+    <%= f.number_field :first_use_age,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'continuous_usage_duration' %><br>
-    <%= f.number_field :continuous_usage_duration,:class=>"reverse-dir" %>
+    <%= f.number_field :continuous_usage_duration,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'count' %><br>
-    <%= f.number_field :count,:class=>"reverse-dir" %>
+    <%= f.number_field :count,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'type' %><br>

@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= t 'count' %><br>
-    <%= f.number_field :count, :class=>"reverse-dir"  %>
+    <%= f.number_field :count, :class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'max_avoidance_day' %><br>
-    <%= f.number_field :max_avoidance_day, :class=>"reverse-dir"  %>
+    <%= f.number_field :max_avoidance_day, :class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'description' %><br>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= t 'in_month_used' %><br>
-    <%= f.number_field :in_month_used, :class=>"reverse-dir"  %>
+    <%= f.number_field :in_month_used, :class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"),:class=>"btn btn-default smooth-scroll"%>

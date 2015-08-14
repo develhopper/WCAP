@@ -16,15 +16,15 @@
   </div>
   <div class="field">
     <%= t 'cost_per_month' %><br>
-    <%= f.number_field :cost_per_month,:class=>"reverse-dir" %>
+    <%= f.number_field :cost_per_month,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'overdose_count' %><br>
-    <%= f.number_field :overdose_count,:class=>"reverse-dir" %>
+    <%= f.number_field :overdose_count,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'freakout_count' %><br>
-    <%= f.number_field :freakout_count,:class=>"reverse-dir" %>
+    <%= f.number_field :freakout_count,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   
   <div class="actions">

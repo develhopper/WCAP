@@ -18,7 +18,7 @@
   <div id = "test_description"></div>
   <div class="field" id="part_count">
     <%= t "part_count" %><br>
-    <%= f.number_field :part_count,:class=>"reverse-dir" %>
+    <%= f.number_field :part_count,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>

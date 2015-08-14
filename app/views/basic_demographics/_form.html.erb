@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= t 'file_number' %><br>
-    <%= f.number_field :file_number ,:class=>"reverse-dir"%>
+    <%= f.number_field :file_number ,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'private_code' %><br>
-    <%= f.number_field :private_code ,:class=>"reverse-dir"%>
+    <%= f.number_field :private_code ,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'gender' %><br>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= t 'year_of_birth' %><br>
-    <%= f.number_field :year_of_birth ,:class=>"reverse-dir"%>
+    <%= f.number_field :year_of_birth ,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t 'interview_date' %><br>
@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= t 'educational_year' %><br>
-    <%= f.number_field :educational_year ,:class=>"reverse-dir"%>
+    <%= f.number_field :educational_year ,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <br>
   <div class="actions">

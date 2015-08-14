@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= t ('in_year_treat_count') %><br>
-    <%= f.number_field :in_year_treat_count, :class=>"reverse-dir" %>
+    <%= f.number_field :in_year_treat_count, :class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="field">
     <%= t ('na_session') %><br>
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= t ('total') %><br>
-    <%= f.number_field :total, :class=>"reverse-dir" %>
+    <%= f.number_field :total, :class=>"reverse-dir", :onchange => "checkIfNumeric.call(this);" %>
   </div>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>

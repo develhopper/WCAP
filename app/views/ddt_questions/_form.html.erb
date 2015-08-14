@@ -19,15 +19,15 @@
   <br>
   <div class="field">
     <%= f.label t 'definite_value' %><br>
-    <%= f.number_field :definite_value,:class=>"reverse-dir" , :onchange => "showDdtQuestionText();"%>
+    <%= f.number_field :definite_value,:class=>"reverse-dir" , :onchange => "checkIfNumeric.call(this); showDdtQuestionText();"%>
   </div>
   <div class="field">
     <%= f.label t 'indefinite_value' %><br>
-    <%= f.number_field :indefinite_value,:class=>"reverse-dir", :onchange => "showDdtQuestionText();" %>
+    <%= f.number_field :indefinite_value,:class=>"reverse-dir", :onchange => "checkIfNumeric.call(this); showDdtQuestionText();" %>
   </div>
   <div class="field">
     <%= f.label t 'risk_rate' %><br>
-    <%= f.number_field :risk_rate,:class=>"reverse-dir" , :onchange => "showDdtQuestionText();"%>
+    <%= f.number_field :risk_rate,:class=>"reverse-dir" , :onchange => "checkIfNumeric.call(this); showDdtQuestionText();"%>
   </div>
   
   <div class="actions">
