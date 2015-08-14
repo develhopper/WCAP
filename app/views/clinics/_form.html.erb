@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= t 'supervisor' %><br>
-    <%= f.select :supervisor_id, options_for_select(@users.collect { |s| [s.email, s.id] }, selected: @clinic.supervisor_id), {} ,:class=>"reverse-dir" %>
+    <%= f.select :supervisor_id, options_for_select(@users.collect { |s| [s.identity, s.id] }, selected: @clinic.supervisor_id), {} ,:class=>"reverse-dir" %>
   </div>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>

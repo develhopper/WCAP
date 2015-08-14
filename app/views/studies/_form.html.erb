@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= t "admin" %><br>
-    <%= f.select :admin_id, options_for_select(@users.collect { |s| [s.email, s.id] }, selected: @study.admin_id), {} ,:class=>"reverse-dir" %>
+    <%= f.select :admin_id, options_for_select(@users.collect { |s| [s.identity, s.id] }, selected: @study.admin_id), {} ,:class=>"reverse-dir" %>
   </div>
   <div class="field">
     <%= t "description" %><br>

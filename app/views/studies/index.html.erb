@@ -18,7 +18,7 @@
           <tbody>
             <% @studies.each do |study| %>
               <tr>
-                <td><%= study.admin.profile.name %></td>
+                <td><%= study.admin.identity %></td>
                 <td><%= study.description %></td>
                 <td><%= link_to (t 'show'), study , :class => "btn btn-primary"%></td>
                 <td><%= link_to (t 'edit'), edit_study_path(study), :class => "btn btn-primary" %></td>

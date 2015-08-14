@@ -13,6 +13,11 @@ class User < ActiveRecord::Base
     not under_supervision_clinics.empty?
   end
 
+
+  def identity
+    "#{email}  #{profile.name} "
+  end
+
   has_one :profile
   has_many :registrations
   has_many :under_supervision_clinics, :class_name => :Clinic, :foreign_key => "supervisor_id"
