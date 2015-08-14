@@ -21,13 +21,13 @@ function getLocale() {
 function setDirection() {
   var locale = getLocale();
   if (locale == "fa"){
-    document.getElementById("page").className += " right-to-left";
+    document.getElementById("page").className += " right-to-left font-fa";
     $(".reverse-dir").addClass('left-side');
 
     
   }
   else{
-    document.getElementById("page").className += " left-to-right";
+    document.getElementById("page").className += " left-to-right font-en";
    $(".reverse-dir").addClass('right-side');
   }
 }
