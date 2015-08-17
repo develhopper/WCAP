@@ -119,7 +119,8 @@ fa:
 
 
 #treatment
-
+  treatments_list: لیست درمان‌ها
+  new_treatment: ایجاد درمان جدید
 #test_details
   test_details_list: لیست جزئیات تست‌ها
   new_test_detail: ایجاد جزئیات تست

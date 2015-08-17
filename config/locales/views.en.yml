@@ -118,7 +118,8 @@ en:
   treatment_history: Treatment History
 
 #treatments
-  
+  treatments_list: Treatments List
+  new_treatment: New Treatment
 #test_details
   test_details_list: Test Details List
   new_test_detail: New Test
