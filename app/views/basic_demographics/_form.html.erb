@@ -33,7 +33,8 @@
   </div>
   <div class="field">
     <%= t 'interview_date' %><br>
-    <%= f.date_select :interview_date , {}, {:class=>"reverse-dir"}%>
+    <input type="text" id="calendar-field" class="pdate reverse-dir" disabled="disabled"><br>  
+    <%= f.hidden_field :interview_date , {:class=>"reverse-dir"}%>
   </div>
   <div class="field">
     <%= t 'marital_status' %><br>
@@ -48,3 +49,12 @@
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>
   </div>
 <% end %>
+
+  <script type="text/javascript">
+  
+    var objCal5 = new AMIB.persianCalendar( 'calendar-field', {
+        extraInputID: 'basic_demographic_interview_date',
+        extraInputFormat: 'YYYY/MM/DD'
+      }
+    );
+  </script>

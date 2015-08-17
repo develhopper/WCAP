@@ -22,6 +22,7 @@
 //= jquery.jcanvas.min
 //= jquery.bart
 //= gonogo
+//= js-persian-cal.min
 //= require_tree .
 
 

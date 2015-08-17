@@ -35,7 +35,12 @@
 
           <p>
             <strong><%= t 'interview_date'%>:</strong>
-            <%= @basic_demographic.interview_date %>
+            <%if request.fullpath == url_for( :locale => 'en' )%>
+              <%= @basic_demographic.interview_date.strftime "%A %d %B %Y"%>
+            <%else%>
+              <%= @basic_demographic.interview_date.to_parsi.strftime "%A %d %B %Y"
+%>
+            <%end%>
           </p>
 
           <p>

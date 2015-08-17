@@ -16,10 +16,10 @@
 			    <a href="#"><i class="fa fa-google-plus"></i></a>
 			    <a href="#"><i class="fa fa-pinterest"></i></a> -->
           <%if request.fullpath == url_for( :locale => 'en' )%>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
               <%=link_to 'Persian', url_for( :locale => 'fa' ), :class => "btn btn-link smooth-scroll"%>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <%= Time.zone.now.getlocal.strftime "%A %d %B %Y | %k:%M"%>
             </div>
           <%else%>
