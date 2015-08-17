@@ -40,9 +40,12 @@ if (!window.Node) {
 /**
  * Configurable Elements
  */
-var silo = new TypeSilo(3); //Edit number to change the amount of tests given.
+var silo ;//= new TypeSilo(3); //Edit number to change the amount of tests given.
                             //See classes.js for more information.
-
+function setTypeSiloCount(count){
+    alert("count :" + count)
+    silo = new TypeSilo(count);
+}
 /**
  * Global Elements
  */
@@ -80,7 +83,7 @@ keyToColor['x'] = 'cancel';
  * 
  * @event body onload
  */
-function ini(parts) {
+function ini() {
     //alert("boogh");
     displayOfMessage     = document.getElementById('displayOfMessage');
     displayOfColoredWord = document.getElementById('displayOfColoredWord');

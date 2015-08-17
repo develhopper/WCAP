@@ -11,10 +11,9 @@
   <%= csrf_meta_tags %>
 
     <script type="text/javascript">
-            
     $(document).ready(function() {  
       document.getElementById("hidden-form").style.display = "none";
-      ini(<%= @stroop.total_items / 8 %>);
+      ini();
     });
 </script>
 </head>
@@ -66,5 +65,8 @@ Come back when you've done all the colors, and your results will be here.</texta
     </div>
   </div>
 </section>
+<script type="text/javascript">
+  setTypeSiloCount(<%= @stroop.total_items / 8 %>);   
+</script>
 </body>
 </html>
