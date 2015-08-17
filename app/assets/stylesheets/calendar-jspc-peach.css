@@ -12,6 +12,7 @@ a.pcalBtn {
 	background-image: url( "pcal.png" );
 	background-repeat: no-repeat;
 	margin: 0 1px;
+	float: left;
 }
 
 a.pcalBtn:hover {
