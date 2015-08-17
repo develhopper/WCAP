@@ -53,7 +53,6 @@ GEM
       warden (~> 1.2.3)
     devise-i18n-views (0.3.4)
     erubis (2.7.0)
-    exception_handler (0.3.45)
     execjs (2.5.2)
     hike (1.2.3)
     i18n (0.7.0)
@@ -138,7 +137,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   devise-i18n-views
-  exception_handler
   jbuilder (~> 2.0)
   jquery-rails
   parsi-date

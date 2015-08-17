@@ -50,8 +50,6 @@ gem 'active_record-acts_as'
 
 gem 'parsi-date'
 
-gem 'exception_handler'
-
 
 group :production do  
   gem 'pg'
