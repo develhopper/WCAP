@@ -70,6 +70,7 @@ Rails.application.routes.draw do
   # delete 'studies/:id/remove_examiner/:examiner_id' => 'studies#remove_examiner', as: :remove_study_examiner
 
   get 'welcome/index'
+  get 'welcome/help'
 
   devise_for :users
   resources :users, only: [:index] do

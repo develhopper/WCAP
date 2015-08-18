@@ -33,8 +33,8 @@
   </div>
   <div class="field">
     <%= t 'interview_date' %><br>
-    <input type="text" id="calendar-field" class="pdate reverse-dir"><br>  
-    <%= f.hidden_field :interview_date , {:class=>"reverse-dir"}%>
+      <input type="text" id="calendar-field" class="pdate reverse-dir"  disabled><br>  
+      <%= f.text_field :interview_date , {:class=>"reverse-dir"  , :disabled => "disabled"}%>
   </div>
   <div class="field">
     <%= t 'marital_status' %><br>
@@ -51,10 +51,19 @@
 <% end %>
 
   <script type="text/javascript">
-  
-    var objCal5 = new AMIB.persianCalendar( 'calendar-field', {
-        extraInputID: 'basic_demographic_interview_date',
-        extraInputFormat: 'YYYY/MM/DD'
-      }
-    );
+    locale = getLocale();
+    if(locale == 'fa'){
+      $("#basic_demographic_interview_date").hide();
+      $("#calendar-field").show();
+      var objCal5 = new AMIB.persianCalendar( 'calendar-field', {
+          extraInputID: 'basic_demographic_interview_date',
+          extraInputFormat: 'YYYY/MM/DD'
+        }
+      );
+    }
+    else{
+        $("#basic_demographic_interview_date").show();
+        $("#calendar-field").hide();
+        $('#basic_demographic_interview_date').datePicker({startDate:'01/01/1996'});
+    }
   </script>

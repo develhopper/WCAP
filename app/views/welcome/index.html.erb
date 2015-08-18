@@ -3,21 +3,31 @@
 
         	<section id="carousel-1" class="carousel slide section-slide" data-ride="carousel">
           		<div class="carousel-inner">
-            		<div class="item active" style="background-image: url(<%= asset_path 'bg-1.jpg' %>);">
+            		<div class="item active">
               			<div class="container">
-              				<%=image_tag("typo-1.png", :alt => "First slide")%>
+              				<%=image_tag("home_page_1.jpg", :alt => "First slide", :width => 600, :height => 300)%>
               			</div>
             		</div>
-	            	<div class="item" style="background-image: url(<%= asset_path 'bg-2.jpg' %>);">
+	            	<div class="item" >
 	            		<div class="container">
-	            			<%=image_tag("typo-2.png", :alt => "Second slide")%>
+	            			<%=image_tag("home_page_2.jpg", :alt => "Second slide", :width => 600, :height => 300)%>
 	            		</div>
 	           		</div>
-	            	<div class="item" style="background-image: url(<%= asset_path 'bg-3.jpg' %>);">
+	            	<div class="item" >
 	              		<div class="container">
-	              			<%=image_tag("typo-3.png", :alt => "Third slide")%>
+	              			<%=image_tag("home_page_3.jpg", :alt => "Third slide", :width => 600, :height => 300)%>
 	              		</div>
 	            	</div>
+                <div class="item" >
+                    <div class="container">
+                      <%=image_tag("home_page_4.jpg", :alt => "Forth slide", :width => 600, :height => 300)%>
+                    </div>
+                </div>
+                <div class="item" >
+                    <div class="container">
+                      <%=image_tag("home_page_5.jpg", :alt => "Fifth slide", :width => 600, :height => 300)%>
+                    </div>
+                </div>
 	         	</div>
 	          	<a class="left carousel-control" href="#carousel-1" data-slide="prev">
 	          		<span class="fa fa-chevron-left"></span>
@@ -27,7 +37,14 @@
 	          	</a>
         	</section>
 
+          <% if current_user %>
           <section id="portfolio" class="section section-portfolio">
+            <div class="container">
+            <%= link_to (t 'help') , '/welcome/help', :class => 'btn btn-lg btn-link'%>
+          </div>
+          </section>
+          <% end %>
+          <!-- <section id="portfolio" class="section section-portfolio">
               <div class="container">
                 <h2 class="section-title"><span>یه همچین جایی باید ویدئو‌های آموزشی قرار بدیم</span></h2>
                 <ul id="filters">
@@ -113,12 +130,12 @@
 
             </div>
         </section>
+ -->
 
 
 
 
-
-        	<section class="section section-center section-cta">
+        	<!-- <section class="section section-center section-cta">
           		<div class="container">
             		<h2 class="section-title"><span>آماده هستی برای شروع؟</span></h2>
             		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
@@ -187,9 +204,9 @@
 
             		</div>
           		</div>
-        	</section>
+        	</section> -->
 
-        	<section id="portfolio" class="section section-portfolio">
+        	<!-- <section id="portfolio" class="section section-portfolio">
 	          	<div class="container">
 	            	<h2 class="section-title"><span>آثار اخیر.</span></h2>
 	            	<ul id="filters">
@@ -275,9 +292,9 @@
 
 		        </div>
 		    </section>
-
+ -->
         <!-- Project Modal -->
-        	<div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-label" aria-hidden="true">
+       <!--  	<div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-label" aria-hidden="true">
           		<div class="modal-dialog">
 
             		<div class="modal-content">
@@ -321,9 +338,9 @@
             		</div>
 
 	        	</div>
-        	</div>
+        	</div> -->
 
-        	<section id="testimonials" class="section section-center section-hilite section-testimonial">
+      <!--   	<section id="testimonials" class="section section-center section-hilite section-testimonial">
           		<div class="container">
             		<h2 class="section-title"><span>آنچه مشتریان ما می گویند؟</span></h2>
             		<i class="fa fa-quote-left fa-3x"></i>
@@ -363,9 +380,9 @@
             		</div>
 
           		</div>
-        	</section>
+        	</section> -->
 
-        	<section id="pricing" class="section section-center section-pricing">
+        <!-- 	<section id="pricing" class="section section-center section-pricing">
             	<div class="container">
                 	<h2 class="section-title"><span>جدول قیمت گذاری آسان</span></h2>
                 	<div class="pricing-table">
@@ -459,8 +476,8 @@
 	                </div>
 	            </div>
 	        </section>
-
-	        <section id="team" class="section section-center section-hilite section-team">
+ -->
+	      <!--   <section id="team" class="section section-center section-hilite section-team">
 	            <div class="container">
 	                <h2 class="section-title"><span>تیم شاد ما</span></h2>
 	                <div class="row">
@@ -492,9 +509,9 @@
 	                    </div>
 	                </div>
 	            </div>
-	        </section>
+	        </section> -->
 
-	        <section id="blog" class="section section-blog">
+	      <!--   <section id="blog" class="section section-blog">
 	          <div class="container">
 	            <h2 class="section-title"><span>وبلاگ ما</span></h2>
 	            <div class="row">
@@ -544,9 +561,9 @@
 	              </div>
 	            </div>
 	          </div>
-	        </section>
+	        </section> -->
 
-	        <section id="clients" class="section section-hilite section-our-clients">
+	      <!--   <section id="clients" class="section section-hilite section-our-clients">
 	          <div class="container">
 	            <h2 class="section-title"><span>مشتریان ما</span></h2>
 	            <div class="row">
@@ -570,9 +587,9 @@
 	              </div>
 	            </div>
 	          </div>
-	        </section>
+	        </section> -->
 
-	        <section id="contact" class="section section-center section-contact">
+	        <!-- <section id="contact" class="section section-center section-contact">
 	          <div class="container">
 	            <h2 class="section-title"><span>تماس با ما</span></h2>
 	            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
@@ -618,7 +635,7 @@
 	            </div>
 	          </div>
 	        </section>
-	        
+	         -->
 	      
 
 	    <div class="scroll-to-top" data-spy="affix" data-offset-top="200"><a href="#page" class="smooth-scroll"><i class="fa fa-arrow-up"></i></a></div>
