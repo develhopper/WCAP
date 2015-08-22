@@ -10,7 +10,7 @@ class Ability
 
     user ||= User.new # guest user (not logged in)
     if user.admin?
-      can :safe_manage, :all
+      can :manage, :all
     else
 
         #
