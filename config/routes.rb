@@ -63,7 +63,7 @@ Rails.application.routes.draw do
 
 
 
-  # post 'ddts/:ddt_id/ddt_answer/:id' => 'ddt_answers#update', as: :update_ddt_ddt_answer
+  post 'ddts/:ddt_id/ddt_answer/:id' => 'ddt_answers#update', as: :update_ddt_ddt_answer
 
   # post 'studies/:id/add_examiner/:examiner_id' => 'studies#add_examiner', as: :add_study_examiner
   
