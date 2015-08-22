@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822095145) do
+ActiveRecord::Schema.define(version: 20150822111715) do
 
   create_table "Ddt_Questions_studies", id: false, force: true do |t|
     t.integer "ddt_question_id", null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150822095145) do
   create_table "barts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "finished"
   end
 
   create_table "basic_demographics", force: true do |t|

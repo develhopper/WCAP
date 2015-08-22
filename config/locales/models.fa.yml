@@ -44,6 +44,9 @@ fa:
   intravenous_injection: "تزریق وریدی"
 
 #barts
+  pumps: تعداد باد کردن
+  explosion: ترکیدن
+  response_time: زمان پاسخ
 
 #basic_demographics
   basic_demographic: اطلاعات دموگرافیک پایه‌ی

@@ -41,7 +41,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :barts, except: [:destroy, :new, :create]
+  resources :barts, except: [:destroy, :new, :create] do
+    member do
+      post 'finish'
+      post 'restart'
+    end
+  end
 
   resources :tasks, except: [:destroy, :edit, :new ,:update , :create] do
     member do

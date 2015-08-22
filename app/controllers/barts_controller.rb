@@ -1,8 +1,8 @@
 class BartsController < ApplicationController
-  before_action :set_bart, only: [:show, :edit, :update, :destroy]
+  before_action :set_bart, only: [:show, :edit, :update, :destroy, :restart, :finish]
   before_filter :authenticate_user!
 
-  layout false , except: [:index, :new, :edit]
+  layout false , except: [:index, :new, :show]
 
   respond_to :html
 
@@ -21,6 +21,18 @@ class BartsController < ApplicationController
   end
 
   def edit
+  end
+
+  def finish
+    @bart.finished = true
+    @bart.save
+    respond_with(@bart)
+  end
+
+  def restart
+    @bart.finished = false
+    @bart.save
+    respond_with(@bart)
   end
 
   def create

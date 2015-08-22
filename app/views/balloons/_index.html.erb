@@ -1,0 +1,23 @@
+<table class='table table-striped table-bordered text-center'>
+  <thead>
+    <tr>
+      <th class='text-center'><%= t "pumps"%></th>
+      <th class='text-center'><%= t "explosion"%></th>
+      <th class='text-center'><%= t "response_time"%></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bart.balloons.each do |balloon| %>
+      <tr>
+        <td><%= balloon.pumps %></td>
+        <td><% if balloon.explosion %>
+                   <%= image_tag("tik.png", height: '32', width: '32')%>
+                  <% else %>
+                   <%= image_tag("cross.png", height: '32', width: '32')%> 
+                  <% end %></td></td>
+        <td><%= balloon.response_time%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -27,6 +27,7 @@ fa:
   edit_bart: ویرایش آزمون خطرپذیری بادکنکی
   bart_description: توضیحات بارت شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
   bart_final_text: توضیحات پایان آزمون بارت را در فایل views.fa.yml بیابید.
+  bart: خطر پذیری بادکنکی
 
 #basic_demographics
   basic_demographics_list: اطلاعات پایه‌ی دموگرافیک آزمودنی
@@ -58,7 +59,7 @@ fa:
   ddt_deter_forth_part: "روز؟"
   or: یا
 #ddt
-  ddt: Delay Discounting
+  ddt: کاهش ارزش تعویقی
   ddt_description: توضیحات Delay Discounting شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
 #gonogos
   gonogos_list: لیست تست‌های گونوگوی انجام‌شده

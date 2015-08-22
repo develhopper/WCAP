@@ -40,7 +40,7 @@
                 <tbody>
                   <% @task.tests.each do |test| %>
                     <tr>
-                      <td> <%= test.specific.class.name %></td> 
+                      <td> <%= t test.specific.class.name.downcase %></td> 
                       <td> <%= link_to (t 'show'), test.specific, :class => "btn btn-primary" %></td>                  
                     </tr>
                   <% end %>

@@ -27,6 +27,7 @@ en:
   edit_bart: Edit Bart
   bart_description: find this in views.en.yml
   bart_final_text: edit "bart's final text" in views.en.yml
+  bart: Balloon Analogue Risk Task
 
 #basic_demographics
   basic_demographics_list: Basic Demographics List

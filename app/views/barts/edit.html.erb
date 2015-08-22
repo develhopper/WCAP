@@ -1,29 +1,55 @@
-<section class="section  section-testimonial loaded">
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-3'>
-      </div>
 
-      <div class='col-md-6 col-sm-6'>
-        <div class='panel panel-primary '>
-          <div class="panel-heading">
-              <h3 class="panel-title">
-                 <%= t 'edit_bart'%>
-              </h3>
-           </div>
-          
-          <div class="panel-body">
-            <%= render 'form' %>
-          </div>
-          
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAP</title>
+    <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+      <!-- additional scripts to run the demo on this page -->
+      
+  </head>
+
+  <body>
+    <div id="page" >
+      <main id="main" class="site-main">
+        <div id="bart" style="margin: auto; text-align: center; height:100%">
         </div>
-        <div class="text-center">
-          <%= link_to (t 'show'), bart_path(@bart), :class => "btn btn-primary" %> 
-          <%= link_to (t 'back'), barts_path, :class => "btn btn-primary" %>
+        <% @bart.balloons.each_with_index do |balloon , i| %>
+          <%= render :partial => '/balloons/form' , :locals =>{:balloon => balloon, :form_index => i}  %>
+        <%end%>
+
+        <div id="exit">
+          <br><br>
+          <%=t 'bart_final_text'%>
+
+          <br><br>
+          <%= button_to 'finish', finish_bart_path(@bart) , :method=>:post , :id => "finish_gonogo"  %>
         </div>
-      </div>
-      <div class='col-md-3'>
-      </div>
+      </main>
     </div>
-  </div>
-</section>
+    <script type="text/javascript">
+          $(document).ready(setDirection());
+          $(document).ready(function() {   
+              //load BART
+          var s = {//txt_cashin: 'PUNKTE SAMMELN',
+                  //txt_inflate: 'BALLON AUFBLASEN',
+                  //txt_next: 'Nächster Ballon',
+                  //txt_balloon_number: 'Ballon:',
+                  //txt_current_earned: 'Punkte für Ballon:',
+                  //txt_total_earned: 'Punkte insgesamt:',
+                  //txt_prob_explosion: "Wahrscheinlichkeit,\n\n dass Ballon platzt:",
+                  showpumpcount: true,
+                  showpopprob: false,
+                  ballon: {popprob: 60}};
+          var b = [ {b:<%=@bart.balloons.count%>, o: { color: 'blue', earnings: 50}}, 
+                  {b:0, o: { color: 'green', earnings:1}},
+                  {b:0, o: { color: 'red', earnings: 1}} ];
+              $("#bart").bart( {s:s, b:b} );
+      });
+      </script>   
+  </body>
+</html>
