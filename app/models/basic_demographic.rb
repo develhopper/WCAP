@@ -3,4 +3,6 @@ class BasicDemographic < ActiveRecord::Base
 
   enum gender: [:male , :female]
   enum marital_status: [:single ,:married ,:separated ,:divorced ,:widowed]
+
+  validates :interview_date, presence: true
 end

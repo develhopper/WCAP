@@ -3,13 +3,16 @@ class ClinicsController < ApplicationController
     :add_examiner, :remove_examiner, :get_examiners, :finalize]
   before_filter :authenticate_user!
   before_action :set_available_users, only: [:get_examiners]
-
-  # load_and_authorize_resource
+  load_and_authorize_resource
   
   respond_to :html
 
   def index
-    @clinics = Clinic.all
+    if current_user.admin
+      @clinics = Clinic.all
+    else
+      @clinics = Clinic.where(:supervisor_id => current_user.id)
+    end
     respond_with(@clinics)
   end
 

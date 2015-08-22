@@ -5,11 +5,16 @@ class StudiesController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_available_users, only: [:new,:edit, :update, :get_examiners]
   before_action :set_available_patients, only: [:get_patients]
+  load_and_authorize_resource
 
   respond_to :html
 
   def index
-    @studies = Study.all
+    if current_user.admin
+      @studies = Study.all
+    else
+      @studies = current_user.related_studies
+    end
     respond_with(@studies)
   end
 

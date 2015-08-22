@@ -2,7 +2,8 @@ class BasicDemographicsController < ApplicationController
   before_action :set_basic_demographic, only: [:show, :edit, :update, :destroy]
   before_action :set_patient
   before_filter :authenticate_user!  
-
+  load_and_authorize_resource
+  
   respond_to :html
 
   def index

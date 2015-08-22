@@ -65,7 +65,7 @@
           <!-- write code for active users here -->
             
 
-            <% if (current_user.admin || current_user.supervisor)  && !current_page?(clinics_url) %>
+            <% if (current_user.admin || current_user.is_supervisor?)  && !current_page?(clinics_url) %>
               <li class="active"><%= link_to (t 'clinics'), clinics_url %></li>
             <% end %>
 
