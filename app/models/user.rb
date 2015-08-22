@@ -28,10 +28,14 @@ class User < ActiveRecord::Base
   def related_clinics
     _clinics = []
     under_supervision_clinics.each do |c|
-      _clinics.append(c)
+      unless _clinics.include?(c)
+        _clinics.append(c)
+      end
     end
     clinics.each do |c|
-      _clinics.append(c)
+      unless _clinics.include?(c)
+        _clinics.append(c)
+      end
     end
     return _clinics
   end
