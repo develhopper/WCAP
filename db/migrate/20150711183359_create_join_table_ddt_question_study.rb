@@ -1,8 +1,7 @@
 class CreateJoinTableDdtQuestionStudy < ActiveRecord::Migration
-  def change
-    create_join_table :Ddt_Questions, :studies do |t|
-      # t.index [:ddt_question_id, :study_id]
-      # t.index [:study_id, :ddt_question_id]
-    end
+
+  create_table :ddt_questions_studies, id: false do |t|
+    t.integer :ddt_question_id, null: false
+    t.integer :study_id, null: false
   end
 end
