@@ -39,6 +39,8 @@ en:
   new_clinic: New Clinic
   edit_clinic: Edit Clinic
   clinic_examiners_list: Clinic Examiners List
+  add_to_clinic: Add To Clinic
+  remove_from_clinic: Remove From Clinic
 
 #ddt_questions
   ddt_questions_list: Delay Discounting Questions List

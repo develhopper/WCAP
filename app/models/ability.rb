@@ -32,7 +32,7 @@ class Ability
         # See the wiki for details:
         # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
         can :safe_manage, Profile, :user_id => user.id
-        can :safe_manage, Clinic, :supervisor_id => user.id
+        can [:safe_manage,:add_examiner, :remove_examiner, :get_examiners], Clinic, :supervisor_id => user.id
         can :safe_manage, Patient do |patient|
           !patient.id || user.can_edit_patient(patient.id)
         end

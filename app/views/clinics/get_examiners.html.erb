@@ -25,9 +25,9 @@
                 <td><%= user.profile.name %></td>
                 <td><%= user.email %></td>
                 <% unless @examiners.include?(user) %>
-                    <td id="<%= "add_link_#{user.id}" %>" ><%= link_to (t 'add_to_study'), add_examiner_clinic_path(@clinic, :examiner_id => user.id), :remote => true, :method => :post, :class => "smooth-scroll btn btn-primary " %></td>
+                    <td id="<%= "add_link_#{user.id}" %>" ><%= link_to (t 'add_to_clinic'), add_examiner_clinic_path(@clinic, :examiner_id => user.id), :remote => true, :method => :post, :class => "smooth-scroll btn btn-primary " %></td>
                 <% else %>
-                    <td id="<%= "remove_link_#{user.id}" %>"><%= link_to (t 'remove_from_study'), remove_examiner_clinic_path(@clinic, :examiner_id => user.id), :remote => true, :method => :delete, :class => "smooth-scroll btn btn-danger " %></td>
+                    <td id="<%= "remove_link_#{user.id}" %>"><%= link_to (t 'remove_from_clinic'), remove_examiner_clinic_path(@clinic, :examiner_id => user.id), :remote => true, :method => :delete, :class => "smooth-scroll btn btn-danger " %></td>
                 <% end %>
                 
               </tr>

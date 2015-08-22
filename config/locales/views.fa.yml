@@ -39,6 +39,8 @@ fa:
   new_clinic: ایجاد کلینیک جدید
   edit_clinic: ویرایش کلینیک
   clinic_examiners_list: لیست آزمون‌گیرنده‌های کلینیک
+  add_to_clinic: افزودن به کلینیک
+  remove_from_clinic: حذف از کلینیک
 
 #ddt_questions
   ddt_questions_list: لیست سوالات Delay Discounting
@@ -122,9 +124,9 @@ fa:
   treatments_list: لیست درمان‌ها
   new_treatment: ایجاد درمان جدید
 #test_details
-  test_details_list: لیست جزئیات تست‌ها
-  new_test_detail: ایجاد جزئیات تست
-  edit_test_detail: ویرایش جزئیات تست
+  test_details_list: لیست جزئیات آزمون‌ها
+  new_test_detail: ایجاد جزئیات آزمون
+  edit_test_detail: ویرایش جزئیات آزمون
 #registrations
   registrations_list: لیست پرونده‌ها
   

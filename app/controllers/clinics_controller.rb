@@ -1,6 +1,6 @@
 class ClinicsController < ApplicationController
   before_action :set_clinic, only: [:show, :edit, :update, :destroy, 
-    :add_examiner, :remove_examiner, :get_examiners, :finalize]
+    :add_examiner, :remove_examiner, :get_examiners]
   before_filter :authenticate_user!
   before_action :set_available_users, only: [:get_examiners]
   load_and_authorize_resource
