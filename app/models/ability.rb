@@ -37,7 +37,8 @@ class Ability
           !patient.id || user.can_edit_patient(patient.id)
         end
 
-        can :safe_manage, Study do |study|
+        can [:safe_manage, :add_examiner, :remove_examiner, :get_examiners, :finalize, 
+    :get_patients, :add_patient, :add_ddt_question , :get_ddt_questions, :remove_ddt_question], Study do |study|
           !study.id || user.can_edit_study(study.id)
         end
 
