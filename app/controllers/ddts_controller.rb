@@ -1,5 +1,5 @@
 class DdtsController < ApplicationController
-  before_action :set_ddt, only: [:show, :edit, :update, :destroy]
+  before_action :set_ddt, only: [:show, :edit, :update, :destroy, :restart]
   before_filter :authenticate_user!
   layout false , only: [:edit]
   
@@ -20,6 +20,12 @@ class DdtsController < ApplicationController
   end
 
   def edit
+  end
+
+  def restart
+    @ddt.finished = false
+    @ddt.save
+    respond_with(@ddt)
   end
 
   def create

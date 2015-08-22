@@ -1,5 +1,43 @@
 <section class="section section-center section-testimonial loaded">
-  <div class='container'>
-    <%= render 'ddt_answers/index' %>
+
+  
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-3'>
+        </div>
+
+        <div class='col-md-6'>
+          <div class='panel panel-primary '>
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                 <%= t 'ddt'%>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <% if @ddt.finished %>
+                <%= render 'ddt_answers/index' %>
+
+
+              <% else %>
+                <%= t 'ddt_description' %>
+                
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-md-3'>
+        </div>
+      </div>
+      <% if @ddt.finished %>
+        <%= link_to (t 'back'), @ddt.task, :class => "btn btn-primary" %>
+        <%= link_to (t 'reset'), restart_ddt_path(@ddt), :method => :post, :class => "btn btn-primary" %>
+      <% else %>
+        <%= link_to (t 'start'), edit_ddt_path(@ddt), :class => "btn btn-primary" %>
+        <%= link_to (t 'back'), @ddt.task, :class => "btn btn-primary" %>
+      <% end %>
   </div>
+  
+
 </section>

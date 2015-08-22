@@ -58,7 +58,8 @@ fa:
   ddt_deter_forth_part: "روز؟"
   or: یا
 #ddt
-
+  ddt: Delay Discounting
+  ddt_description: توضیحات Delay Discounting شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
 #gonogos
   gonogos_list: لیست تست‌های گونوگوی انجام‌شده
   new_gonogo: تست گونوگو جدید
@@ -112,6 +113,7 @@ fa:
   tasks_list: لیست آزمون‌ها
   related_tasks_list: لیست آزمون‌های مرتبط
   current_task: آزمون کنونی
+  select_task: انتخاب آزمون
   
 #treatment_histories
   treatment_histories_list: لیست سوابق درمانی

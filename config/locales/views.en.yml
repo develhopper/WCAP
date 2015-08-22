@@ -58,6 +58,8 @@ en:
   ddt_deter_forth_part: "day(s)?"
   or: Or
 #ddt
+  ddt: Delay Discounting
+  ddt_description: find this in views.en.yml
 
 #gonogos
   gonogos_list: Go/NoGos List
@@ -113,6 +115,7 @@ en:
   tasks_list: Tasks List
   related_tasks_list: Related Task List
   current_task: Current Task
+  select_task: Select Task
 #treatment_histories
   treatment_histories_list: Treatment Histories List
   new_treatment_history: New Treatment History

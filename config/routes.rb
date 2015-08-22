@@ -21,7 +21,12 @@ Rails.application.routes.draw do
 
   resources :ddt_questions
 
-  resources :ddts, except: [:destroy, :new, :create]
+  resources :ddts, except: [:destroy, :new, :create] do
+    member do
+      post 'restart'
+    end
+  end
+
 
   resources :gonogos, except: [:destroy, :new, :create]
 
