@@ -1,0 +1,23 @@
+<table class='table table-striped table-bordered text-center'>
+  <thead>
+    <tr>
+      <!-- <th class='text-center'><%= t 'response_time'%></th> -->
+      <th class='text-center'><%= t 'is_clicked'%></th>
+      <th class='text-center'><%= t 'state'%></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gonogo.rectangles.each do |rectangle| %>
+      <tr>
+        <!-- <td><%=rectangle.response_time%></td> -->
+        <td><% if rectangle.is_clicked %>
+                   <%= image_tag("tik.png", height: '32', width: '32')%>
+                  <% else %>
+                   <%= image_tag("cross.png", height: '32', width: '32')%> 
+                  <% end %></td>
+        <td><%=t rectangle.state%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

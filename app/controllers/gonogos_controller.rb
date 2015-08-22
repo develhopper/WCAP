@@ -1,7 +1,7 @@
 class GonogosController < ApplicationController
-  before_action :set_gonogo, only: [:show, :edit, :update, :destroy]
+  before_action :set_gonogo, only: [:show, :edit, :update, :destroy, :restart, :finish]
   before_filter :authenticate_user!
-  layout false , except: [:index, :new, :edit]  
+  layout false , except: [:index, :new, :show]  
   respond_to :html
 
   def index
@@ -21,6 +21,16 @@ class GonogosController < ApplicationController
   def edit
   end
 
+  def finish
+    @gonogo.finished = true
+    @gonogo.save
+    respond_with(@gonogo)
+  end
+  def restart
+    @gonogo.finished = false 
+    @gonogo.save
+    respond_with(@gonogo)
+  end
   def create
     @gonogo = Gonogo.new(gonogo_params)
     @gonogo.save

@@ -141,7 +141,7 @@ function PlayBlueVert() {
                 if (counter >= maxTiral) {
                     clearTimeout(play);
                     console.log('canceled');
-		    document.getElementById("finish").click();
+		    document.getElementById("finish_gonogo").click();
 			
                 }
                     document.removeEventListener("keypress", listener);
@@ -198,7 +198,7 @@ function PlayGreenVert() {
             if (counter >= maxTiral) {
                 clearTimeout(play);
                 console.log('canceled');
-		    document.getElementById("finish").click();
+		    document.getElementById("finish_gonogo").click();
                 }
                 document.removeEventListener("keypress", listener);
                 window.charCode = null;
@@ -254,7 +254,7 @@ function PlayBlueHori() {
 	            if (counter >= maxTiral) {
                 clearTimeout(play);
                 console.log('canceled');
-		    document.getElementById("finish").click();
+		    document.getElementById("finish_gonogo").click();
                 }
                 document.removeEventListener("keypress", listener);
                 window.charCode = null;
@@ -311,7 +311,7 @@ function PlayGreenHori() {
             if (counter >= maxTiral) {
                 clearTimeout(play);
                 console.log('canceled');
-		    document.getElementById("finish").click();
+		    document.getElementById("finish_gonogo").click();
                 }
                 document.removeEventListener("keypress", listener);
                 window.charCode = null;

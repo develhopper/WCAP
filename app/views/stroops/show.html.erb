@@ -51,7 +51,7 @@
 
     <% else %>
         <%= link_to (t 'back'), @stroop.task, :class => "btn btn-primary" %>
-        <%= link_to (t 'reset'), restart_stroop_path(@stroop), :method => :post, :class => "btn btn-primary" %>
+        <%= link_to (t 'reset'), restart_stroop_path(@stroop), :method => :post, :class => "btn btn-primary", data: { confirm: (t 'are_you_sure') }  %>
     <% end %>
     
   </div>

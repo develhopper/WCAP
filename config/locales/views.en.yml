@@ -66,6 +66,10 @@ en:
   new_gonogo: New Go/NoGo
   edit_gonogo: Edit Go/NoGo
   gonogo_description: find this in views.en.yml
+  gonogo: Go/No-go
+  is_clicked: Is Clicked?
+  state: State
+
   
 #patients
   patients_list: Patients List	  
@@ -140,3 +144,4 @@ en:
   are_you_sure: Are you sure?
   users_awaiting_approval: Users Awaiting Approval
   name: Name
+  reset: Reset

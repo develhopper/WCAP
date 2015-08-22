@@ -32,7 +32,7 @@
       </div>
       <% if @ddt.finished %>
         <%= link_to (t 'back'), @ddt.task, :class => "btn btn-primary" %>
-        <%= link_to (t 'reset'), restart_ddt_path(@ddt), :method => :post, :class => "btn btn-primary" %>
+        <%= link_to (t 'reset'), restart_ddt_path(@ddt), :method => :post, :class => "btn btn-primary", data: { confirm: (t 'are_you_sure') }  %>
       <% else %>
         <%= link_to (t 'start'), edit_ddt_path(@ddt), :class => "btn btn-primary" %>
         <%= link_to (t 'back'), @ddt.task, :class => "btn btn-primary" %>

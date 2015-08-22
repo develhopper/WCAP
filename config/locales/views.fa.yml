@@ -65,7 +65,9 @@ fa:
   new_gonogo: تست گونوگو جدید
   edit_gonogo: ویرایش گونوگو
   gonogo_description: توضیحات گونوگو شما می‌توانید من را در فایل views.fa.yml بیابید برای ادامه و شروع تست باید روی گزینه‌ی شروع کلیک کنید.
-
+  gonogo: برو / بایست
+  is_clicked: کلیک شده؟
+  state: حالت
 #patients
   patients_list: لیست آزمودنی‌ها
   new_patient: ایجاد آزمودنی
@@ -140,3 +142,4 @@ fa:
   are_you_sure: آیا مطمئن هستید؟
   users_awaiting_approval: کاربرانی که نیاز به تایید دارند
   name: نام
+  reset: شروع دوباره

@@ -121,3 +121,9 @@ fa:
   test_name: نام تست
   part_count: تعداد قسمت‌ها
   study: تحقیق
+
+#rectangle
+  blue_vertical: آبی عمودی
+  green_vertical: سبز عمودی
+  blue_horizontal: آبی افقی
+  green_horizontal: سبز افقی

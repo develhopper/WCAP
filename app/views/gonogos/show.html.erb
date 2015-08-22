@@ -1,49 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	  <meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <title>WCAP</title>
-	  <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	  <%= csrf_meta_tags %>
-	</head>
-	<body>
-		<%= javascript_tag do %>
-	  		var maxTiral = <%= @gonogo.rectangles.count %>;
-		<% end %>
+<section class="section section-center section-testimonial loaded">
 
+  
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-3'>
+        </div>
 
-		<div id="page" >
-			<main id="main" class="site-main">
-	    		<button id = "start" , onclick="start()"> <%=t 'start_test'%>  </button>
-				
-				<div id="BlueVert"></div>
-	        	<div id="GreenVert"></div>
-	   			<div id="WhiteVert"></div>
-				<div id="BlueHori"></div>
-				<div id="GreenHori"></div>
-	       		<div id="WhiteHori"></div>
-	        	<div id="WhitePlus"></div>
-	        	<div id="WhiteWithNoBorder"></div>
+        <div class='col-md-6'>
+          <div class='panel panel-primary '>
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                 <%= t 'gonogo'%>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <% if @gonogo.finished %>
+                <%= render 'rectangles/index' %>
+              <% else %>
+                <%= t 'gonogo_description' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
 
+        <div class='col-md-3'>
+        </div>
+      </div>
+      <% if @gonogo.finished %>
+        <%= link_to (t 'back'), @gonogo.task, :class => "btn btn-primary" %>
+        <%= link_to (t 'reset'), restart_gonogo_path(@gonogo), :method => :post, :class => "btn btn-primary" , data: { confirm: (t 'are_you_sure') } %>
+      <% else %>
+        <%= link_to (t 'start'), edit_gonogo_path(@gonogo), :class => "btn btn-primary" %>
+        <%= link_to (t 'back'), @gonogo.task, :class => "btn btn-primary" %>
+      <% end %>
+  </div>
+  
 
-				<% @gonogo.rectangles.each_with_index do |rectangle , i| %>
-					<%= render :partial => '/rectangles/form' , :locals =>{:rectangle => rectangle, :form_index => i}  %>
-				<%end%>
-
-			
-				<div id="exit">
-					
-	        	</div>
-			</main>
-		</div>
-
-		<script> 
-	    	$(document).ready(setDirection());
-		</script>
-	</body>
-</html>
-
-
+</section>

@@ -1,29 +1,49 @@
-<section class="section  section-testimonial loaded">
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-3'>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAP</title>
+    <%= stylesheet_link_tag    'application' , media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= javascript_tag do %>
+        var maxTiral = <%= @gonogo.rectangles.count %>;
+    <% end %>
 
-      <div class='col-md-6 col-sm-6'>
-        <div class='panel panel-primary '>
-          <div class="panel-heading">
-              <h3 class="panel-title">
-                 <%= t 'edit_gonogo'%>
-              </h3>
-           </div>
-          
-          <div class="panel-body">
-            <%= render 'form' %>
-          </div>
-          
+
+    <div id="page" >
+      <main id="main" class="site-main">
+        
+        <div id="BlueVert"></div>
+            <div id="GreenVert"></div>
+          <div id="WhiteVert"></div>
+        <div id="BlueHori"></div>
+        <div id="GreenHori"></div>
+            <div id="WhiteHori"></div>
+            <div id="WhitePlus"></div>
+            <div id="WhiteWithNoBorder"></div>
+
+
+        <% @gonogo.rectangles.each_with_index do |rectangle , i| %>
+          <%= render :partial => '/rectangles/form' , :locals =>{:rectangle => rectangle, :form_index => i}  %>
+        <%end%>
+
+      
+        <div id="exit">
+          <%= button_to 'finish', finish_gonogo_path(@gonogo) , :method=>:post , :id => "finish_gonogo"  %>
         </div>
-        <div class="text-center">
-          <%= link_to (t 'show'), gonogo_path(@gonogo), :class => "btn btn-primary" %> 
-          <%= link_to (t 'back'), gonogos_path, :class => "btn btn-primary" %>
-        </div>
-      </div>
-      <div class='col-md-3'>
-      </div>
+      </main>
     </div>
-  </div>
-</section>
+
+    <script> 
+        start();
+        $(document).ready(setDirection());
+    </script>
+  </body>
+</html>
+
+
