@@ -54,3 +54,10 @@ gem 'parsi-date'
 group :production do  
   gem 'pg'
 end  
+
+group :development do
+  gem "rails-erd"
+  gem 'annotate', '~> 2.6.6'
+end
+
+

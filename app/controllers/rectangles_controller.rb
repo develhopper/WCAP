@@ -20,7 +20,7 @@ class RectanglesController < ApplicationController
       if params[:rectangle][:state]
         params[:rectangle][:state] = Rectangle.states.keys[params[:rectangle][:state].to_i - 1]
       end
-      params.require(:rectangle).permit(:id, :state, :is_clicked, :display_time, :response_time, :reaction_time, :gonogo_id)
+      params.require(:rectangle).permit(:id, :state, :is_clicked, :display_time, :response_time, :gonogo_id)
 
     end
 
