@@ -17,6 +17,4 @@ class Rectangle < ActiveRecord::Base
 
   enum state: [:blue_vertical, :green_vertical, :blue_horizontal, :green_horizontal]
 
-  #Validates presence of :gonogo
-  validates :gonogo, presence: true
 end

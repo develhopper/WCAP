@@ -5,7 +5,7 @@ class CreateRectangles < ActiveRecord::Migration
       t.boolean :is_clicked
       t.integer :display_time
       t.integer :response_time
-      t.references :gonogo, index: true, null: false
+      t.references :gonogo, index: true
 
       t.timestamps
     end

@@ -15,7 +15,6 @@ class DdtAnswer < ActiveRecord::Base
   belongs_to :ddt_question
   
   #Validates presence of [:ddt, :ddt_question]
-  validates :ddt, presence: true
   validates :ddt_question, presence: true
 
 end

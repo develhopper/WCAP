@@ -14,6 +14,4 @@
 class Balloon < ActiveRecord::Base
   belongs_to :bart
 
-  #Validates presence of :bart
-  validates :bart, presence: true
 end

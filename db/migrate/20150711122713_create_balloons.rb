@@ -4,7 +4,7 @@ class CreateBalloons < ActiveRecord::Migration
       t.integer :pumps
       t.boolean :explosion
       t.integer :response_time
-      t.references :bart, index: true, null: false
+      t.references :bart, index: true
 
       t.timestamps
     end
