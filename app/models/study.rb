@@ -21,6 +21,7 @@ class Study < ActiveRecord::Base
   validates :description, presence: true
   validates :admin, presence: true
 
+  #Returns Patients of Study
   def patients
     patients = []
     tasks.each do |task|
@@ -29,6 +30,7 @@ class Study < ActiveRecord::Base
     return patients
   end
 
+  #Creates task for patient from TestDetails
   def create_task(patient)
     t = Task.new
     test_details.each do |tdetail|
