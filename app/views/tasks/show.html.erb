@@ -33,6 +33,7 @@
                 <thead>
                   <tr>
                     <th class='text-center'><%= t 'test_name'%></th>
+                    <th class='text-center'><%= t 'finished'%></th>
                     <th class='text-center'></th>
                   </tr>
                 </thead>
@@ -41,7 +42,14 @@
                   <% @task.tests.each do |test| %>
                     <tr>
                       <td> <%= t test.specific.class.name.downcase %></td> 
-                      <td> <%= link_to (t 'show'), test.specific, :class => "btn btn-primary" %></td>                  
+                      <td>
+                          <% if test.specific.finished %>
+                           <%= image_tag("tik.png", height: '32', width: '32')%>
+                          <% else %>
+                           <%= image_tag("cross.png", height: '32', width: '32')%> 
+                          <% end %>
+                      </td>                  
+                      <td> <%= link_to (t 'show'), test.specific, :class => "btn btn-primary" %></td>
                     </tr>
                   <% end %>
                 </tbody>

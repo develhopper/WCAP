@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
     t.integer  "pumps"
     t.boolean  "explosion"
     t.integer  "response_time"
-    t.integer  "bart_id",       null: false
+    t.integer  "bart_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   end
 
   create_table "ddt_answers", force: true do |t|
-    t.integer  "ddt_id",                          null: false
+    t.integer  "ddt_id"
     t.integer  "ddt_question_id",                 null: false
     t.boolean  "response",        default: false, null: false
     t.datetime "created_at"
@@ -144,7 +144,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
     t.boolean  "is_clicked"
     t.integer  "display_time"
     t.integer  "response_time"
-    t.integer  "gonogo_id",     null: false
+    t.integer  "gonogo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -188,8 +188,8 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   end
 
   create_table "tasks", force: true do |t|
-    t.integer  "study_id",   null: false
-    t.integer  "patient_id", null: false
+    t.integer  "study_id"
+    t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -208,7 +208,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "test_details", ["study_id"], name: "index_test_details_on_study_id"
 
   create_table "tests", force: true do |t|
-    t.integer  "task_id",            null: false
+    t.integer  "task_id"
     t.integer  "execution_schedule"
     t.integer  "actable_id"
     t.string   "actable_type"

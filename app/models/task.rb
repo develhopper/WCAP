@@ -13,7 +13,4 @@ class Task < ActiveRecord::Base
   belongs_to :study
   belongs_to :patient
   has_many :tests
-
-  validates :study, presence: true
-  validates :patient, presence: true
 end

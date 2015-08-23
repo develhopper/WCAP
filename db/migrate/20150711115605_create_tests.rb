@@ -1,7 +1,7 @@
 class CreateTests < ActiveRecord::Migration
   def change
     create_table :tests do |t|
-      t.references :task, index: true, null: false
+      t.references :task, index: true
       t.integer :execution_schedule
       t.actable
 

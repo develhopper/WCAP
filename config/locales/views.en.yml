@@ -151,3 +151,4 @@ en:
   form_error_first_part: prohibited this
   form_error_second_part: "from being saved:"
   pluralize_error: error(s)
+  finished: Finished

@@ -19,9 +19,6 @@ class Test < ActiveRecord::Base
   enum execution_schedule: [:before_stimulation, 
   	:after_stimulation , :during_stimulation]
 
-  validates :task, presence: true
-
-
   #Return list of child class of Test for example: [Bart, Gonogo, ..]
   def self.get_child_classes
     result = []
