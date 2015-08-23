@@ -8,9 +8,10 @@ fa:
       not_saved:
         one: '۱ خطا جلوی ذخیره %{resource} را گرفت:'
         other: '%{count} خطا جلوی ذخیره این %{resource} را گرفت:'
-
   devise:
     failure:
+      user:
+        not_found_in_database: 'شناسه و یا گذروازه‌ نادرست است.'
       not_approved: 'حساب شما هنوز توسط ادمین تایید نشده است.'
       already_authenticated: 'وارد سیستم هستید.'
       unauthenticated: 'پیش از ادامه باید وارد شوید یا ثبت نام کنید.'
