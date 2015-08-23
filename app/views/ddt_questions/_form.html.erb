@@ -1,7 +1,7 @@
 <%= form_for(@ddt_question) do |f| %>
   <% if @ddt_question.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@ddt_question.errors.count, "error") %> prohibited this ddt_question from being saved:</h2>
+      <h2><%= "\u200f #{@ddt_question.errors.count} " + ( t 'pluralize_error') + " " +  (t  'form_error_first_part') + " " + (t 'ddt_question') +" "+ (t 'form_error_second_part')%></h2>
 
       <ul>
       <% @ddt_question.errors.full_messages.each do |message| %>

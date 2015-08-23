@@ -1,7 +1,7 @@
 <%= form_for([@study,@test_detail]) do |f| %>
   <% if @test_detail.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@test_detail.errors.count, "error") %> prohibited this test_detail from being saved:</h2>
+      <h2><%= "\u200f #{@test_detail.errors.count} " + ( t 'pluralize_error') + " " +  (t  'form_error_first_part') + " " + (t 'test_detail') +" "+ (t 'form_error_second_part')%></h2>
 
       <ul>
       <% @test_detail.errors.full_messages.each do |message| %>

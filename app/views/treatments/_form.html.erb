@@ -1,8 +1,7 @@
 <%= form_for([@patient, @treatment_history, @treatment]) do |f| %>
   <% if @treatment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@treatment.errors.count, "error") %> prohibited this treatment from being saved:</h2>
-
+      <h2><%= "\u200f #{@patient.errors.count} " + ( t 'pluralize_error') + " " +  (t  'form_error_first_part') + " " + (t 'patient') +" "+ (t 'form_error_second_part')%></h2>
       <ul>
       <% @treatment.errors.full_messages.each do |message| %>
         <li><%= message %></li>

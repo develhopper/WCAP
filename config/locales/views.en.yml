@@ -146,3 +146,8 @@ en:
   users_awaiting_approval: Users Awaiting Approval
   name: Name
   reset: Reset
+
+  form_error_message: "%{count} %{pluralize_error} prohibited this %{model} from being saved:"
+  form_error_first_part: prohibited this
+  form_error_second_part: "from being saved:"
+  pluralize_error: error(s)

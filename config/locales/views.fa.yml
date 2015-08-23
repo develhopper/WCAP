@@ -144,3 +144,7 @@ fa:
   users_awaiting_approval: کاربرانی که نیاز به تایید دارند
   name: نام
   reset: شروع دوباره
+  form_error_message: "%{count} %{pluralize_error} مانع ذخیره شدن %{model} شده است:"
+  form_error_first_part: مانع ذخیره شدن 
+  form_error_second_part: "شده است"
+  pluralize_error: خطا

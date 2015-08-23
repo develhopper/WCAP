@@ -1,7 +1,7 @@
 <%= form_for(@clinic) do |f| %>
   <% if @clinic.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@clinic.errors.count, "error") %> prohibited this clinic from being saved:</h2>
+      <h2><%= "\u200f #{@clinic.errors.count} " + ( t 'pluralize_error') + " " +  (t  'form_error_first_part') + " " + (t 'clinic') +" "+ (t 'form_error_second_part')%></h2>
 
       <ul>
       <% @clinic.errors.full_messages.each do |message| %>
@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= t 'supervisor' %><br>
-    <%= f.select :supervisor_id, options_for_select(@users.collect { |s| [s.identity, s.id] }, selected: @clinic.supervisor_id), {} ,:class=>"reverse-dir" %>
+    <%= f.select :supervisor_id, options_for_select(User.all.collect { |s| [s.identity, s.id] }, selected: @clinic.supervisor_id), {} ,:class=>"reverse-dir" %>
   </div>
   <div class="actions">
     <%= f.submit (t 'submit', :default => "Submit"), :class => "btn btn-default smooth-scroll"%>

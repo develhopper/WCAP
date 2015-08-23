@@ -1,7 +1,7 @@
 <%= form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <h2><%= "\u200f #{@profile.errors.count} " + ( t 'pluralize_error') + " " +  (t  'form_error_first_part') + " " + (t 'profile') +" "+ (t 'form_error_second_part')%></h2>
 
       <ul>
       <% @profile.errors.full_messages.each do |message| %>
