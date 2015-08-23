@@ -4,7 +4,7 @@ class CreateAbusingProfiles < ActiveRecord::Migration
       t.integer :cost_per_month
       t.integer :overdose_count
       t.integer :freakout_count
-      t.references :patient, index: true
+      t.references :patient, index: true, null: false
 
       t.timestamps
     end

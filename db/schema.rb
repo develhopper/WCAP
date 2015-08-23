@@ -13,16 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20150822111715) do
 
-  create_table "Ddt_Questions_studies", id: false, force: true do |t|
-    t.integer "ddt_question_id", null: false
-    t.integer "study_id",        null: false
-  end
-
   create_table "abusing_profiles", force: true do |t|
     t.integer  "cost_per_month"
     t.integer  "overdose_count"
     t.integer  "freakout_count"
-    t.integer  "patient_id"
+    t.integer  "patient_id",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,14 +25,14 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "abusing_profiles", ["patient_id"], name: "index_abusing_profiles_on_patient_id"
 
   create_table "abusings", force: true do |t|
-    t.integer  "abusing_profile_id"
+    t.integer  "abusing_profile_id",                        null: false
     t.integer  "drug_type"
     t.integer  "first_use_age"
     t.integer  "continuous_usage_duration"
     t.integer  "count"
     t.integer  "abusing_type"
     t.text     "description"
-    t.boolean  "is_mainspring"
+    t.boolean  "is_mainspring",             default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
     t.integer  "pumps"
     t.boolean  "explosion"
     t.integer  "response_time"
-    t.integer  "bart_id"
+    t.integer  "bart_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -58,11 +53,11 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   create_table "barts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finished"
+    t.boolean  "finished",   default: false, null: false
   end
 
   create_table "basic_demographics", force: true do |t|
-    t.integer  "patient_id"
+    t.integer  "patient_id",       null: false
     t.integer  "file_number"
     t.integer  "private_code"
     t.integer  "gender"
@@ -77,8 +72,8 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "basic_demographics", ["patient_id"], name: "index_basic_demographics_on_patient_id"
 
   create_table "clinics", force: true do |t|
-    t.string   "name"
-    t.integer  "supervisor_id"
+    t.string   "name",          null: false
+    t.integer  "supervisor_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -91,9 +86,9 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   end
 
   create_table "ddt_answers", force: true do |t|
-    t.integer  "ddt_id"
-    t.integer  "ddt_question_id"
-    t.boolean  "response"
+    t.integer  "ddt_id",                          null: false
+    t.integer  "ddt_question_id",                 null: false
+    t.boolean  "response",        default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,24 +97,29 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "ddt_answers", ["ddt_question_id"], name: "index_ddt_answers_on_ddt_question_id"
 
   create_table "ddt_questions", force: true do |t|
-    t.integer  "definite_value"
-    t.integer  "indefinite_value"
-    t.integer  "risk_rate"
-    t.integer  "question_type"
+    t.integer  "definite_value",   null: false
+    t.integer  "indefinite_value", null: false
+    t.integer  "risk_rate",        null: false
+    t.integer  "question_type",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ddt_questions_studies", id: false, force: true do |t|
+    t.integer "ddt_question_id", null: false
+    t.integer "study_id",        null: false
   end
 
   create_table "ddts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finished"
+    t.boolean  "finished",   default: false, null: false
   end
 
   create_table "gonogos", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finished"
+    t.boolean  "finished",   default: false, null: false
   end
 
   create_table "patients", force: true do |t|
@@ -144,8 +144,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
     t.boolean  "is_clicked"
     t.integer  "display_time"
     t.integer  "response_time"
-    t.integer  "reaction_time"
-    t.integer  "gonogo_id"
+    t.integer  "gonogo_id",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -153,9 +152,9 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "rectangles", ["gonogo_id"], name: "index_rectangles_on_gonogo_id"
 
   create_table "registrations", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "clinic_id"
-    t.integer  "patient_id"
+    t.integer  "user_id",    null: false
+    t.integer  "clinic_id",  null: false
+    t.integer  "patient_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -168,17 +167,17 @@ ActiveRecord::Schema.define(version: 20150822111715) do
     t.integer  "duration"
     t.integer  "total_items"
     t.integer  "correct_items"
-    t.boolean  "finished"
+    t.boolean  "finished",      default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "studies", force: true do |t|
-    t.integer  "admin_id"
-    t.text     "description"
+    t.integer  "admin_id",                    null: false
+    t.text     "description",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finalized"
+    t.boolean  "finalized",   default: false, null: false
   end
 
   add_index "studies", ["admin_id"], name: "index_studies_on_admin_id"
@@ -189,9 +188,8 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   end
 
   create_table "tasks", force: true do |t|
-    t.boolean  "confirmed"
-    t.integer  "study_id"
-    t.integer  "patient_id"
+    t.integer  "study_id",   null: false
+    t.integer  "patient_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -201,9 +199,8 @@ ActiveRecord::Schema.define(version: 20150822111715) do
 
   create_table "test_details", force: true do |t|
     t.string   "name"
-    t.integer  "count"
     t.integer  "part_count"
-    t.integer  "study_id"
+    t.integer  "study_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -211,7 +208,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "test_details", ["study_id"], name: "index_test_details_on_study_id"
 
   create_table "tests", force: true do |t|
-    t.integer  "task_id"
+    t.integer  "task_id",            null: false
     t.integer  "execution_schedule"
     t.integer  "actable_id"
     t.string   "actable_type"
@@ -222,7 +219,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "tests", ["task_id"], name: "index_tests_on_task_id"
 
   create_table "treatment_histories", force: true do |t|
-    t.integer  "patient_id"
+    t.integer  "patient_id",          null: false
     t.boolean  "is_cured"
     t.boolean  "in_month_treated"
     t.integer  "in_year_treat_count"
@@ -235,7 +232,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
   add_index "treatment_histories", ["patient_id"], name: "index_treatment_histories_on_patient_id"
 
   create_table "treatments", force: true do |t|
-    t.integer  "treatment_history_id"
+    t.integer  "treatment_history_id", null: false
     t.integer  "treatment_type"
     t.integer  "count"
     t.integer  "max_avoidance_day"
@@ -261,8 +258,7 @@ ActiveRecord::Schema.define(version: 20150822111715) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "current_study_id"
-    t.boolean  "admin"
-    t.boolean  "supervisor"
+    t.boolean  "admin",                  default: false, null: false
     t.integer  "current_task_id"
     t.boolean  "approved",               default: false, null: false
   end

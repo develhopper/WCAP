@@ -1,7 +1,7 @@
 class CreateTreatmentHistories < ActiveRecord::Migration
   def change
     create_table :treatment_histories do |t|
-      t.references :patient, index: true
+      t.references :patient, index: true, null: false
       t.boolean :is_cured
       t.boolean :in_month_treated
       t.integer :in_year_treat_count

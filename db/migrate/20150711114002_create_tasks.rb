@@ -1,9 +1,8 @@
 class CreateTasks < ActiveRecord::Migration
   def change
     create_table :tasks do |t|
-      t.boolean :confirmed
-      t.references :study, index: true
-      t.references :patient, index: true
+      t.references :study, index: true, null: false
+      t.references :patient, index: true, null: false
 
       t.timestamps
     end

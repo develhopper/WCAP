@@ -1,7 +1,7 @@
 class CreateBasicDemographics < ActiveRecord::Migration
   def change
     create_table :basic_demographics do |t|
-      t.references :patient, index: true
+      t.references :patient, index: true, null: false
       t.integer :file_number
       t.integer :private_code
       t.integer :gender
