@@ -23,12 +23,14 @@ class BartsController < ApplicationController
   def edit
   end
 
+  #Marks the bart as finished
   def finish
     @bart.finished = true
     @bart.save
     respond_with(@bart)
   end
 
+  #Changes the bart state to NOT FINISHED, so the patient can take the test for another time
   def restart
     @bart.finished = false
     @bart.save

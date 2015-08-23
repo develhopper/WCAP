@@ -5,6 +5,7 @@ class PatientsController < ApplicationController
   
   respond_to :html
 
+  #Sets the patients to be shown. Admin(s) can see all the patients, supervisors can just see the patients of their own clinics, and examiners can see their related patients.
   def index
     if current_user.admin?
       @patients = Patient.all
@@ -28,8 +29,8 @@ class PatientsController < ApplicationController
   def edit
   end
 
+  #Creates Patient and also Registrations for User and all passed clinic_ids.
   def create
-
     @patient = Patient.new(patient_params)
     unless @patient.check_clinics(params[:clinic_ids], current_user)
       redirect_to patients_path

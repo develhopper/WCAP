@@ -4,6 +4,7 @@ class TasksController < ApplicationController
   
   respond_to :html
 
+  #Sets the Tasks to be shown. Admin(s) can see all the tasks, supervisors can just see the patients of their own clinics' tasks, and examiners can see their related patients' tasks.
   def index
     @tasks = Task.all.order("id DESC")
     unless current_user.admin
@@ -21,6 +22,7 @@ class TasksController < ApplicationController
     respond_with(@task)
   end
 
+  #Assigns this task to the current task of current user
   def set_current
     current_user.current_task = @task
     current_user.save

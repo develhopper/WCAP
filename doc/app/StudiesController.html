@@ -149,13 +149,14 @@
 
         <div class="method-description">
           
-          
+          <p>Adds a <a href="DdtQuestion.html">DdtQuestion</a> to <a
+href="Study.html">Study</a> if has not been finalized yet</p>
           
           
 
           
           <div class="method-source-code" id="add_ddt_question-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 89</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 95</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_ddt_question</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">finalized</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@study</span>
@@ -190,13 +191,14 @@
 
         <div class="method-description">
           
-          
+          <p>Adds examiner to a <a href="Study.html">Study</a>, if has not already been
+a member of that</p>
           
           
 
           
           <div class="method-source-code" id="add_examiner-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 49</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 50</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_examiner</span>
   <span class="ruby-identifier">examiner</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:examiner_id</span>])
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">examiner</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">users</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">examiner</span>)
@@ -228,13 +230,14 @@
 
         <div class="method-description">
           
-          
+          <p>Adds patient to a <a href="Study.html">Study</a>, if has not already been a
+member of that</p>
           
           
 
           
           <div class="method-source-code" id="add_patient-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 58</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 60</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_patient</span>
   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">finalized</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@study</span>
@@ -370,13 +373,13 @@
 
         <div class="method-description">
           
-          
+          <p>Finalizes the status of <a href="Study.html">Study</a></p>
           
           
 
           
           <div class="method-source-code" id="finalize-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 79</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">finalize</span>
   <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">finalized</span> = <span class="ruby-keyword">true</span>
   <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">save</span>
@@ -405,13 +408,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns all the DdtQuestions</p>
           
           
 
           
           <div class="method-source-code" id="get_ddt_questions-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 113</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 121</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_ddt_questions</span>
   <span class="ruby-ivar">@ddt_questions</span> = <span class="ruby-constant">DdtQuestion</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -438,13 +441,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns examiners of <a href="Study.html">Study</a></p>
           
           
 
           
           <div class="method-source-code" id="get_examiners-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 85</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 90</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_examiners</span>
   <span class="ruby-ivar">@examiners</span> = <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">users</span>  
 <span class="ruby-keyword">end</span></pre>
@@ -471,13 +474,14 @@
 
         <div class="method-description">
           
-          
+          <p>If current user is supervisor, returns the patients of her clinic, and if
+examiner, returns her related patients.</p>
           
           
 
           
           <div class="method-source-code" id="get_patients-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 117</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 126</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_patients</span>
   <span class="ruby-ivar">@patients</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">related_patients</span>
 <span class="ruby-keyword">end</span></pre>
@@ -576,13 +580,14 @@
 
         <div class="method-description">
           
-          
+          <p>Removes a <a href="DdtQuestion.html">DdtQuestion</a> from <a
+href="Study.html">Study</a> if has not been finalized yet</p>
           
           
 
           
           <div class="method-source-code" id="remove_ddt_question-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 101</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 108</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_ddt_question</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">finalized</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@study</span>
@@ -617,13 +622,13 @@
 
         <div class="method-description">
           
-          
+          <p>Removes one the specified examiners from <a href="Study.html">Study</a></p>
           
           
 
           
           <div class="method-source-code" id="remove_examiner-source">
-            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 70</span>
+            <pre><span class="ruby-comment"># File app/controllers/studies_controller.rb, line 73</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_examiner</span>
   <span class="ruby-identifier">examiner</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:examiner_id</span>])
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">examiner</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@study</span>.<span class="ruby-identifier">users</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">examiner</span>)

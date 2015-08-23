@@ -7,6 +7,7 @@ class ClinicsController < ApplicationController
   
   respond_to :html
 
+  #Sets the clinics to be shown. Admin(s) can see all the clinics, and supervisors can just see their own
   def index
     if current_user.admin
       @clinics = Clinic.all
@@ -47,7 +48,7 @@ class ClinicsController < ApplicationController
   end
 
 
-
+  #Gets a user and if she is not already an examiner in this clinic, adds her to clinic's list of examiners 
   def add_examiner
     examiner = User.find(params[:examiner_id])
     if examiner && ! @clinic.users.include?(examiner)
@@ -57,6 +58,7 @@ class ClinicsController < ApplicationController
     render 'add_examiner.js'
   end
 
+  #Removes a specified examiner from clinic
   def remove_examiner
     examiner = User.find(params[:examiner_id])
     if examiner && @clinic.users.include?(examiner)
@@ -66,6 +68,7 @@ class ClinicsController < ApplicationController
     render 'remove_examiner.js'
   end
 
+  #Returns the examiners of the clinic
   def get_examiners
     @examiners = @clinic.users  
   end

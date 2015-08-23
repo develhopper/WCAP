@@ -137,7 +137,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 28</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 29</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@abusing</span> = <span class="ruby-constant">Abusing</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">abusing_params</span>)
   <span class="ruby-ivar">@abusing</span>.<span class="ruby-identifier">abusing_profile</span> = <span class="ruby-ivar">@abusing_profile</span>
@@ -173,7 +173,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 41</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@abusing</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">patient_abusing_profile_path</span>(<span class="ruby-ivar">@patient</span>, <span class="ruby-ivar">@abusing_profile</span>)
@@ -207,7 +207,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 25</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -267,13 +267,14 @@
 
         <div class="method-description">
           
-          
+          <p>Adds the new abusing to the set of abusings related to a special
+abusing_profile</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 18</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 19</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@abusing</span> = <span class="ruby-constant">Abusing</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@abusing</span>.<span class="ruby-identifier">abusing_profile</span> = <span class="ruby-ivar">@abusing_profile</span>
@@ -342,7 +343,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 35</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusings_controller.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@abusing</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">abusing_params</span>)
   <span class="ruby-ivar">@abusing</span>.<span class="ruby-identifier">abusing_profile</span> = <span class="ruby-ivar">@abusing_profile</span>

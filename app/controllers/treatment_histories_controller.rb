@@ -14,6 +14,7 @@ class TreatmentHistoriesController < ApplicationController
     respond_with(@patient,@treatment_history)
   end
 
+ #Creates a new TreatmentHistory for related patient if has not any 
   def new
     if @patient.treatment_history
       @treatment_history = @patient.treatment_history

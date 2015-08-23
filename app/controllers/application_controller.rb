@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
  
+ #Sets the locale to the parameter specified in URL, or the default locale mentioned in config/application.rb
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end

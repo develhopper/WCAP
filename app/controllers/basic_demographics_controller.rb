@@ -14,7 +14,8 @@ class BasicDemographicsController < ApplicationController
   def show
     respond_with(@patient,@basic_demographic)
   end
-
+  
+  #Creates a new basic_demographic for related patient if has not any 
   def new
     if @patient.basic_demographic
       @basic_demographic = @patient.basic_demographic

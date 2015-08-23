@@ -127,7 +127,7 @@
 
           
           <div class="method-source-code" id="default_url_options-source">
-            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 13</span>
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">default_url_options</span>(<span class="ruby-identifier">options</span> = {})
 { <span class="ruby-identifier">locale</span><span class="ruby-operator">:</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> }.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">options</span>
 <span class="ruby-keyword">end</span></pre>
@@ -154,13 +154,14 @@
 
         <div class="method-description">
           
-          
+          <p>Sets the locale to the parameter specified in URL, or the default locale
+mentioned in config/application.rb</p>
           
           
 
           
           <div class="method-source-code" id="set_locale-source">
-            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 8</span>
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_locale</span>
   <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:locale</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">default_locale</span>
 <span class="ruby-keyword">end</span></pre>

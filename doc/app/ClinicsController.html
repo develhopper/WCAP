@@ -137,13 +137,14 @@
 
         <div class="method-description">
           
-          
+          <p>Gets a user and if she is not already an examiner in this clinic, adds her
+to clinic&#39;s list of examiners</p>
           
           
 
           
           <div class="method-source-code" id="add_examiner-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 51</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_examiner</span>
   <span class="ruby-identifier">examiner</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:examiner_id</span>])
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">examiner</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-ivar">@clinic</span>.<span class="ruby-identifier">users</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">examiner</span>)
@@ -181,7 +182,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@clinic</span> = <span class="ruby-constant">Clinic</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">clinic_params</span>)
   <span class="ruby-ivar">@clinic</span>.<span class="ruby-identifier">save</span>
@@ -216,7 +217,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 44</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@clinic</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@clinic</span>)
@@ -250,7 +251,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 29</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
   <span class="ruby-ivar">@users</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -277,13 +278,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns the examiners of the clinic</p>
           
           
 
           
           <div class="method-source-code" id="get_examiners-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 69</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 72</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_examiners</span>
   <span class="ruby-ivar">@examiners</span> = <span class="ruby-ivar">@clinic</span>.<span class="ruby-identifier">users</span>  
 <span class="ruby-keyword">end</span></pre>
@@ -310,13 +311,14 @@
 
         <div class="method-description">
           
-          
+          <p>Sets the clinics to be shown. Admin(s) can see all the clinics, and
+supervisors can just see their own</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">admin</span>
     <span class="ruby-ivar">@clinics</span> = <span class="ruby-constant">Clinic</span>.<span class="ruby-identifier">all</span>
@@ -354,7 +356,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 23</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@clinic</span> = <span class="ruby-constant">Clinic</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@users</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">all</span>
@@ -383,13 +385,13 @@
 
         <div class="method-description">
           
-          
+          <p>Removes a specified examiner from clinic</p>
           
           
 
           
           <div class="method-source-code" id="remove_examiner-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 60</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 62</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_examiner</span>
   <span class="ruby-identifier">examiner</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:examiner_id</span>])
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">examiner</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@clinic</span>.<span class="ruby-identifier">users</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">examiner</span>)
@@ -427,7 +429,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 19</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@clinic</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -460,7 +462,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 39</span>
+            <pre><span class="ruby-comment"># File app/controllers/clinics_controller.rb, line 40</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@clinic</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">clinic_params</span>)
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@clinic</span>)

@@ -137,7 +137,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 30</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@abusing_profile</span> = <span class="ruby-constant">AbusingProfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">abusing_profile_params</span>)
   <span class="ruby-ivar">@abusing_profile</span>.<span class="ruby-identifier">save</span>
@@ -172,7 +172,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 41</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@abusing_profile</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@abusing_profile</span>)
@@ -206,7 +206,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 27</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -266,13 +266,13 @@
 
         <div class="method-description">
           
-          
+          <p>Creates a new abusing_profile for related patient if has not any</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@patient</span>.<span class="ruby-identifier">abusing_profile</span>
     <span class="ruby-ivar">@abusing_profile</span> = <span class="ruby-ivar">@patient</span>.<span class="ruby-identifier">abusing_profile</span>
@@ -345,7 +345,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 36</span>
+            <pre><span class="ruby-comment"># File app/controllers/abusing_profiles_controller.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@abusing_profile</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">abusing_profile_params</span>)
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@abusing_profile</span>.<span class="ruby-identifier">patient</span>)

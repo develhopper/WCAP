@@ -15,6 +15,7 @@ class AbusingsController < ApplicationController
     respond_with(@abusing)
   end
 
+ #Adds the new abusing to the set of abusings related to a special abusing_profile
   def new
     @abusing = Abusing.new
     @abusing.abusing_profile = @abusing_profile

@@ -12,7 +12,8 @@ class AbusingProfilesController < ApplicationController
   def show
     respond_with(@abusing_profile)
   end
-
+  
+  #Creates a new abusing_profile for related patient if has not any 
   def new
     if @patient.abusing_profile
       @abusing_profile = @patient.abusing_profile

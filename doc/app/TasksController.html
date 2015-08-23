@@ -123,13 +123,15 @@
 
         <div class="method-description">
           
-          
+          <p>Sets the Tasks to be shown. Admin(s) can see all the tasks, supervisors can
+just see the patients of their own clinics&#39; tasks, and examiners can
+see their related patients&#39; tasks.</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/tasks_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/tasks_controller.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@tasks</span> = <span class="ruby-constant">Task</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;id DESC&quot;</span>)
   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">admin</span>
@@ -165,13 +167,13 @@
 
         <div class="method-description">
           
-          
+          <p>Assigns this task to the current task of current user</p>
           
           
 
           
           <div class="method-source-code" id="set_current-source">
-            <pre><span class="ruby-comment"># File app/controllers/tasks_controller.rb, line 24</span>
+            <pre><span class="ruby-comment"># File app/controllers/tasks_controller.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_current</span>
   <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">current_task</span> = <span class="ruby-ivar">@task</span>
   <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">save</span>
@@ -206,7 +208,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/tasks_controller.rb, line 20</span>
+            <pre><span class="ruby-comment"># File app/controllers/tasks_controller.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@task</span>)
 <span class="ruby-keyword">end</span></pre>

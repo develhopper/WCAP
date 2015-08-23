@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     end
   end
 
+  #Approves User
   def approve
     user = User.find(params[:id])
     user.approved = true
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  #Disapproves User
   def disapprove
     user = User.find(params[:id])
     user.approved = false

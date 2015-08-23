@@ -46,6 +46,7 @@ class StudiesController < ApplicationController
     respond_with(@study)
   end
 
+  #Adds examiner to a Study, if has not already been a member of that
   def add_examiner
     examiner = User.find(params[:examiner_id])
     if examiner && ! @study.users.include?(examiner)
@@ -55,6 +56,7 @@ class StudiesController < ApplicationController
     render 'add_examiner.js'
   end
 
+  #Adds patient to a Study, if has not already been a member of that
   def add_patient
     unless @study.finalized
       redirect_to @study
@@ -67,6 +69,7 @@ class StudiesController < ApplicationController
     render 'add_patient.js'
   end
 
+  #Removes one the specified examiners from Study
   def remove_examiner
     examiner = User.find(params[:examiner_id])
     if examiner && @study.users.include?(examiner)
@@ -76,16 +79,19 @@ class StudiesController < ApplicationController
     render 'remove_examiner.js'
   end
 
+  #Finalizes the status of Study
   def finalize
     @study.finalized = true
     @study.save
     redirect_to @study
   end
 
+  #Returns examiners of Study
   def get_examiners
     @examiners = @study.users  
   end
 
+  #Adds a DdtQuestion to Study if has not been finalized yet
   def add_ddt_question
     if @study.finalized
       redirect_to @study
@@ -98,6 +104,7 @@ class StudiesController < ApplicationController
     render 'add_ddt_question.js'
   end
 
+  #Removes a DdtQuestion from Study if has not been finalized yet
   def remove_ddt_question
     if @study.finalized
       redirect_to @study
@@ -110,10 +117,12 @@ class StudiesController < ApplicationController
     render 'remove_ddt_question.js'
   end
 
+  #Returns all the DdtQuestions
   def get_ddt_questions
     @ddt_questions = DdtQuestion.all
   end
 
+  #If current user is supervisor, returns the patients of her clinic, and if examiner, returns her related patients.
   def get_patients
     @patients = current_user.related_patients
   end
