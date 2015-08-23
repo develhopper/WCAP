@@ -117,7 +117,7 @@ fa:
   related_tasks_list: لیست آزمون‌های مرتبط
   current_task: آزمون کنونی
   select_task: انتخاب آزمون
-  
+  task_test_list: لیست تست‌های آزمون
 #treatment_histories
   treatment_histories_list: لیست سوابق درمانی
   new_treatment_history: ایجاد سوابق درمانی

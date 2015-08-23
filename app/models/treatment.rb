@@ -30,5 +30,4 @@ class Treatment < ActiveRecord::Base
    :other_methods
     ]
   validates :treatment_type, presence: true
-  validates :treatment_history, presence: true
 end

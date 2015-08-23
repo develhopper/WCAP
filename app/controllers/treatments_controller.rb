@@ -27,12 +27,14 @@ class TreatmentsController < ApplicationController
 
   def create
     @treatment = Treatment.new(treatment_params)
+    @treatment.treatment_history = @treatment_history
     @treatment.save
     respond_with(@patient,@treatment_history,@treatment)
   end
 
   def update
     @treatment.update(treatment_params)
+    @treatment.treatment_history = @treatment_history
     respond_with(@patient,@treatment_history,@treatment)
   end
 

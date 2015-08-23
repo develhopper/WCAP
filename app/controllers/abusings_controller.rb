@@ -27,12 +27,14 @@ class AbusingsController < ApplicationController
 
   def create
     @abusing = Abusing.new(abusing_params)
+    @abusing.abusing_profile = @abusing_profile
     @abusing.save
     respond_with(@patient,@abusing_profile,@abusing)
   end
 
   def update
     @abusing.update(abusing_params)
+    @abusing.abusing_profile = @abusing_profile
     respond_with(@patient,@abusing_profile)
   end
 
