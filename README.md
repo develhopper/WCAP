@@ -1,7 +1,7 @@
 #WCAP
   WCAP(Web-based Cognitive Assessment Package) is an application for giving online cognitive assessment tasks such as [Stroop](https://en.wikipedia.org/wiki/Stroop_effect), [Go/No-go](https://en.wikipedia.org/wiki/Go/no_go), [BART](http://www.cognitiveatlas.org/task/balloon_analogue_risk_task_%28bart%29), [Delayed Discounting](http://www.cognitiveatlas.org/task/balloon_analogue_risk_task_%28bart%29).
   
-  This application is developed by Maryam Younesi and Ali Nosrati, students of [Universitiy of Tehran](http://ut.ac.ir). We will be pleased if you use this application and contribute to improve it. :)
+  This application is developed by Maryam Younesi and Ali Nosrati, students of [Universitiy of Tehran](http://ut.ac.ir), under        supervision of [Dr Hamed Ekhtiari](http://iricss.org/en/Pages/People/Hamed_Ekhtiari.aspx) (Director of [Neurocognitive Lab](http://incas.tums.ac.ir/find.php?item=1.220.127.fa), [Iranian National Center for Addiction Studies](http://incas.tums.ac.ir/index.php?slc_lang=en&sid=1)) . We will be pleased if you use this application and contribute to improve it. :)
   
   Users have two global level of access admin and default users. Admin can manage all system and entities.
   
@@ -71,4 +71,3 @@
     gem 'capistrano-rvm', github: "capistrano/rvm" ## If are using rvm
 
     
-
