@@ -1,8 +1,25 @@
 #WCAP
   WCAP(Web-based Cognitive Assessment Package) is an application for giving online cognitive assessment tasks such as [Stroop](https://en.wikipedia.org/wiki/Stroop_effect), [Go/No-go](https://en.wikipedia.org/wiki/Go/no_go), [BART](http://www.cognitiveatlas.org/task/balloon_analogue_risk_task_%28bart%29), [Delayed Discounting](http://www.cognitiveatlas.org/task/balloon_analogue_risk_task_%28bart%29).
   
-  This application is developed by Maryam Younesi and Ali Nosrati, students of [Universitiy of Tehran](http://ut.ac.ir), under        supervision of [Dr Hamed Ekhtiari](http://iricss.org/en/Pages/People/Hamed_Ekhtiari.aspx) (Director of [Neurocognitive Lab](http://incas.tums.ac.ir/find.php?item=1.220.127.fa), [Iranian National Center for Addiction Studies](http://incas.tums.ac.ir/index.php?slc_lang=en&sid=1)) . We will be pleased if you use this application and contribute to improve it. :)
+  This application is developed by **Maryam Younesi** and **Ali Nosrati**, students of [Universitiy of Tehran](http://ut.ac.ir), under        supervision of [**Dr Hamed Ekhtiari**](http://iricss.org/en/Pages/People/Hamed_Ekhtiari.aspx) (Director of [Neurocognitive Lab](http://incas.tums.ac.ir/find.php?item=1.220.127.fa), [Iranian National Center for Addiction Studies](http://incas.tums.ac.ir/index.php?slc_lang=en&sid=1)) . We will be pleased if you use this application and contribute to improve it. :)
   
+#**Terms of Use**
+
+WCAP is freely available for all the researchers who need to use this tasks. They just need to cite related papers of the developer team inside their resulted publications and acknowledge WCAP developers in the acknowledgment part.  WCAP can be downloaded from [here](https://github.com/UTStudents/WCAP/archive/master.zip). Installation steps are explained in the *Deployment instructions*. If you need more help, you can send us an [email](mailto:f.b.yavari@gmail.com).
+
+
+#**Related Papers**
+1. Ekhtiari H, Jannati A, Moghimi A, Behzadi A. The Farsi Version of the Balloon Analogue Risk Task: An Instrument for The Assessment of Riskful-Decision Making. Advances in Cognitive Science; 2003; 
+2. Ekhtiari H, Behzadi A, Jannati A, Moghimi A. Delayed Discounting Procedure and Impulsive Behaviors: A Preliminary Study. Advances in Cognitive Science; 2003; 
+3. Ekhtiari H, Behzadi A, Mokri M. The Effect of Method of Choice Presentation On the Delayed Discounting Procedure. Advances in Cognitive Science; 2005; 
+4. Ekhtiari H, Rezvanfard M, Mokri A. Impulsivity and its different assessment tools: A review of viewpoints and conducted researches. Iran J Psychiatry Clin Psychol. Iranian Journal of Psychiatry and Clinical Psychology; 2008;14(3):247–57. 
+5. Ekhtiari H., Behzadi A., Mokri A., Delayed Discounting Procedure Different Methods for Iranian Subjects. New Adv Cogn Sci. 2002; 4:41–9. 
+6. Ekhtiari H., Mokri A., Variant Tasks for Delayed Discounting Procedure, Differences in Standard and Random Trials. New Adv Cogn Sci. 2003; 3:28–36. 
+
+
+
+
+## Description 
   Users have two global level of access admin and default users. Admin can manage all system and entities.
   
   Clinics and Studies have a supervisor and some examiners.
