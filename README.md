@@ -5,7 +5,7 @@
   
 #**Terms of Use**
 
-WCAP is freely available for all the researchers who need to use this tasks. They just need to cite related papers of the developer team inside their resulted publications and acknowledge WCAP developers in the acknowledgment part.  WCAP can be downloaded from [here](https://github.com/UTStudents/WCAP/archive/master.zip). Installation steps are explained in the *Deployment instructions*. If you need more help, you can send us an [email](mailto:f.b.yavari@gmail.com).
+WCAP is freely available for all the researchers who need to use this tasks. They just need to cite related papers (listed below) of the developer team inside their resulted publications and acknowledge WCAP developers in the acknowledgment part.  WCAP can be downloaded from [here](https://github.com/UTStudents/WCAP/archive/master.zip). Installation steps are explained in the *Deployment instructions*. If you need more help, you can send us an [email](mailto:f.b.yavari@gmail.com).
 
 
 #**Related Papers**
