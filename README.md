@@ -12,7 +12,7 @@ WCAP is freely available for all the researchers who need to use these tasks. Th
 1. Ekhtiari H, Jannati A, Moghimi A, Behzadi A. The Farsi Version of the Balloon Analogue Risk Task: An Instrument for The Assessment of Riskful-Decision Making. Advances in Cognitive Science; 2003; 
 2. Ekhtiari H, Behzadi A, Jannati A, Moghimi A. Delayed Discounting Procedure and Impulsive Behaviors: A Preliminary Study. Advances in Cognitive Science; 2003; 
 3. Ekhtiari H, Behzadi A, Mokri M. The Effect of Method of Choice Presentation On the Delayed Discounting Procedure. Advances in Cognitive Science; 2005; 
-4. Ekhtiari H, Rezvanfard M, Mokri A. Impulsivity and its different assessment tools: A review of viewpoints and conducted researches. Iran J Psychiatry Clin Psychol. Iranian Journal of Psychiatry and Clinical Psychology; 2008;14(3):247–57. 
+4. [Ekhtiari H, Rezvanfard M, Mokri A. Impulsivity and its different assessment tools: A review of viewpoints and conducted researches. Iran J Psychiatry Clin Psychol. Iranian Journal of Psychiatry and Clinical Psychology; 2008;14(3):247–57. ](doc/publications/Impulsivity.pdf)
 5. Ekhtiari H., Behzadi A., Mokri A., Delayed Discounting Procedure Different Methods for Iranian Subjects. New Adv Cogn Sci. 2002; 4:41–9. 
 6. Ekhtiari H., Mokri A., Variant Tasks for Delayed Discounting Procedure, Differences in Standard and Random Trials. New Adv Cogn Sci. 2003; 3:28–36. 
 
