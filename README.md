@@ -87,4 +87,6 @@ WCAP is freely available for all the researchers who need to use these tasks. Th
     gem 'capistrano-rails', '~> 1.1.1'
     gem 'capistrano-rvm', github: "capistrano/rvm" ## If are using rvm
 
-    
+#Note
+You can find IOWA gambling task in [**extras**](./extras) directory.
+
