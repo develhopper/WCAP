@@ -52,7 +52,7 @@ gem 'parsi-date'
 
 
 group :production do  
-  gem 'pg', `~>0.15`
+  gem 'pg', '~>0.15'
 end  
 
 group :development do
